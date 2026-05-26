@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --bg-color: #0b0914;
+  --card-bg: #161224;
+  --accent-color: #d4af37; /* Dourado */
+  --text-color: #e0dbec;
+}
+
+
+
+body {
+  background-color: #030303;
+  color: #a3a3a3;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Efeito de Vinheta Cinematográfica nas bordas da tela */
+.cinematic-vignette {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 20%, rgba(0, 0, 0, 0.95) 100%);
+  pointer-events: none;
+  z-index: 40;
+}
+
+/* Linha fina ornamental divisória */
+.mystic-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b89742 50%, transparent);
+  opacity: 0.3;
+}
+
+/* Customização de Scrollbar estilo Grimório */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a0610;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8c0d1e;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card-bg);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--accent-color);
+}
+.navbar a { color: var(--text-color); text-decoration: none; }
+.nav-links { display: flex; list-style: none; gap: 1.5rem; margin: 0; }
+.nav-links a:hover { color: var(--accent-color); }
+
+/* Hero */
+.home-hero { text-align: center; padding: 3rem 1rem; }
+.home-hero h1 { color: var(--accent-color); font-size: 2.5rem; margin-bottom: 0.5rem; }
+
+/* Grid de Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #2a243d;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
+.card-image { height: 180px; background-size: cover; background-position: center; }
+.card-content { padding: 1.5rem; text-align: center; }
+.card-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.card-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+/* Páginas internas */
+.page-content { padding: 3rem; text-align: center; }
