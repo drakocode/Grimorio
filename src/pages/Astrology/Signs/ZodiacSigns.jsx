@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { zodiacData } from '../../../data/Astrology/zodiac'; 
-import ZodiacCard from '../../../components/ZodiacCard';
+import { zodiacData } from '../../../data/Astrology/signs/zodiac'; 
+import ZodiacCard from '../../../components/cards/ZodiacCard';
 
 const ZodiacSigns = () => {
   return (

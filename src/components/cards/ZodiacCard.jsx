@@ -26,7 +26,7 @@ const ZodiacCard = ({ sign }) => {
       className="group relative"
     >
       {/* Rota direciona para /astrologia/signos/:path */}
-      <Link to={`/astrologia/signos/${sign.path}`}>
+      <div>
         <div className="relative overflow-hidden bg-cathedral/90 backdrop-blur-md border border-white/[0.04] p-5 transition-all duration-500 shadow-inner-dark group-hover:border-purple-500/30 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]">
           
           {/* Cantoneiras do Grimório */}
@@ -69,15 +69,17 @@ const ZodiacCard = ({ sign }) => {
             </p>
             
             {/* Botão de Rito */}
-            <div className="pt-2">
-              <div className="w-full py-2 bg-black/30 border border-white/[0.05] text-[9px] tracking-[0.3em] text-silver uppercase text-center group-hover:border-purple-500/50 group-hover:text-white group-hover:bg-purple-950/20 transition-all duration-300">
-                Desvelar Arcanos
+            <Link to={`/astrologia/signos/${sign.path}`}>
+              <div className="pt-2">
+                <div className="w-full py-2 bg-black/30 border border-white/[0.05] text-[9px] tracking-[0.3em] text-silver uppercase text-center group-hover:border-purple-500/50 group-hover:text-white group-hover:bg-purple-950/20 transition-all duration-300">
+                  Desvelar Arcanos
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
         </div>
-      </Link>
+      </div>
     </motion.div>
   );
 };

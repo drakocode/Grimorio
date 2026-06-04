@@ -14,4 +14,4 @@ function Card({ titulo, descricao, imagem, link }) {
   );
 }
 
-export default Card;
+export default Card; 

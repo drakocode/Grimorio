@@ -10,7 +10,7 @@ const ContentCard = ({ item, categoryPath }) => {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className="group relative"
     >
-      <Link to={`/${categoryPath}/${item.path}`}>
+      <div >
         {/* Container do Card - Glassmorphism gótico */}
         <div className="relative overflow-hidden rounded-none bg-cathedral/80 backdrop-blur-md border border-white/[0.05] p-5 transition-all duration-500 shadow-inner-dark group-hover:border-crimson/40 group-hover:shadow-crimson-glow">
           
@@ -35,10 +35,10 @@ const ContentCard = ({ item, categoryPath }) => {
 
           {/* Conteúdo textual */}
           <div className="mt-5 space-y-3">
-            <div className="flex items-center gap-2 text-[10px] tracking-[0.3em] text-gold-faded uppercase">
+            {/* <div className="flex items-center gap-2 text-[10px] tracking-[0.3em] text-gold-faded uppercase">
               <span>✦</span>
               <span>Arcano Geral</span>
-            </div>
+            </div> */}
             
             <h3 className="text-xl font-serif font-medium tracking-[0.15em] text-white group-hover:text-gold-venerable transition-colors duration-300 uppercase">
               {item.title}
@@ -49,14 +49,14 @@ const ContentCard = ({ item, categoryPath }) => {
             </p>
             
             {/* Botão de Exploração Metálico/Sombrio */}
-            <div className="pt-3">
-              <div className="w-full text-center py-2 bg-black/40 border border-white/[0.08] text-[10px] tracking-[0.25em] text-silver uppercase group-hover:border-crimson group-hover:text-white group-hover:bg-wine/20 transition-all duration-300">
+            <Link to={`/${categoryPath}/${item.path}`}>
+              <div className="pt-3 w-full text-center py-2 bg-black/40 border border-white/[0.08] text-[10px] tracking-[0.25em] text-silver uppercase group-hover:border-crimson group-hover:text-white group-hover:bg-wine/20 transition-all duration-300">
                 Explorar Rito
               </div>
-            </div>
+            </Link>
           </div>
         </div>
-      </Link>
+      </div>
     </motion.div>
   );
 };

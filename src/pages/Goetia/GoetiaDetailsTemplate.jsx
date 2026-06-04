@@ -41,6 +41,7 @@ const GoetiaDetailsTemplate = () => {
      {/*  <div className="cinematic-vignette" /> */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-crimson/5 rounded-full blur-[140px] pointer-events-none z-0" />
 
+
       {/* ================= HERO SECTION RITUALÍSTICA ================= */}
       <section className="relative h-[70vh] w-full flex items-end justify-center overflow-hidden border-b border-white/[0.02]">
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/30 z-10" />
@@ -201,7 +202,7 @@ const GoetiaDetailsTemplate = () => {
               className="w-full sm:w-auto text-center text-[10px] font-serif tracking-[0.2em] text-silver/40 uppercase border border-white/[0.05] px-6 py-3.5 bg-white/[0.01] transition-all hover:border-crimson/40 hover:text-crimson flex items-center justify-center gap-2 group"
             >
               <span className="transition-transform group-hover:-translate-x-1">←</span> 
-              {goctiaDetailsData => goetiaDetailsData[prevKey]?.title || "Anterior"}
+              {goetiaDetailsData => goetiaDetailsData[prevKey]?.title || "Anterior"}
             </Link>
 
             {/* Retorno ao Grimório Central */}
@@ -217,7 +218,7 @@ const GoetiaDetailsTemplate = () => {
               to={`/goetia/daemons/${nextKey}`}
               className="w-full sm:w-auto text-center text-[10px] font-serif tracking-[0.2em] text-silver/40 uppercase border border-white/[0.05] px-6 py-3.5 bg-white/[0.01] transition-all hover:border-crimson/40 hover:text-crimson flex items-center justify-center gap-2 group"
             >
-              {goctiaDetailsData => goetiaDetailsData[nextKey]?.title || "Próximo"} 
+              {goetiaDetailsData => goetiaDetailsData[nextKey]?.title || "Próximo"} 
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
           </motion.section>

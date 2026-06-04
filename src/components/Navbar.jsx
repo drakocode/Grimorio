@@ -6,7 +6,7 @@ function Navbar() {
 const location = useLocation();
   
   const links = [
-    { name: 'Home', path: '/' },
+/*     { name: 'Home', path: '/' }, */
     { name: 'Astrologia', path: '/astrologia' },
     { name: 'Goetia', path: '/goetia' },
     { name: 'Tarot', path: '/tarot' }

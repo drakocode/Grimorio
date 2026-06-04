@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { signDetailsData } from '../../../data/Astrology/SignsDetailsData';
+import { signDetailsData } from '../../../data/Astrology/signs/SignsDetailsData';
 
 const SignDetailsTemplate = () => {
   const { id } = useParams();

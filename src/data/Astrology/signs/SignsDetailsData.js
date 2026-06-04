@@ -1,9 +1,22 @@
+import imgAries from '../../../assets/astrology/aries.jpeg';
+import imgTouro from '../../../assets/astrology/taurus.jpeg';
+import imgGemeos from '../../../assets/astrology/gemini.jpeg';
+import imgCancer from '../../../assets/astrology/cancer.jpeg';
+import imgLeao from '../../../assets/astrology/leo.jpeg';
+import imgVirgem from '../../../assets/astrology/virgo.jpeg';
+import imgLibra from '../../../assets/astrology/libra.jpeg';
+import imgEscorpião from '../../../assets/astrology/scorpio.jpeg';
+import imgSagitario from '../../../assets/astrology/sagittarius.jpeg';
+import imgCapricornio from '../../../assets/astrology/capricorn.jpeg';
+import imgAquario from '../../../assets/astrology/aquarius.jpeg';
+import imgPeixes from '../../../assets/astrology/pisces.jpeg';
+
 export const signDetailsData = {
   aries: {
     title: "Áries",
     symbol: "♈",
     archetype: "O Pioneiro do Caos Primordial e a Lâmina de Marte",
-    banner: "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=1200",
+    banner: imgAries,
     metadata: [
       { label: "Elemento", value: "Fogo", icon: "🜂" },
       { label: "Planeta Regente", value: "Marte", icon: "♂" },
@@ -51,7 +64,7 @@ export const signDetailsData = {
     title: "Touro",
     symbol: "♉",
     archetype: "O Construtor do Altar e o Guardião dos Mistérios da Matéria",
-    banner: "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=1200",
+    banner: imgTouro,
     metadata: [
       { label: "Elemento", value: "Terra", icon: "🜃" },
       { label: "Planeta Regente", value: "Vênus", icon: "♀" },
@@ -99,7 +112,7 @@ export const signDetailsData = {
     title: "Gêmeos",
     symbol: "♊",
     archetype: "O Tecelão do Verbo e o Mensageiro Entre Dois Mundos",
-    banner: "https://images.unsplash.com/photo-1532968315712-a1f0d7016366?w=1200",
+    banner: imgGemeos,
     metadata: [
       { label: "Elemento", value: "Ar", icon: "🜁" },
       { label: "Planeta Regente", value: "Mercúrio", icon: "☿" },
@@ -147,7 +160,7 @@ export const signDetailsData = {
     title: "Câncer",
     symbol: "♋",
     archetype: "O Guardião do Graal Emocional e o Tecedor do Tempo",
-    banner: "https://images.unsplash.com/photo-1504333638930-c8787321eba0?w=1200",
+    banner: imgCancer,
     metadata: [
       { label: "Elemento", value: "Água", icon: "🜄" },
       { label: "Planeta Regente", value: "Lua", icon: "☽" },
@@ -195,7 +208,7 @@ export const signDetailsData = {
     title: "Leão",
     symbol: "♌",
     archetype: "O Monarca Áureo do Self e a Força do Fogo Central",
-    banner: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200",
+    banner: imgLeao,
     metadata: [
       { label: "Elemento", value: "Fogo", icon: "🜂" },
       { label: "Planeta Regente", value: "Sol", icon: "☉" },
@@ -243,7 +256,7 @@ export const signDetailsData = {
     title: "Virgem",
     symbol: "♍",
     archetype: "O Alquimista da Ordem Cósmica e o Tecedor do Detalhe",
-    banner: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1200",
+    banner: imgVirgem,
     metadata: [
       { label: "Elemento", value: "Terra", icon: "🜃" },
       { label: "Planeta Regente", value: "Mercúrio", icon: "☿" },
@@ -291,7 +304,7 @@ export const signDetailsData = {
     title: "Libra",
     symbol: "♎",
     archetype: "O Geômetra da Justiça Cósmica e o Espelho da Harmonia",
-    banner: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=1200",
+    banner: imgLibra,
     metadata: [
       { label: "Elemento", value: "Ar", icon: "🜁" },
       { label: "Planeta Regente", value: "Vênus", icon: "♀" },
@@ -339,7 +352,7 @@ export const signDetailsData = {
     title: "Escorpião",
     symbol: "♏",
     archetype: "O Alquimista das Profundezas Ocultas e o Senhor da Fênix",
-    banner: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200",
+    banner: imgEscorpião,
     metadata: [
       { label: "Elemento", value: "Água", icon: "🜄" },
       { label: "Planeta Regente", value: "Plutão / Marte", icon: "♇" },
@@ -387,7 +400,7 @@ export const signDetailsData = {
     title: "Sagitário",
     symbol: "♐",
     archetype: "O Arqueiro do Infinito e o Peregrino da Verdade Oculta",
-    banner: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200",
+    banner: imgSagitario,
     metadata: [
       { label: "Elemento", value: "Fogo", icon: "🜂" },
       { label: "Planeta Regente", value: "Júpiter", icon: "♃" },
@@ -435,7 +448,7 @@ export const signDetailsData = {
     title: "Capricórnio",
     symbol: "♑",
     archetype: "O Arquiteto do Tempo e o Senhor do Trono de Rocha",
-    banner: "https://images.unsplash.com/photo-1447433589675-4adf569200c8?w=1200",
+    banner: imgCapricornio,
     metadata: [
       { label: "Elemento", value: "Terra", icon: "🜃" },
       { label: "Planeta Regente", value: "Saturno", icon: "♄" },
@@ -483,7 +496,7 @@ export const signDetailsData = {
     title: "Aquário",
     symbol: "♒",
     archetype: "O Visionário do Caos Cósmico e o Portador do Éter do Futuro",
-    banner: "https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=1200",
+    banner: imgAquario,
     metadata: [
       { label: "Elemento", value: "Ar", icon: "🜁" },
       { label: "Planeta Regente", value: "Urano / Saturno", icon: "♅" },
@@ -531,7 +544,7 @@ export const signDetailsData = {
     title: "Peixes",
     symbol: "♓",
     archetype: "O Místico do Oceano Cósmico e o Dissolvedor do Ego",
-    banner: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200",
+    banner: imgPeixes,
     metadata: [
       { label: "Elemento", value: "Água", icon: "🜄" },
       { label: "Planeta Regente", value: "Netuno / Júpiter", icon: "♆" },

@@ -1,6 +1,6 @@
 import CategoryLayout from '../components/CategoryLayout';
-import { categoryData } from '../data/contents';
+import { TarotCategoryData } from '../data/tarot/tarotContents';
 
 export default function Tarot() {
-  return <CategoryLayout data={categoryData.tarot} categorySlug="tarot" />;
+  return <CategoryLayout data={TarotCategoryData.tarot} categorySlug="tarot" />;
 }

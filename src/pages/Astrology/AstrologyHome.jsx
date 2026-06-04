@@ -1,4 +1,4 @@
-import CategoryLayout from '../../components/CategoryLayout';
+import CategoryLayout from '../../components/layout/CategoryLayout';
 import { AstrologyCategoryData } from '../../data/Astrology/astrologyContents';
 
 export default function Astrologia() {
