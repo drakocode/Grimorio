@@ -14,7 +14,7 @@ import TarotDetailsTemplate from "./pages/Tarot/TarotDetailsTemplate";
 
 /* import DynamicDetails from './pages/DynamicDetails'; */
 import SignDetailsTemplate from "./pages/Astrology/Signs/SignDetailsTemplate";
-import "./Styles/App.css";
+import "./Styles/app.css";
  
 function App() {
   return (
