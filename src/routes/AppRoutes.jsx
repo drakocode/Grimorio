@@ -11,6 +11,16 @@ export default function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/signs" element={<Signs />} />
         <Route path="/tarot" element={<Tarot />} />
+
+        {/* Rota de Fallback para links quebrados (Opcional) */}
+        <Route
+          path="*"
+          element={
+            <div className="text-white text-center pt-24 font-serif">
+              404 • Portal Oculto
+            </div>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

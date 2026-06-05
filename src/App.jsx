@@ -10,12 +10,14 @@ import GoetiaDetailsTemplate from "./pages/Goetia/GoetiaDetailsTemplate";
 import TarotHome from "./pages/Tarot/TarotHome";
 import TarotGallery from "./pages/Tarot/TarotGallery";
 import TarotDetailsTemplate from "./pages/Tarot/TarotDetailsTemplate";
+import TarotMenoresGallery from "./pages/Tarot/TarotMenoresGallery";
+import TarotMenoresDetails from "./pages/Tarot/TarotMenoresDetailsTemplate";
 /* import DynamicDetails from "./pages/DynamicDetails"; */
 
 /* import DynamicDetails from './pages/DynamicDetails'; */
 import SignDetailsTemplate from "./pages/Astrology/Signs/SignDetailsTemplate";
 import "./styles/App.css";
-  
+
 function App() {
   return (
     <Router>
@@ -43,14 +45,32 @@ function App() {
           />
 
           {/* ESTRUTURA BLINDADA DO SETOR DE TAROT */}
-        {/* Rota 1: Portal Geral /tarot */}
-        <Route path="/tarot" element={<TarotHome />} />
+          {/* Rota 1: Portal Geral /tarot */}
+          <Route path="/tarot" element={<TarotHome />} />
 
-        {/* Rota 2: Galeria de Lâminas /tarot/arcanos-maiores */}
-        <Route path="/tarot/arcanos-maiores" element={<TarotGallery />} />
+          {/* Rota 2: Galeria de Lâminas /tarot/arcanos */}
+          <Route path="/tarot/arcanos-maiores" element={<TarotGallery />} />
 
-        {/* Rota 3: Visualização do Arcano /tarot/arcanos-maiores/:id */}
-        <Route path="/tarot/arcanos-maiores/:id" element={<TarotDetailsTemplate />} />
+          {/* Rota 3: Visualização do Arcano /tarot/arcanos-maiores/:id */}
+          <Route
+            path="/tarot/arcanos-maiores/:id"
+            element={<TarotDetailsTemplate />}
+          />
+          {/* 2. ADICIONAR A NOVA ROTA PARA OS ARCANOS MENORES */}
+          <Route
+            path="/tarot/arcanos-menores"
+            element={<TarotMenoresGallery />}
+          />
+{/* Caminho Dinâmico para a Lâmina Individual usando o parâmetro ':id' */}
+        <Route path="/tarot/arcanos-menores/:id" element={<TarotMenoresDetails />} />
+
+
+          {/* Rota de Fallback para links quebrados (Opcional) */}
+          <Route path="*" element={<div className="text-white text-center pt-24 font-serif">404 • Portal Oculto</div>} />
+        
+        
+        
+        
         </Routes>
       </div>
     </Router>

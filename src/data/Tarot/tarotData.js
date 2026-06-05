@@ -1,6 +1,29 @@
 import imgMajorArcana from '../../assets/tarot/majorArcana.jpeg';
 import imgMinorArcana from '../../assets/tarot/minorArcana.jpeg';
 
+import imgLouco from "../../assets/tarot/majorArcana/0.jpg";
+import imgMago from "../../assets/tarot/majorArcana/1.jpg";
+import imgSacerdotisa from "../../assets/tarot/majorArcana/2.jpg";
+import imgImperatriz from "../../assets/tarot/majorArcana/3.jpg";
+import imgImperador from "../../assets/tarot/majorArcana/4.jpg";
+import imgHierofante from "../../assets/tarot/majorArcana/5.jpg";
+import imgEnamorados from "../../assets/tarot/majorArcana/6.jpg";
+import imgCarro from "../../assets/tarot/majorArcana/7.jpg";
+import imgForca from "../../assets/tarot/majorArcana/8.jpg";
+import imgEremita from "../../assets/tarot/majorArcana/9.jpg";
+import imgRoda from "../../assets/tarot/majorArcana/10.jpg";
+import imgJustica from "../../assets/tarot/majorArcana/11.jpg";
+import imgEnforcado from "../../assets/tarot/majorArcana/12.jpg";
+import imgMorte from "../../assets/tarot/majorArcana/13.jpg";
+import imgTemperanca from "../../assets/tarot/majorArcana/14.jpg";
+import imgDiabo from "../../assets/tarot/majorArcana/15.jpg";
+import imgTorre from "../../assets/tarot/majorArcana/16.jpg";
+import imgEstrela from "../../assets/tarot/majorArcana/17.jpg";
+import imgLua from "../../assets/tarot/majorArcana/18.jpg";
+import imgSol from "../../assets/tarot/majorArcana/19.jpg";
+import imgJulgamento from "../../assets/tarot/majorArcana/20.jpg";
+import imgMundo from "../../assets/tarot/majorArcana/21.jpg";
+
 
 
 // Categorias do Portal de Tarot
@@ -27,7 +50,7 @@ export const tarotCardsData = {
     number: "0",
     title: "O Louco",
     archetype: "O Início Espiritual, Potencial Puro, Fé Cega, Liberdade Absoluta.",
-    banner: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200",
+    banner: imgLouco,
     metadata: [
       { label: "Elemento", value: "Ar", icon: "🜁" },
       { label: "Astro Regente", value: "Urano", icon: "♅" },
@@ -41,7 +64,7 @@ export const tarotCardsData = {
     number: "I",
     title: "O Mago",
     archetype: "A Vontade Direcionada, Maestria Elemental, Manifestação Prática.",
-    banner: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200",
+    banner: imgMago,
     metadata: [
       { label: "Elemento", value: "Ar / Fogo", icon: "🜂" },
       { label: "Astro Regente", value: "Mercúrio", icon: "☿" },
@@ -55,7 +78,7 @@ export const tarotCardsData = {
     number: "II",
     title: "A Sacerdotisa",
     archetype: "O Inconsciente Sagrado, Intuição Pura, Mistério Cósmico, Sabedoria Silenciosa.",
-    banner: "https://images.unsplash.com/photo-1504333638930-c8787321eba0?w=1200",
+    banner: imgSacerdotisa,
     metadata: [
       { label: "Elemento", value: "Água", icon: "🜄" },
       { label: "Astro Regente", value: "Lua", icon: "☽" },
@@ -69,7 +92,7 @@ export const tarotCardsData = {
     number: "III",
     title: "A Imperatriz",
     archetype: "A Abundância Sagrada, Criatividade Transbordante, Natureza Viva, Fertilidade.",
-    banner: "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=1200",
+    banner: imgImperatriz,
     metadata: [
       { label: "Elemento", value: "Terra", icon: "🜃" },
       { label: "Astro Regente", value: "Vênus", icon: "♀" },
@@ -83,7 +106,7 @@ export const tarotCardsData = {
     number: "IV",
     title: "O Imperador",
     archetype: "A Estrutura Firme, Autoridade Justa, Ordem Social, Estabilidade Concreta.",
-    banner: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200",
+    banner: imgImperador,
     metadata: [
       { label: "Elemento", value: "Fogo", icon: "🜂" },
       { label: "Signo Regente", value: "Áries", icon: "♈" },
@@ -97,7 +120,7 @@ export const tarotCardsData = {
     number: "V",
     title: "O Hierofante",
     archetype: "A Tradição Sagrada, Ensino Espiritual, Alinhamento Ortodoxo, Portador das Chaves.",
-    banner: "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=1200",
+    banner: imgHierofante,
     metadata: [
       { label: "Elemento", value: "Terra", icon: "🜃" },
       { label: "Signo Regente", value: "Touro", icon: "♉" },
@@ -111,7 +134,7 @@ export const tarotCardsData = {
     number: "VI",
     title: "Os Enamorados",
     archetype: "A Escolha Sagrada, Alinhamento de Valores, Conexão de Almas, Dualidade Coesa.",
-    banner: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200",
+    banner: imgEnamorados,
     metadata: [
       { label: "Elemento", value: "Ar", icon: "🜁" },
       { label: "Signo Regente", value: "Gêmeos", icon: "♊" },
@@ -125,7 +148,7 @@ export const tarotCardsData = {
     number: "VII",
     title: "O Carro",
     archetype: "A Vontade Triunfante, Direcionamento de Forças Opostas, Domínio do Ego.",
-    banner: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200",
+    banner: imgCarro,
     metadata: [
       { label: "Elemento", value: "Água", icon: "🜄" },
       { label: "Signo Regente", value: "Câncer", icon: "♋" },
@@ -139,7 +162,7 @@ export const tarotCardsData = {
     number: "VIII",
     title: "A Força",
     archetype: "A Coragem Mansa, Domínio dos Instintos Primais, Alquimia Emocional.",
-    banner: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=1200",
+    banner: imgForca,
     metadata: [
       { label: "Elemento", value: "Fogo", icon: "🜂" },
       { label: "Signo Regente", value: "Leão", icon: "♌" },
@@ -153,7 +176,7 @@ export const tarotCardsData = {
     number: "IX",
     title: "O Eremita",
     archetype: "A Busca Interior, Iluminação Solitária, Mentor da Alma, Prudência.",
-    banner: "https://images.unsplash.com/photo-1447433589675-4adf569200c1?w=1200",
+    banner: imgEremita,
     metadata: [
       { label: "Elemento", value: "Terra", icon: "🜃" },
       { label: "Signo Regente", value: "Virgem", icon: "♍" },
@@ -167,7 +190,7 @@ export const tarotCardsData = {
     number: "X",
     title: "A Roda da Fortuna",
     archetype: "Os Ciclos Cósmicos, Sincronicidade Espetacular, Mudança Inevitável.",
-    banner: "https://images.unsplash.com/photo-1461360370896-922624d12aa1?w=1200",
+    banner: imgRoda,
     metadata: [
       { label: "Elemento", value: "Fogo", icon: "🜂" },
       { label: "Astro Regente", value: "Júpiter", icon: "♃" },
@@ -181,7 +204,7 @@ export const tarotCardsData = {
     number: "XI",
     title: "A Justiça",
     archetype: "O Equilíbrio Kármico, Verdade Nua e Crua, Causa e Efeito, Rigor Absoluto.",
-    banner: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200",
+    banner: imgJustica,
     metadata: [
       { label: "Elemento", value: "Ar", icon: "🜁" },
       { label: "Signo Regente", value: "Libra", icon: "♎" },
@@ -195,7 +218,7 @@ export const tarotCardsData = {
     number: "XII",
     title: "O Enforcado",
     archetype: "O Sacrifício Iluminado, Nova Perspectiva, Pausa Estratégica, Rendição.",
-    banner: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200",
+    banner: imgEnforcado,
     metadata: [
       { label: "Elemento", value: "Água", icon: "🜄" },
       { label: "Astro Regente", value: "Netuno", icon: "♆" },
@@ -209,7 +232,7 @@ export const tarotCardsData = {
     number: "XIII",
     title: "A Morte",
     archetype: "A Transmutação Radical, Fim Necessário, Renascimento da Alma.",
-    banner: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=1200",
+    banner: imgMorte,
     metadata: [
       { label: "Elemento", value: "Água", icon: "🜄" },
       { label: "Signo Regente", value: "Escorpião", icon: "♏" },
@@ -223,7 +246,7 @@ export const tarotCardsData = {
     number: "XIV",
     title: "A Temperança",
     archetype: "A Alquimia Divina, Fluxo Harmonioso, Equilíbrio de Opostos, Cura Essencial.",
-    banner: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200",
+    banner: imgTemperanca,
     metadata: [
       { label: "Elemento", value: "Fogo", icon: "🜂" },
       { label: "Signo Regente", value: "Sagitário", icon: "♐" },
@@ -237,7 +260,7 @@ export const tarotCardsData = {
     number: "XV",
     title: "O Diabo",
     archetype: "As Amarras Ilusórias, Sombra Psíquica, Força Material, Desejo Primal.",
-    banner: "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200",
+    banner: imgDiabo,
     metadata: [
       { label: "Elemento", value: "Terra", icon: "🜃" },
       { label: "Signo Regente", value: "Capricórnio", icon: "♑" },
@@ -251,7 +274,7 @@ export const tarotCardsData = {
     number: "XVI",
     title: "A Torre",
     archetype: "A Ruína Iluminadora, Destruição de Ilusões, Choque de Realidade.",
-    banner: "https://images.unsplash.com/photo-1533669955142-6a73332af4db?w=1200",
+    banner: imgTorre,
     metadata: [
       { label: "Elemento", value: "Fogo", icon: "🜂" },
       { label: "Astro Regente", value: "Marte", icon: "♂" },
@@ -265,7 +288,7 @@ export const tarotCardsData = {
     number: "XVII",
     title: "A Estrela",
     archetype: "A Esperança Renovada, Alinhamento Cósmico, Inspiração Divina, Serenidade.",
-    banner: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1200",
+    banner: imgEstrela,
     metadata: [
       { label: "Elemento", value: "Ar", icon: "🜁" },
       { label: "Signo Regente", value: "Aquário", icon: "♒" },
@@ -279,7 +302,7 @@ export const tarotCardsData = {
     number: "XVIII",
     title: "A Lua",
     archetype: "A Noite Escura da Alma, Ilusão Fantasmagórica, Instinto Profundo.",
-    banner: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200",
+    banner: imgLua,
     metadata: [
       { label: "Elemento", value: "Água", icon: "🜄" },
       { label: "Signo Regente", value: "Peixes", icon: "♓" },
@@ -293,7 +316,7 @@ export const tarotCardsData = {
     number: "XIX",
     title: "O Sol",
     archetype: "A Clareza Absoluta, Vitalidade Radiante, Verdade Revelada, Sucesso.",
-    banner: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200",
+    banner: imgSol,
     metadata: [
       { label: "Elemento", value: "Fogo", icon: "🜂" },
       { label: "Astro Regente", value: "Sol", icon: "☉" },
@@ -307,7 +330,7 @@ export const tarotCardsData = {
     number: "XX",
     title: "O Julgamento",
     archetype: "O Despertar Espiritual, O Chamado da Consciência, Absolvição, Redenção.",
-    banner: "https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=1200",
+    banner: imgJulgamento,
     metadata: [
       { label: "Elemento", value: "Fogo", icon: "🜂" },
       { label: "Astro Regente", value: "Plutão", icon: "♇" },
@@ -321,7 +344,7 @@ export const tarotCardsData = {
     number: "XXI",
     title: "O Mundo",
     archetype: "A Apoteose, Integração Total, Encerramento Perfeito, Plenitude Máxima.",
-    banner: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200",
+    banner: imgMundo,
     metadata: [
       { label: "Elemento", value: "Terra", icon: "🜃" },
       { label: "Astro Regente", value: "Saturno", icon: "♄" },
