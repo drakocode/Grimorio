@@ -23,4 +23,12 @@ export const homeSections = [
         "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=500", // Imagem temporária
       link: "/tarot",
     },
+    {
+      titulo: "Oráculo",
+      descricao:
+        "Explore as diversas formas de oráculos e suas aplicações para a adivinhação.",
+      imagem:
+        "https://images.unsplash.com/photo-1504333638930-c8787321eba0?w=500", // Imagem temporária
+      link: "/oraculo",
+    }
   ];

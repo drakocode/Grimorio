@@ -32,6 +32,7 @@ function Navbar() {
       subcategories: [
         { name: "Arcanos Maiores", path: "/tarot/arcanos-maiores" },
         { name: "Arcanos Menores", path: "/tarot/arcanos-menores" },
+        { name: "Oráculo", path: "/tarot/oraculo" }
       ],
     },
   ];

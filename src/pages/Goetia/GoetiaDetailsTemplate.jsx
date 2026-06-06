@@ -3,9 +3,17 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { goetiaDetailsData } from '../../data/Goetia/goetiaDetails';
 
-// Ordem dos Daemons para o sistema de navegação anterior/próximo
-const DAEMON_ORDER = ["bael", "paimon"]; // Adicione os novos slugs aqui conforme expandir
-
+// Ordem dos 72 Daemons para o sistema de navegação anterior/próximo
+const DAEMON_ORDER = [
+  "bael", "agares", "vassago", "samigina", "marbas", "valefor", "amon", "barbatos", "paimon", "buer",
+  "gusion", "sitri", "beleth", "leraje", "eligos", "zepar", "botis", "bathin", "sallos", "purson",
+  "marax", "ipos", "aim", "naberius", "glaysa-labolas", "bune", "ronove", "berith", "astaroth", "forneus",
+  "foras", "asmodeus", "gaap", "furfur", "marchosias", "stolas", "phenex", "malthus", "malphas", "raum",
+  "focalor", "vepar", "sabnock", "shax", "vine", "bifrons", "vual", "haagenti", "crocell", "furcas",
+  "balam", "allocer", "camio", "murmur", "oro bas", "gremory", "ose", "amy", "oriash", "vapula",
+  "zagan", "valac", "andras", "haures", "andrealphus", "cimejes", "amdusias", "belial", "decarabia", "seere",
+  "dantalion", "andromalius"
+];
 const GoetiaDetailsTemplate = () => {
   const { id } = useParams();
 
@@ -190,38 +198,38 @@ const GoetiaDetailsTemplate = () => {
           </motion.section>
 
           {/* ================= CONTROLADORES DE NAVEGAÇÃO ENTRE ENTIDADES ================= */}
-          <motion.section 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="pt-8 border-t border-white/[0.03] flex flex-col sm:flex-row items-center justify-between gap-4"
-          >
-            {/* Botão Daemon Anterior */}
-            <Link 
-              to={`/goetia/daemons/${prevKey}`}
-              className="w-full sm:w-auto text-center text-[10px] font-serif tracking-[0.2em] text-silver/40 uppercase border border-white/[0.05] px-6 py-3.5 bg-white/[0.01] transition-all hover:border-crimson/40 hover:text-crimson flex items-center justify-center gap-2 group"
-            >
-              <span className="transition-transform group-hover:-translate-x-1">←</span> 
-              {goetiaDetailsData => goetiaDetailsData[prevKey]?.title || "Anterior"}
-            </Link>
+<motion.section 
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  className="pt-8 border-t border-white/[0.03] flex flex-col sm:flex-row items-center justify-between gap-4"
+>
+  {/* Botão Daemon Anterior */}
+  <Link 
+    to={`/goetia/daemons/${prevKey}`}
+    className="w-full sm:w-auto text-center text-[10px] font-serif tracking-[0.2em] text-silver/40 uppercase border border-white/[0.05] px-6 py-3.5 bg-white/[0.01] transition-all hover:border-crimson/40 hover:text-crimson flex items-center justify-center gap-2 group"
+  >
+    <span className="transition-transform group-hover:-translate-x-1">←</span> 
+    {goetiaDetailsData[prevKey]?.title || "Anterior"}
+  </Link>
 
-            {/* Retorno ao Grimório Central */}
-            <Link 
-              to="/goetia/daemons"
-              className="w-full sm:w-auto text-center text-[9px] font-serif tracking-[0.3em] text-gold-venerable/50 uppercase px-6 py-3 hover:text-gold-venerable transition-colors"
-            >
-              🜹 Voltar ao Catálogo Goético
-            </Link>
+  {/* Retorno ao Grimório Central */}
+  <Link 
+    to="/goetia/daemons"
+    className="w-full sm:w-auto text-center text-[9px] font-serif tracking-[0.3em] text-gold-venerable/50 uppercase px-6 py-3 hover:text-gold-venerable transition-colors"
+  >
+    🜹 Voltar ao Catálogo Goético
+  </Link>
 
-            {/* Botão Próximo Daemon */}
-            <Link 
-              to={`/goetia/daemons/${nextKey}`}
-              className="w-full sm:w-auto text-center text-[10px] font-serif tracking-[0.2em] text-silver/40 uppercase border border-white/[0.05] px-6 py-3.5 bg-white/[0.01] transition-all hover:border-crimson/40 hover:text-crimson flex items-center justify-center gap-2 group"
-            >
-              {goetiaDetailsData => goetiaDetailsData[nextKey]?.title || "Próximo"} 
-              <span className="transition-transform group-hover:translate-x-1">→</span>
-            </Link>
-          </motion.section>
+  {/* Botão Próximo Daemon */}
+  <Link 
+    to={`/goetia/daemons/${nextKey}`}
+    className="w-full sm:w-auto text-center text-[10px] font-serif tracking-[0.2em] text-silver/40 uppercase border border-white/[0.05] px-6 py-3.5 bg-white/[0.01] transition-all hover:border-crimson/40 hover:text-crimson flex items-center justify-center gap-2 group"
+  >
+    {goetiaDetailsData[nextKey]?.title || "Próximo"} 
+    <span className="transition-transform group-hover:translate-x-1">→</span>
+  </Link>
+</motion.section>
 
           {/* Detalhe Decorativo de Fundo de Texto de Roda */}
           <div className="text-center pt-4 opacity-10 font-serif text-[10px] uppercase tracking-[0.4em] select-none">

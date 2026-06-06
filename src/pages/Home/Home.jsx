@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import imgGoetia from '../../assets/goetiaHome.jpeg';
 import imgAstrology from '../../assets/astrologyHome.jpeg';
 import imgTarot from '../../assets/tarotHome.jpeg';
+import imgOraculo from '../../assets/tarot/tiragens.jpeg';
 
 // Função auxiliar simétrica para injetar estilos baseados na tradição ocultista de cada portal
 const getPortalStyle = (titulo) => {
@@ -11,6 +12,7 @@ const getPortalStyle = (titulo) => {
   if (cleanTitle.includes('astrologia')) return 'text-gold-venerable border-gold-venerable/30 bg-gold-venerable/5';
   if (cleanTitle.includes('goetia')) return 'text-crimson border-crimson/30 bg-wine/10';
   if (cleanTitle.includes('tarot')) return 'text-purple-400 border-purple-400/30 bg-purple-900/10';
+  if (cleanTitle.includes('oráculo')) return 'text-gold-venerable border-gold-venerable/30 bg-gold-venerable/5';
   return 'text-silver border-silver/30 bg-white/5';
 };
 
@@ -37,6 +39,13 @@ function Home() {
       imagem: imgTarot,
       link: "/tarot",
     },
+    {
+      titulo: "Oráculo",
+      sub: "Sapientia Divina",
+      descricao: "Explore as diversas formas de oráculos e suas aplicações para a adivinhação.",
+      imagem: imgOraculo,
+      link: "/tarot/oraculo",
+    }
   ];
 
   // Orquestração das animações de entrada (Stagger)

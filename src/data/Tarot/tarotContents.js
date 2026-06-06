@@ -1,5 +1,6 @@
 import imgMajorArcana from '../../assets/tarot/majorArcana.jpeg';
 import imgMinorArcana from '../../assets/tarot/minorArcana.jpeg';
+import imgTiragens from '../../assets/tarot/tiragens.jpeg';
 
 export const TarotCategoryData = {  
   tarot: {
@@ -19,6 +20,13 @@ export const TarotCategoryData = {
     desc: "As 56 lâminas cotidianas que regem os eventos práticos, dinâmicas mentais e o plano material.",
     img: imgMinorArcana,
     path: "arcanos-menores"
+  },
+  {
+    id: 3,
+    title: "Oráculo",
+    desc: "As diferentes formas de tirar o tarot, cada uma com seu próprio significado e aplicação.",
+    img: imgTiragens,
+    path: "oraculo"
   }]
   }
 };

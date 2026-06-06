@@ -34,7 +34,7 @@ const TarotGallery = () => {
       <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold-venerable/5 rounded-full blur-[160px] pointer-events-none z-0" />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-         {/* ================= HERO SECTION CINEMATOGRÁFICA ================= */}
+              {/* ================= HERO SECTION CINEMATOGRÁFICA ================= */}
               <section className="relative h-[65vh] flex flex-col justify-center items-center text-center px-6 border-b border-white/[0.02]">
                 <motion.div
                   initial={{ opacity: 0, letterSpacing: "0.1em" }}

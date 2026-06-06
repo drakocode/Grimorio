@@ -100,3 +100,62 @@ body {
 
 /* Páginas internas */
 .page-content { padding: 3rem; text-align: center; }
+
+
+@layer utilities {
+  /* ================= SISTEMA 3D PARA VIRADA DE CARTAS ================= */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  /* ================= ILUMINAÇÃO DE MESA DE RITUAL ================= */
+  .shadow-abyss-deep {
+    box-shadow: 
+      0 30px 60px -15px rgba(0, 0, 0, 0.9),
+      0 0 50px 0 rgba(139, 0, 0, 0.05);
+  }
+
+  .shadow-gold-pulse {
+    box-shadow: 
+      0 0 25px -5px rgba(184, 134, 11, 0.2),
+      inset 0 0 12px rgba(184, 134, 11, 0.1);
+  }
+
+  /* ================= PADRÕES DO VERSO DA CARTA (DORSO) ================= */
+  /* Textura esotérica sutil para o fundo das cartas não reveladas */
+  .bg-arcane-back {
+    background-color: #050505;
+    background-image: 
+      radial-gradient(circle at center, rgba(139, 0, 0, 0.15) 0%, transparent 75%),
+      linear-gradient(45deg, rgba(255,255,255,0.01) 25%, transparent 25%), 
+      linear-gradient(-45deg, rgba(255,255,255,0.01) 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.01) 75%), 
+      linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.01) 75%);
+    background-size: 100% 100%, 16px 16px, 16px 16px, 16px 16px, 16px 16px;
+  }
+}
+
+/* ================= ANIMAÇÃO DE FLUTUAÇÃO MÍSTICA ================= */
+@keyframes astralFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.7));
+  }
+  50% {
+    transform: translateY(-6px) scale(1.01);
+    filter: drop-shadow(0 15px 25px rgba(139, 0, 0, 0.15));
+  }
+}
+
+.animate-astral-float {
+  animation: astralFloat 6s ease-in-out infinite;
+}

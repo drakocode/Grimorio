@@ -12,6 +12,7 @@ import TarotGallery from "./pages/Tarot/TarotGallery";
 import TarotDetailsTemplate from "./pages/Tarot/TarotDetailsTemplate";
 import TarotMenoresGallery from "./pages/Tarot/TarotMenoresGallery";
 import TarotMenoresDetails from "./pages/Tarot/TarotMenoresDetailsTemplate";
+import TarotSpreads from "./pages/Tarot/TarotSpreads";
 /* import DynamicDetails from "./pages/DynamicDetails"; */
 
 /* import DynamicDetails from './pages/DynamicDetails'; */
@@ -26,7 +27,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
 
-          {/* NAVEGAÇÃO DA CATEGORIA ASTROLOGIA */}
+          {/* 
+          
+          
+          NAVEGAÇÃO DA CATEGORIA ASTROLOGIA 
+          
+          
+          */}
           <Route path="/astrologia" element={<Astrologia />} />
           <Route path="/astrologia/signos" element={<ZodiacSigns />} />
           <Route
@@ -34,7 +41,13 @@ function App() {
             element={<SignDetailsTemplate />}
           />
 
-          {/* NAVEGAÇÃO DA CATEGORIA GOETIA */}
+          {/* 
+          
+          
+          NAVEGAÇÃO DA CATEGORIA GOETIA 
+          
+          
+          */}
           <Route path="/goetia" element={<Goetia />} />
           {/* Rota Principal de Listagem dos 72 Daemons */}
           <Route path="/goetia/daemons" element={<GoetiaGallery />} />
@@ -44,7 +57,13 @@ function App() {
             element={<GoetiaDetailsTemplate />}
           />
 
-          {/* ESTRUTURA BLINDADA DO SETOR DE TAROT */}
+          {/* 
+          
+
+          ESTRUTURA BLINDADA DO SETOR DE TAROT 
+          
+          
+          */}
           {/* Rota 1: Portal Geral /tarot */}
           <Route path="/tarot" element={<TarotHome />} />
 
@@ -61,16 +80,29 @@ function App() {
             path="/tarot/arcanos-menores"
             element={<TarotMenoresGallery />}
           />
-{/* Caminho Dinâmico para a Lâmina Individual usando o parâmetro ':id' */}
-        <Route path="/tarot/arcanos-menores/:id" element={<TarotMenoresDetails />} />
+          {/* Caminho Dinâmico para a Lâmina Individual usando o parâmetro ':id' */}
+          <Route
+            path="/tarot/arcanos-menores/:id"
+            element={<TarotMenoresDetails />}
+          />
 
+          <Route path="/tarot/oraculo" element={<TarotSpreads />} />
 
-          {/* Rota de Fallback para links quebrados (Opcional) */}
-          <Route path="*" element={<div className="text-white text-center pt-24 font-serif">404 • Portal Oculto</div>} />
-        
-        
-        
-        
+          {/* 
+          
+          
+          Rota de Fallback para links quebrados (Opcional) 
+          
+          
+          */}
+          <Route
+            path="*"
+            element={
+              <div className="text-white text-center pt-24 font-serif">
+                404 • Portal Oculto
+              </div>
+            }
+          />
         </Routes>
       </div>
     </Router>
