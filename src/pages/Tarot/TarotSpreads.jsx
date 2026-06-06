@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
 // IMPORTAÇÃO DOS DADOS ORIGINAIS DOS ARCANOS
-import { tarotDetailsData } from "../../data/tarot/tarotDetails";
+import { tarotDetailsData } from "../../data/Tarot/tarotDetails";
 
 // Métodos de tiragem disponíveis na mesa ritualística
 const SPREADS = [
