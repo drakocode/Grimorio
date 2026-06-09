@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from '../components/mainLayout/Layout';
-import Home from '../pages/Home/Home';
+import Home from '../pages/home/Home';
 
 // Importações do Módulo Tarot
 import TarotHome from '../pages/tarot/TarotHome';
