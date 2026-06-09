@@ -1,4 +1,4 @@
-import { homeManifesto, grimoireSectors } from '../../data/Home/homeData';
+import { homeManifesto, grimoireSectors } from '../../data/home/homeData';
 import RitualGrid from '../../components/grid/Grid';
 import OccultCard from '../../components/cards/Card';
 import { useRitualScroll } from '../../hooks/useRitualScroll';
