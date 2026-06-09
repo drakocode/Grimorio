@@ -1,0 +1,121 @@
+.astrology-page-container {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  gap: 60px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.astrology-telemetry-panel {
+  position: relative;
+  border-right: var(--border-sharp);
+  padding-right: 40px;
+}
+
+.sticky-panel-content {
+  position: sticky;
+  top: 140px;
+  left: 0;
+}
+
+.archive-tag {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.astrology-main-title {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--color-ghost);
+}
+
+.astrology-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-crimson) 0%, transparent 100%);
+  margin: 24px 0;
+}
+
+.astrology-manifesto-text {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* Caixa de Telemetria */
+.live-telemetry-box {
+  background: rgba(26, 26, 34, 0.3);
+  border: var(--border-sharp);
+  padding: 20px;
+}
+
+.telemetry-header {
+  font-size: 0.75rem;
+  color: var(--color-ghost);
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(176, 141, 87, 0.1);
+  padding-bottom: 10px;
+}
+
+.pulse-indicator {
+  width: 6px;
+  height: 6px;
+  background: var(--color-gold);
+  box-shadow: 0 0 8px var(--color-gold);
+  border-radius: 50% !important; /* Exceção funcional para sinalizadores puramente esféricos */
+}
+
+.telemetry-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.telemetry-table th {
+  color: var(--color-muted);
+  font-weight: 400;
+  padding-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.telemetry-table td {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(243, 240, 247, 0.03);
+  color: var(--color-ghost);
+}
+
+.text-gold { color: var(--color-gold); }
+.text-crimson { color: var(--color-crimson); }
+
+.stream-header-tag {
+  font-size: 0.8rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+/* Responsividade Arquitetural */
+@media (max-width: 1100px) {
+  .astrology-page-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .astrology-telemetry-panel {
+    border-right: none;
+    border-bottom: var(--border-sharp);
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+  .sticky-panel-content {
+    position: relative;
+    top: 0;
+  }
+}

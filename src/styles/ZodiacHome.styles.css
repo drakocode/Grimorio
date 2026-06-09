@@ -1,0 +1,190 @@
+.zodiac-page-container {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  gap: 60px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.zodiac-filter-panel {
+  position: relative;
+  border-right: var(--border-sharp);
+  padding-right: 40px;
+}
+
+.sticky-zodiac-content {
+  position: sticky;
+  top: 140px;
+  left: 0;
+}
+
+.zodiac-archive-tag {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.zodiac-main-title {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--color-ghost);
+}
+
+.zodiac-architectural-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-crimson) 0%, transparent 100%);
+  margin: 24px 0;
+}
+
+.zodiac-description-text {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Grupos de Filtros */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.filter-label {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  letter-spacing: 0.1em;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-btn {
+  background: var(--color-charcoal);
+  border: 1px solid rgba(176, 141, 87, 0.1);
+  color: var(--color-muted);
+  padding: 6px 14px;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: var(--transition-ceremonial);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-crimson);
+  color: var(--color-ghost);
+}
+
+.filter-btn.active {
+  background: var(--color-crimson);
+  border-color: var(--color-crimson);
+  color: var(--color-ghost);
+}
+
+/* Painel de Telemetria */
+.zodiac-telemetry {
+  background: rgba(11, 11, 15, 0.4);
+  border: var(--border-sharp);
+  padding: 20px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.telemetry-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px dashed rgba(176, 141, 87, 0.1);
+  padding-bottom: 8px;
+}
+
+.telemetry-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tel-label {
+  color: var(--color-muted);
+}
+
+.tel-value {
+  color: var(--color-ghost);
+}
+
+.text-gold { color: var(--color-gold); }
+.text-crimson { color: var(--color-crimson); }
+
+/* Stream Grid */
+.zodiac-stream-tag {
+  font-size: 0.8rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.zodiac-grid-override {
+  gap: 20px !important;
+}
+
+/* Fallback do filtro vazio */
+.no-signs-found {
+  text-align: center;
+  padding: 80px 20px;
+  border: var(--border-sharp);
+  background: rgba(26, 26, 34, 0.2);
+}
+
+.no-signs-found p {
+  color: var(--color-crimson);
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
+}
+
+.reset-filters-btn {
+  background: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  padding: 10px 20px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: var(--transition-ceremonial);
+}
+
+.reset-filters-btn:hover {
+  background: var(--color-gold);
+  color: var(--color-abyss);
+}
+
+/* Responsividade */
+@media (max-width: 1280px) {
+  .zodiac-grid-override {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .zodiac-page-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .zodiac-filter-panel {
+    border-right: none;
+    border-bottom: var(--border-sharp);
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+  .sticky-zodiac-content {
+    position: relative;
+    top: 0;
+  }
+}

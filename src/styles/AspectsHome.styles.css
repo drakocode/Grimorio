@@ -1,0 +1,196 @@
+.aspects-page-container {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  gap: 60px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.aspects-manifesto-panel {
+  position: relative;
+  border-right: var(--border-sharp);
+  padding-right: 40px;
+}
+
+.sticky-aspects-content {
+  position: sticky;
+  top: 140px;
+  left: 0;
+}
+
+.btn-back-to-astro {
+  display: inline-block;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: color 0.3s ease;
+}
+
+.btn-back-to-astro:hover {
+  color: var(--color-gold);
+}
+
+.aspects-archive-tag {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.aspects-main-title {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--color-ghost);
+}
+
+.aspects-architectural-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-crimson) 0%, transparent 100%);
+  margin: 24px 0;
+}
+
+.aspects-description-text {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Caixa de Telemetria */
+.aspects-telemetry-box {
+  background: rgba(11, 11, 15, 0.4);
+  border: var(--border-sharp);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aspects-tel-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px dashed rgba(176, 141, 87, 0.1);
+  padding-bottom: 8px;
+}
+
+.aspects-tel-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Listagem de Aspectos */
+.aspects-stream-tag {
+  font-size: 0.8rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.aspects-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.aspect-occult-card {
+  background: var(--color-charcoal);
+  border: var(--border-sharp);
+  padding: 24px;
+  transition: var(--transition-ceremonial);
+}
+
+.aspect-occult-card:hover {
+  border-color: var(--color-sharp-bright);
+  box-shadow: 0 8px 25px rgba(106, 30, 42, 0.05);
+}
+
+.aspect-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(243, 240, 247, 0.05);
+  padding-bottom: 12px;
+}
+
+.aspect-symbol {
+  font-size: 2rem;
+  color: var(--color-ghost);
+  font-family: var(--font-display);
+}
+
+.aspect-degree {
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+}
+
+.aspect-card-title {
+  font-size: 1.6rem;
+  color: var(--color-ghost);
+  margin-bottom: 8px;
+}
+
+.aspect-nature-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+  color: var(--color-muted);
+}
+
+/* Medidor de Tensão */
+.aspect-tension-container {
+  margin-bottom: 20px;
+}
+
+.tension-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  margin-bottom: 8px;
+}
+
+.tension-track {
+  width: 100%;
+  height: 6px;
+  background: var(--color-abyss);
+  border: 1px solid rgba(176, 141, 87, 0.1);
+  overflow: hidden;
+}
+
+.tension-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--color-gold), var(--color-crimson));
+  transition: width 1s ease-in-out;
+}
+
+.aspect-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+  text-align: justify;
+}
+
+/* Responsividade */
+@media (max-width: 1100px) {
+  .aspects-page-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .aspects-manifesto-panel {
+    border-right: none;
+    border-bottom: var(--border-sharp);
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+  .sticky-aspects-content {
+    position: relative;
+    top: 0;
+  }
+}

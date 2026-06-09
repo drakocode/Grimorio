@@ -1,0 +1,211 @@
+.daemon-detail-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.daemon-back-link {
+  display: inline-block;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  margin-bottom: 40px;
+  transition: color 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.daemon-back-link:hover {
+  color: var(--color-crimson);
+}
+
+.daemon-layout-container {
+  display: grid;
+  grid-template-columns: 45fr 55fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Câmara de Contenção (Mídia) */
+.daemon-media-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.daemon-monolith-chamber {
+  position: relative;
+  width: 100%;
+  border: 1px solid rgba(106, 30, 42, 0.3);
+  background: #09090c;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.daemon-rank-badge {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  background: var(--color-gold);
+  color: var(--color-abyss);
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 4px 12px;
+  letter-spacing: 0.15em;
+  z-index: 2;
+}
+
+.daemon-chamber-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1; /* Daemons renderizados em proporção quadrada perfeitamente simétrica */
+  object-fit: cover;
+  filter: grayscale(100%) contrast(120%) brightness(60%);
+  border: 1px solid rgba(106, 30, 42, 0.1);
+}
+
+.daemon-containment-glow {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  box-shadow: inset 0 0 30px rgba(106, 30, 42, 0.2);
+  pointer-events: none;
+}
+
+/* Tabela de Parâmetros Técnicos */
+.daemon-parameters {
+  background: rgba(17, 17, 22, 0.5);
+  border: var(--border-sharp);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.param-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  border-bottom: 1px dashed rgba(106, 30, 42, 0.1);
+  padding-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.param-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.param-label { color: var(--color-muted); }
+.param-value { color: var(--color-ghost); font-weight: bold; }
+
+.text-gold { color: var(--color-gold); }
+.text-crimson { color: var(--color-crimson); }
+
+/* Coluna de Descrição e Lore */
+.daemon-content-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.daemon-meta {
+  color: var(--color-gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+}
+
+.daemon-title-main {
+  font-size: 4.5rem;
+  color: var(--color-ghost);
+  line-height: 1;
+  margin: 12px 0 6px 0;
+}
+
+.daemon-subtitle-sub {
+  font-size: 1.1rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.05em;
+}
+
+.daemon-separator-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-crimson) 0%, transparent 100%);
+  margin: 32px 0;
+}
+
+.daemon-section {
+  margin-bottom: 40px;
+}
+
+.daemon-section-tag {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
+}
+
+.daemon-office-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(243, 240, 247, 0.8);
+  text-align: justify;
+}
+
+/* Lista de Requisitos de Evocação */
+.requirements-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.requirement-item {
+  display: flex;
+  gap: 12px;
+  align-items: start;
+}
+
+.req-bullet {
+  color: var(--color-gold);
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+.req-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+.daemon-system-footer {
+  border-top: 1px dashed rgba(176, 141, 87, 0.1);
+  padding-top: 24px;
+  margin-top: 20px;
+}
+
+.security-tag {
+  font-size: 0.7rem;
+  color: var(--color-gold);
+  letter-spacing: 0.2em;
+}
+
+/* Fallback de Registro Vazio */
+.daemon-not-found {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.daemon-not-found h2 { color: var(--color-crimson); margin-bottom: 16px; }
+.daemon-not-found p { color: var(--color-muted); margin-bottom: 32px; }
+.btn-back-goetia { color: var(--color-gold); text-decoration: none; }
+
+/* Adaptação Responsiva */
+@media (max-width: 1100px) {
+  .daemon-layout-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .daemon-title-main {
+    font-size: 3.5rem;
+  }
+}

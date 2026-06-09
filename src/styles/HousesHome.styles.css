@@ -1,0 +1,173 @@
+.houses-page-container {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  gap: 60px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.houses-manifesto-panel {
+  position: relative;
+  border-right: var(--border-sharp);
+  padding-right: 40px;
+}
+
+.sticky-houses-content {
+  position: sticky;
+  top: 140px;
+  left: 0;
+}
+
+.btn-back-to-astro {
+  display: inline-block;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: color 0.3s ease;
+}
+
+.btn-back-to-astro:hover {
+  color: var(--color-gold);
+}
+
+.houses-archive-tag {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.houses-main-title {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--color-ghost);
+}
+
+.houses-architectural-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-crimson) 0%, transparent 100%);
+  margin: 24px 0;
+}
+
+.houses-description-text {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Caixa de Telemetria */
+.houses-telemetry-box {
+  background: rgba(11, 11, 15, 0.4);
+  border: var(--border-sharp);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.houses-tel-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px dashed rgba(176, 141, 87, 0.1);
+  padding-bottom: 8px;
+}
+
+.houses-tel-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Listagem de Casas */
+.houses-stream-tag {
+  font-size: 0.8rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.houses-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.house-occult-card {
+  background: var(--color-charcoal);
+  border: var(--border-sharp);
+  padding: 24px;
+  transition: var(--transition-ceremonial);
+}
+
+.house-occult-card:hover {
+  border-color: var(--color-sharp-bright);
+  box-shadow: 0 8px 25px rgba(176, 141, 87, 0.05);
+}
+
+.house-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(243, 240, 247, 0.05);
+  padding-bottom: 12px;
+}
+
+.house-number {
+  font-size: 1.4rem;
+  color: var(--color-gold);
+  font-family: var(--font-display);
+}
+
+.house-classification {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  border: 1px solid rgba(122, 122, 133, 0.2);
+  padding: 2px 8px;
+  letter-spacing: 0.1em;
+}
+
+.house-card-title {
+  font-size: 1.5rem;
+  color: var(--color-ghost);
+  margin-bottom: 8px;
+}
+
+.house-ruler-tag,
+.house-theme-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  color: var(--color-muted);
+}
+
+.house-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+  margin-top: 16px;
+  text-align: justify;
+}
+
+/* Responsividade */
+@media (max-width: 1100px) {
+  .houses-page-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .houses-manifesto-panel {
+    border-right: none;
+    border-bottom: var(--border-sharp);
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+  .sticky-houses-content {
+    position: relative;
+    top: 0;
+  }
+}

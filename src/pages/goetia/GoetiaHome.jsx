@@ -1,0 +1,60 @@
+import { goetiaManifesto, goetiaDaemons, goetiaSystemMetrics } from '../../data/goetia/goetiaData';
+import RitualGrid from '../../components/grid/Grid';
+import OccultCard from '../../components/cards/Card';
+import '../../styles/GoetiaHome.styles.css';
+
+const GoetiaHome = () => {
+  return (
+    <div className="goetia-page-container">
+      
+      {/* PAINEL ESQUERDO: Telemetria de Contenção e Manifesto */}
+      <aside className="goetia-manifesto-panel">
+        <div className="sticky-goetia-content">
+          <div className="goetia-archive-tag font-mono">{goetiaManifesto.sectionId}</div>
+          <h1 className="goetia-main-title">{goetiaManifesto.title}</h1>
+          <div className="goetia-architectural-line"></div>
+          <p className="goetia-description-text">{goetiaManifesto.description}</p>
+          
+          {/* Terminal de Status Ctônico */}
+          <div className="goetia-status-box font-mono">
+            <div className="goetia-status-row">
+              <span className="status-label">PROTOCOLO_SISTEMA:</span>
+              <span className="status-value text-crimson">{goetiaSystemMetrics.hierarchy}</span>
+            </div>
+            <div className="goetia-status-row">
+              <span className="status-label">SIGILOS_REGISTRADOS:</span>
+              <span className="status-value">{goetiaSystemMetrics.activeSeals}</span>
+            </div>
+            <div className="goetia-status-row">
+              <span className="status-label">BARREIRA_MATRIZ:</span>
+              <span className="status-value text-gold">{goetiaSystemMetrics.containment}</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      {/* PAINEL DIREITO: Indexador de Entidades Registradas */}
+      <section className="goetia-stream-panel">
+        <div className="goetia-stream-tag font-mono">// CHALDEAN_ARRAYS_DETECTED</div>
+        
+        <RitualGrid columns={1} className="goetia-grid-gap">
+          {goetiaDaemons.map((daemon) => (
+            <OccultCard
+              key={daemon.id}
+              indexId={daemon.id}
+              title={daemon.title}
+              subTitle={daemon.subTitle}
+              description={daemon.description}
+              image={daemon.image}
+              metadata={daemon.metadata}
+              linkPath={daemon.path}
+            />
+          ))}
+        </RitualGrid>
+      </section>
+
+    </div>
+  );
+};
+
+export default GoetiaHome;

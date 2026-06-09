@@ -1,0 +1,198 @@
+.sign-detail-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.sign-back-link {
+  display: inline-block;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  margin-bottom: 40px;
+  transition: color 0.3s ease;
+}
+
+.sign-back-link:hover {
+  color: var(--color-gold);
+}
+
+.sign-layout-container {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Coluna do Monólito */
+.sign-media-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sign-monolith {
+  position: relative;
+  width: 100%;
+  border: 1px solid rgba(176, 141, 87, 0.2);
+  background: #0d0d11;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.sign-glyph-badge {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  background: var(--color-crimson);
+  color: var(--color-ghost);
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(106, 30, 42, 0.3);
+}
+
+.sign-hero-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  filter: grayscale(80%) contrast(110%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Tabela de Correspondências */
+.sign-correspondences {
+  background: rgba(11, 11, 15, 0.8);
+  border: var(--border-sharp);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sign-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  border-bottom: 1px dashed rgba(122, 122, 133, 0.1);
+  padding-bottom: 8px;
+}
+
+.sign-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sign-label { color: var(--color-muted); }
+.sign-value { color: var(--color-ghost); font-weight: bold; }
+
+/* Coluna de Conteúdo Doutrinário */
+.sign-content-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-meta {
+  color: var(--color-crimson);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+}
+
+.sign-title-main {
+  font-size: 4rem;
+  color: var(--color-ghost);
+  line-height: 1;
+  margin: 12px 0 6px 0;
+}
+
+.sign-subtitle-sub {
+  font-size: 1.2rem;
+  color: var(--color-gold);
+  letter-spacing: 0.05em;
+}
+
+.sign-separator {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-gold) 0%, transparent 100%);
+  margin: 32px 0;
+}
+
+.sign-section {
+  margin-bottom: 40px;
+}
+
+.sign-section-tag {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
+}
+
+.sign-lore-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(230, 230, 235, 0.85);
+  text-align: justify;
+}
+
+/* Palavras-chave */
+.keywords-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.keyword-badge {
+  background: var(--color-charcoal);
+  border: var(--border-sharp);
+  padding: 12px;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.kw-bullet {
+  font-size: 0.85rem;
+}
+
+.sign-system-footer {
+  border-top: 1px dashed rgba(122, 122, 133, 0.1);
+  padding-top: 24px;
+  margin-top: 20px;
+}
+
+.security-tag {
+  font-size: 0.7rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.2em;
+}
+
+/* Fallback Signo Não Encontrado */
+.sign-not-found {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.sign-not-found h2 { color: var(--color-crimson); margin-bottom: 16px; }
+.sign-not-found p { color: var(--color-muted); margin-bottom: 32px; }
+.btn-back-astrology { color: var(--color-gold); text-decoration: none; }
+
+/* Responsividade */
+@media (max-width: 1100px) {
+  .sign-layout-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .sign-title-main {
+    font-size: 3rem;
+  }
+}
