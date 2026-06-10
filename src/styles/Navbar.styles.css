@@ -78,3 +78,62 @@
   color: var(--color-crimson);
   letter-spacing: 0.1em;
 }
+
+/* ==========================================================================
+   Navegação Mobile (Estética Grimório)
+   ========================================================================== */
+
+/* Botão de ativação do menu */
+.nav-mobile-btn {
+  background: rgba(11, 11, 15, 0.6);
+  border: 1px solid rgba(176, 141, 87, 0.2); /* Borda em ouro sutil */
+  color: var(--color-muted);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition-ceremonial);
+}
+
+.nav-mobile-btn:hover {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+  box-shadow: 0 0 15px rgba(176, 141, 87, 0.15);
+}
+
+/* Painel do Menu Mobile Dropdown */
+.nav-mobile-menu {
+  background: rgba(11, 11, 15, 0.96);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(176, 141, 87, 0.1);
+  border-bottom: var(--border-sharp);
+  position: absolute;
+  top: 80px; /* Altura exata da navbar */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/* Itens de link de dentro do menu mobile */
+.nav-mobile-item {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--color-muted);
+  text-decoration: none;
+  padding: 18px var(--grid-gap);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  transition: var(--transition-ceremonial);
+}
+
+.nav-mobile-item:hover, 
+.nav-mobile-item.is-active {
+  color: var(--color-gold);
+  background: rgba(176, 141, 87, 0.02);
+  padding-left: calc(var(--grid-gap) + 8px); /* Sutil recuo ritualístico no hover */
+}
