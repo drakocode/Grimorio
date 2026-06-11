@@ -1,142 +1,159 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import '../../styles/Navbar.styles.css';
 
+// Configuração da árvore de navegação com subcategorias baseado nas suas rotas
 const mainNavigation = [
-  { path: '/astrology', label: 'ASTROLOGIA' },
-  { path: '/tarot', label: 'TAROT' },
-  { path: '/cabala', label: 'CABALA' },
-  { path: '/anjos', label: 'ANJOS' },
+  { 
+    path: '/astrology', 
+    label: 'ASTROLOGIA',
+    subcategories: [
+      { path: '/astrology/signs', label: 'SIGNOS' },
+      { path: '/astrology/houses', label: 'CASAS' },
+      { path: '/astrology/aspects', label: 'ASPECTOS' }
+    ]
+  },
+  { 
+    path: '/tarot', 
+    label: 'TAROT',
+    subcategories: [
+      { path: '/tarot/major-arcana', label: 'ARCANOS MAIORES' },
+      { path: '/tarot/minor-arcana', label: 'ARCANOS MENORES' },
+      { path: '/readings', label: 'ORACULO' }
+    ]
+  },
+  { 
+    path: '/cabala', 
+    label: 'CABALA',
+    subcategories: [
+      { path: '/cabala/tree-of-life', label: 'ÁRVORE DA VIDA' },
+      { path: '/cabala/sephirot', label: 'SEPHIROT' },
+      { path: '/cabala/tree-of-death', label: 'ÁRVORE DA MORTE' },
+      { path: '/cabala/qliphoth', label: 'QLIPHOTH' },
+      { path: '/cabala/anjos', label: 'ANJOS' }
+    ]
+  },
   { path: '/goetia', label: 'GOETIA' }
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [hasScrolled, setHasScrolled] = useState(false);
+  /* const [hoveredMenu, setHoveredMenu] = useState(null); */
+  const [expandedMobileMenus, setExpandedMobileMenus] = useState({});
   const location = useLocation();
   const { scrollY } = useScroll();
 
+  // Transição suave de opacidade do fundo baseado no scroll existente
   const headerBg = useTransform(
     scrollY,
     [0, 100],
     ['rgba(11, 11, 15, 0.85)', 'rgba(11, 11, 15, 0.98)']
   );
-  const borderOpacity = useTransform(scrollY, [0, 100], [0.4, 0.8]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setHasScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [location.pathname]);
+  const toggleMobileSubmenu = (label, e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setExpandedMobileMenus(prev => ({
+      ...prev,
+      [label]: !prev[label]
+    }));
+  };
 
   const isActive = (path) => {
     if (path === '/') return location.pathname === '/';
-    return location.pathname === path || location.pathname.startsWith(path + '/');
+    return location.pathname.startsWith(path);
   };
 
   return (
-    <motion.header
-      style={{ backgroundColor: headerBg }}
-      className={`ceremonial-nav ${hasScrolled ? 'shadow-[0_4px_30px_rgba(0,0,0,0.6)]' : ''}`}
+    <motion.header 
+      style={{ background: headerBg }} 
+      className="ceremonial-nav"
     >
-      {/* Linha de borda inferior fina com a opacidade controlada pelo scroll */}
-      <motion.div
-        style={{ opacity: borderOpacity }}
-        className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent"
-      />
-
-      <nav className="nav-inner">
-        {/* Identidade Visual / Logo */}
-        <Link to="/" className="nav-brand flex items-center gap-3 group relative z-10">
-          <div className="flex flex-col">
-            <h1>GRIMÓRIO</h1>
-            <span className="mono-metadata">
-              INDEX // GRM_00
-            </span>
-          </div>
+      <div className="nav-inner">
+        <Link to="/" className="nav-brand" onClick={() => setMobileOpen(false)}>
+          <h1 className="unifrakturmaguntia-regular">Grimório</h1>
         </Link>
 
-        {/* Links de Navegação Desktop */}
-        {/* <div className="nav-links hidden lg:flex">
-          {mainNavigation.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`nav-item ${isActive(item.path) ? 'text-gold' : ''}`}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div> */}
+        
 
-        {/* Botão de Alternância Mobile Ritualístico */}
-        <motion.button
-          whileTap={{ scale: 0.96 }}
-          className="lg:hidden nav-mobile-btn"
+        {/* BOTÃO MOBILE */}
+        <motion.button 
+          className="lg:hidden nav-mobile-btn" 
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? 'Fechar menu' : 'Abrir menu'}
+          whileTap={{ scale: 0.95 }}
         >
           <AnimatePresence mode="wait">
-            {mobileOpen ? (
-              <motion.div
-                key="close"
-                initial={{ opacity: 0, rotate: -45 }}
-                animate={{ opacity: 1, rotate: 0 }}
-                exit={{ opacity: 0, rotate: 45 }}
-                transition={{ duration: 0.2 }}
-                className="flex items-center justify-center"
-              >
-                <X size={20} strokeWidth={1.5} />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="menu"
-                initial={{ opacity: 0, rotate: 45 }}
-                animate={{ opacity: 1, rotate: 0 }}
-                exit={{ opacity: 0, rotate: -45 }}
-                transition={{ duration: 0.2 }}
-                className="flex items-center justify-center"
-              >
-                <Menu size={20} strokeWidth={1.5} />
-              </motion.div>
-            )}
+            {mobileOpen ? <X size={20} strokeWidth={1.5} key="close" /> : <Menu size={20} strokeWidth={1.5} key="menu" />}
           </AnimatePresence>
         </motion.button>
+      </div>
 
-        {/* Painel de Navegação Mobile */}
-        <AnimatePresence>
-          {mobileOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-              className="lg:hidden nav-mobile-menu overflow-hidden"
-            >
-              <div className="py-2 flex flex-col">
-                {mainNavigation.map((item) => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    className={`nav-mobile-item ${isActive(item.path) ? 'is-active' : ''}`}
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
+      {/* PAINEL MOBILE (MENU DROPDOWN E ACCORDION) */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+            className="lg:hidden nav-mobile-menu overflow-hidden"
+          >
+            <div className="py-4 flex flex-col px-6 gap-1">
+              {mainNavigation.map((item) => {
+                const hasSubs = item.subcategories && item.subcategories.length > 0;
+                const isMenuExpanded = !!expandedMobileMenus[item.label];
+
+                return (
+                  <div key={item.path} className="flex flex-col mobile-nav-group">
+                    <div className="flex items-center justify-between mobile-row-wrapper">
+                      <Link
+                        to={item.path}
+                        className={`nav-mobile-item flex-grow ${isActive(item.path) ? 'is-active' : ''}`}
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                      {hasSubs && (
+                        <button
+                          onClick={(e) => toggleMobileSubmenu(item.label, e)}
+                          className="mobile-submenu-toggle-btn font-mono"
+                        >
+                          {isMenuExpanded ? '▲' : '▼'}
+                        </button>
+                      )}
+                    </div>
+
+                    {/* Subcategorias no Mobile */}
+                    <AnimatePresence>
+                      {hasSubs && isMenuExpanded && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="pl-4 overflow-hidden mobile-sub-container flex flex-col gap-1 mt-1 mb-2"
+                        >
+                          {item.subcategories.map((sub) => (
+                            <Link
+                              key={sub.path}
+                              to={sub.path}
+                              className={`nav-mobile-subitem font-mono ${location.pathname === sub.path ? 'is-active' : ''}`}
+                              onClick={() => setMobileOpen(false)}
+                            >
+                              <span className="bullet-indicator text-crimson">▸</span> {sub.label}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }

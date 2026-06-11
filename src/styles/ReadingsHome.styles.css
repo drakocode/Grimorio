@@ -1,0 +1,315 @@
+/* ==========================================================================
+   ARCANUM READINGS - HERO SECTION & HORIZONTAL TRAY LAYOUT
+   ========================================================================== */
+
+.readings-page-container.stacked-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+/* --------------------------------------------------------------------------
+   HERO SECTION - PAINEL SUPERIOR DE COMANDO
+   -------------------------------------------------------------------------- */
+
+.readings-hero-section {
+  width: 100%;
+  border-right: none;
+  border-bottom: var(--border-sharp);
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content-vault {
+  max-width: 850px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.readings-archive-tag {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.readings-main-title {
+  font-size: 3.8rem;
+  line-height: 1;
+  color: var(--color-ghost);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.readings-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, var(--color-crimson) 50%, transparent 100%);
+  margin: 28px 0;
+}
+
+.readings-manifesto-text {
+  color: var(--color-muted);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Base Interativa Centralizada no Hero */
+.hero-interactive-dock {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.protocol-selector-box {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.protocol-btn {
+  flex: 1;
+  background: rgba(11, 11, 15, 0.8);
+  border: 1px solid rgba(176, 141, 87, 0.15);
+  color: var(--color-muted);
+  padding: 16px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.protocol-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-ghost);
+  background: rgba(176, 141, 87, 0.03);
+}
+
+.protocol-btn.active-protocol {
+  border-color: var(--color-crimson);
+  color: var(--color-ghost);
+  background: rgba(163, 0, 0, 0.1);
+  box-shadow: inset 0 0 15px rgba(163, 0, 0, 0.15);
+}
+
+.protocol-description-box {
+  background: rgba(11, 11, 15, 0.4);
+  border: 1px dashed rgba(176, 141, 87, 0.15);
+  padding: 18px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.sintonizar-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  padding: 18px;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sintonizar-btn:hover:not(:disabled) {
+  background: var(--color-gold);
+  color: #050505;
+  box-shadow: 0 0 25px rgba(176, 141, 87, 0.25);
+}
+
+.sintonizar-btn:disabled {
+  border-color: rgba(122, 122, 133, 0.2);
+  color: rgba(122, 122, 133, 0.4);
+  cursor: not-allowed;
+}
+
+/* --------------------------------------------------------------------------
+   STREAM PANEL - MESA DE PROJEÇÃO HORIZONTAL (TRAY)
+   -------------------------------------------------------------------------- */
+
+.readings-stream-panel.horizontal-tray {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.readings-stream-tag {
+  font-size: 0.8rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.12em;
+  margin-bottom: 32px;
+}
+
+/* Grid de Disposição das Cartas Lado a Lado */
+.drawn-cards-horizontal-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 32px;
+  width: 100%;
+  flex-wrap: wrap; /* Permite quebras limpas em telas compactas */
+}
+
+/* Os Pilares das Cartas */
+.drawn-card-slot.pillar-card {
+  flex: 1;
+  min-width: 290px;
+  max-width: 350px;
+  border: 1px solid rgba(176, 141, 87, 0.12);
+  background: rgba(13, 13, 17, 0.4);
+  padding: 24px;
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.slot-header {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--color-ghost);
+  border-bottom: 1px dashed rgba(176, 141, 87, 0.15);
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* O Monólito do Arcano */
+.arcana-card-monolith {
+  position: relative;
+  width: 100%;
+  border: 1px solid rgba(176, 141, 87, 0.2);
+  background: #0d0d11;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-glyph {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.2rem;
+  color: var(--color-gold);
+  opacity: 0.7;
+  z-index: 5;
+}
+
+.reversed-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--color-crimson);
+  color: var(--color-ghost);
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  z-index: 5;
+  box-shadow: 0 0 10px rgba(163, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-render-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3.4;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-render-img.reverse-effect {
+  transform: rotate(180deg);
+  filter: hue-rotate(15deg) contrast(1.05);
+}
+
+.card-telemetry {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(176, 141, 87, 0.1);
+  padding-top: 10px;
+}
+
+.c-title {
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  color: var(--color-ghost);
+  font-weight: 500;
+}
+
+.c-meta {
+  font-size: 0.7rem;
+  margin-top: 2px;
+}
+
+/* Diagnóstico */
+.slot-interpretation-box {
+  border-top: 1px solid rgba(176, 141, 87, 0.1);
+  padding-top: 16px;
+}
+
+.doc-tag {
+  font-size: 0.7rem;
+  color: var(--color-crimson);
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.interpretation-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(220, 220, 230, 0.85);
+}
+
+/* fallbacks de carregamento e vazio */
+.readings-loading-box, 
+.empty-readings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-sharp);
+  background: rgba(11, 11, 15, 0.15);
+  padding: 60px 20px;
+  min-height: 250px;
+}
+
+.readings-loading-box p { color: var(--color-gold); margin-top: 16px; }
+.empty-readings p { color: var(--color-muted); }
+
+.pulse-indicator-fast {
+  width: 8px;
+  height: 8px;
+  background: var(--color-crimson);
+  box-shadow: 0 0 12px var(--color-crimson);
+  border-radius: 50%;
+  animation: telemetryPulseFast 0.5s infinite alternate cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes telemetryPulseFast {
+  0% { opacity: 0.3; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Utilitários */
+.text-center { text-align: center; }
+.text-muted { color: var(--color-muted) !important; }
+.text-justify { text-align: justify; }

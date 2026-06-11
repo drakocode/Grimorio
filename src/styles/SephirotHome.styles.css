@@ -2,10 +2,11 @@
 
 .sephirot-page-container {
   display: grid;
-  grid-template-columns: 5fr 4fr;
+  grid-template-columns: 4.5fr 5.5fr;
   gap: 60px;
   width: 100%;
   min-height: 100vh;
+  padding: 40px 0;
 }
 
 .sephirot-telemetry-panel {
@@ -38,80 +39,86 @@
   height: 1px;
   background: linear-gradient(to right, var(--color-gold) 0%, transparent 100%);
   margin: 24px 0;
-}
+} 
 
 .sephirot-manifesto-text {
   color: var(--color-muted);
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 40px;
+  text-align: justify;
 }
 
-/* Painel de Métricas */
+/* Caixa de Telemetria Lateral */
 .tree-metrics-box {
-  background: rgba(26, 26, 34, 0.25);
+  background: rgba(11, 11, 15, 0.4);
   border: var(--border-sharp);
-  padding: 20px;
-  font-size: 0.8rem;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .metrics-header {
+  font-size: 0.8rem;
   color: var(--color-gold);
-  margin-bottom: 14px;
-  border-bottom: 1px solid rgba(176, 141, 87, 0.1);
-  padding-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .metric-row {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
-  color: var(--color-ghost);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px dashed rgba(176, 141, 87, 0.1);
+  padding-bottom: 8px;
 }
 
-.status-stable {
-  color: #5af78e;
-  text-shadow: 0 0 8px rgba(90, 247, 142, 0.3);
+.metric-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-/* Stream de Cards à Direita */
+/* Painel de Fluxo dos Cards */
 .sephirot-stream-panel {
-  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .sephirot-stream-header {
   font-size: 0.8rem;
-  color: var(--color-gold);
-  letter-spacing: 0.1em;
-  margin-bottom: 24px;
+  color: var(--color-crimson);
+  letter-spacing: 0.15em;
 }
 
-.sephirot-list {
+.sephirot-grid {
   display: flex;
-  flex-col: column;
   flex-direction: column;
-  gap: 30px;
+  gap: 32px;
 }
 
-/* Card Ritualístico */
-.sephirah-ritual-card {
-  background: rgba(15, 15, 22, 0.4);
-  border: var(--border-sharp);
-  padding: 24px;
-  transition: var(--transition-ceremonial);
+/* Estruturação dos Cards das Sephirot */
+.sephirah-card {
+  background: rgba(11, 11, 15, 0.5);
+  border: 1px solid rgba(176, 141, 87, 0.15);
+  padding: 32px;
+  transition: var(--transition-ceremonial, all 0.4s ease);
+  position: relative;
 }
 
-.sephirah-ritual-card:hover {
+.sephirah-card:hover {
   border-color: rgba(176, 141, 87, 0.4);
   background: rgba(176, 141, 87, 0.02);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(176, 141, 87, 0.03);
 }
 
 .sephirah-card-header {
   display: flex;
   justify-content: space-between;
   font-size: 0.75rem;
-  margin-bottom: 12px;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
 }
 
 .sephirah-class {
@@ -119,69 +126,81 @@
 }
 
 .sephirah-card-title-block {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .sephirah-name {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--color-ghost);
   letter-spacing: 0.05em;
-  margin: 0;
+  margin: 0 0 4px 0;
 }
 
 .sephirah-translation {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--color-gold);
-  opacity: 0.8;
+  opacity: 0.85;
+  letter-spacing: 0.05em;
 }
 
-/* Grid Técnico do Card */
+/* Grid Técnico Interno do Card */
 .sephirah-data-grid {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 12px;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.25);
   border-left: 2px solid var(--color-gold);
-  margin-bottom: 16px;
-  font-size: 0.8rem;
+  padding: 16px;
+  margin-bottom: 20px;
 }
 
 .data-item {
   display: flex;
-  gap: 8px;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.04);
+  padding-bottom: 6px;
+}
+
+.data-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .data-item .label {
   color: var(--color-muted);
-  min-width: 110px;
 }
 
 .data-item .value {
   color: var(--color-ghost);
 }
 
+/* Descrição Metafísica */
 .sephirah-description {
-  color: var(--color-muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
-  margin: 0;
+  color: rgba(230, 230, 235, 0.8);
+  margin: 0 0 24px 0;
+  text-align: justify;
 }
 
-/* Responsividade */
-@media (max-width: 1100px) {
-  .sephirot-page-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .sephirot-telemetry-panel {
-    border-right: none;
-    border-bottom: var(--border-sharp);
-    padding-right: 0;
-    padding-bottom: 40px;
-  }
-  .sticky-sephirot-content {
-    position: relative;
-    top: 0;
-  }
+/* Botão de Inspeção do Nó */
+.btn-inspect-node {
+  display: inline-block;
+  color: var(--color-gold);
+  font-size: 0.8rem;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
 }
+
+.btn-inspect-node:hover {
+  color: var(--color-ghost);
+  text-shadow: 0 0 8px var(--color-gold);
+  transform: translateX(4px);
+}
+
+/* Utilitários de Cor Globais da Aplicação */
+.text-gold { color: var(--color-gold); }
+.text-crimson { color: var(--color-crimson); }

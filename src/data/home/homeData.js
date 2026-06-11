@@ -59,5 +59,14 @@ export const grimoireSectors = [
     metadata: "CHTHONIC // DEV_ENV",
     path: "/goetia"
   },
-  
+  {
+    id: "SEC-006",
+    title: "Ritual Synthesis Lab",
+    subTitle: "Oracular Protocols",
+    description: "A sandbox for combinatorial experimentation across all Grimório sectors. Synthesize custom rituals by selecting and merging data points from the other five domains.",
+    image: tarotHomeImage,
+    metadata: "SYNTHESIS // PROTOCOLS",
+    path: "/readings"
+  }
+   
 ];

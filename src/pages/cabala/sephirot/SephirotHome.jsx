@@ -1,20 +1,28 @@
 // src/pages/cabala/sephirot/SephirotHome.jsx
-import { motion } from 'framer-motion';
-import { sephirotManifesto, sephirotTreeData, coreTreeMetrics } from '../../../data/cabala/sephirot/sephirotData';
-import '../../../styles/SephirotHome.styles.css';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  sephirotManifesto,
+  sephirotTreeData,
+  coreTreeMetrics,
+} from "../../../data/cabala/sephirot/sephirotData";
+import "../../../styles/SephirotHome.styles.css";
 
 const SephirotHome = () => {
   return (
     <div className="sephirot-page-container">
-      
       {/* SIDEBAR ESQUERDA: Telemetria da Árvore */}
       <aside className="sephirot-telemetry-panel">
         <div className="sticky-sephirot-content">
-          <div className="sephirot-archive-tag font-mono">{sephirotManifesto.sectionId}</div>
+          <div className="sephirot-archive-tag font-mono">
+            {sephirotManifesto.sectionId}
+          </div>
           <h1 className="sephirot-main-title">{sephirotManifesto.title}</h1>
           <div className="sephirot-divider"></div>
-          <p className="sephirot-manifesto-text">{sephirotManifesto.description}</p>
-          
+          <p className="sephirot-manifesto-text">
+            {sephirotManifesto.description}
+          </p>
+
           {/* Caixa de Telemetria de Fluxo */}
           <div className="tree-metrics-box font-mono">
             <div className="metrics-header">// NODE_CORE_METRICS</div>
@@ -24,34 +32,30 @@ const SephirotHome = () => {
             </div>
             <div className="metric-row">
               <span>HIDDEN_ROUTER:</span>
-              <span className="text-crimson">{coreTreeMetrics.hiddenLink}</span>
-            </div>
-            <div className="metric-row">
-              <span>FLOW_STATUS:</span>
-              <span className="status-stable">{coreTreeMetrics.systemStatus}</span>
+              <span className="text-crimson">// DAATH_GATEWAY</span>
             </div>
           </div>
         </div>
       </aside>
 
-      {/* STREAM DIREITO: Listagem Técnica das Dez Sephirot */}
+      {/* PAINEL DIREITO: Nós de Emanação */}
       <section className="sephirot-stream-panel">
-        <div className="sephirot-stream-header font-mono">// DEPTH_EMANATION_LOGS</div>
+        <div className="sephirot-stream-header font-mono">// ARCANUM_NODES_STREAM</div>
         
-        <div className="sephirot-list">
-          {sephirotTreeData.map((sephirah, index) => (
-            <motion.div 
+        <div className="sephirot-grid">
+          {sephirotTreeData.map((sephirah) => (
+            <motion.div
               key={sephirah.number}
-              className="sephirah-ritual-card"
-              initial={{ opacity: 0, y: 30 }}
+              className="sephirah-card"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
             >
-              {/* Topo do Card com Numeração e Classificação */}
+              {/* Header do Card */}
               <div className="sephirah-card-header font-mono">
                 <span className="sephirah-number text-gold">#{sephirah.number}</span>
-                <span className="sephirah-class">// {sephirah.classification}</span>
+                <span className="sephirah-class">[VETOR_{sephirah.classification}]</span>
               </div>
 
               {/* Títulos */}
@@ -78,11 +82,18 @@ const SephirotHome = () => {
 
               {/* Descrição Metafísica */}
               <p className="sephirah-description">{sephirah.description}</p>
+
+              {/* Gatilho de Navegação Técnico */}
+              <Link
+                to={`/cabala/sephirot/${sephirah.number}`}
+                className="btn-inspect-node font-mono"
+              >
+                // ACESSAR_VETOR_DE_EMANAÇÃO →
+              </Link>
             </motion.div>
           ))}
         </div>
       </section>
-
     </div>
   );
 };

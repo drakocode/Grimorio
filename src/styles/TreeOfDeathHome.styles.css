@@ -1,0 +1,177 @@
+/* ==========================================================================
+   SYS_QAB_MORS_10 // TREE OF DEATH (QLIPHOTH) HOME STYLES
+   Aesthetic: Cyber-Occult, Abyssal Crimson, Technical Ritual Interface
+   ========================================================================== */
+
+.cabala-page-container {
+  display: grid;
+  grid-template-columns: 4.5fr 5.5fr;
+  gap: 60px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 0;
+  background-color: #060608; /* Profundidade abissal ligeiramente mais escura */
+}
+
+/* Painel de Telemetria Esquerdo (Estático/Sticky) */
+.cabala-telemetry-panel {
+  position: relative;
+  border-right: 1px solid rgba(220, 20, 60, 0.15); /* Borda em vermelho carmesim sutil */
+  padding-right: 40px;
+}
+
+.sticky-cabala-content {
+  position: sticky;
+  top: 140px;
+  left: 0;
+}
+
+/* Tags e Títulos Metafísicos */
+.cabala-archive-tag {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+}
+
+.cabala-main-title {
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 0 0 24px 0;
+}
+
+/* Divisor de Fluxo Antinómico */
+.cabala-divider {
+  width: 100%;
+  height: 1px;
+  margin: 24px 0;
+}
+
+.cabala-manifesto-text {
+  color: var(--color-muted, #7a7a85);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+/* Monitor de Emanações Invertidas (Live Box) */
+.live-cabala-box {
+  background: rgba(15, 10, 10, 0.5);
+  border: 1px solid rgba(220, 20, 60, 0.2);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: inset 0 0 20px rgba(220, 20, 60, 0.03);
+}
+
+.cabala-telemetry-header {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(220, 20, 60, 0.15);
+  padding-bottom: 12px;
+}
+
+/* Indicador de Pulso Abissal */
+.cabala-pulse-indicator {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-crimson, #dc143c);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 10px var(--color-crimson, #dc143c);
+  animation: abyssalPulse 2s infinite ease-in-out;
+}
+
+@keyframes abyssalPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.4;
+    box-shadow: 0 0 4px rgba(220, 20, 60, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(220, 20, 60, 0.8);
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.4;
+    box-shadow: 0 0 4px rgba(220, 20, 60, 0.4);
+  }
+}
+
+/* Tabela de Telemetria Qliphotica */
+.cabala-telemetry-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+}
+
+.cabala-telemetry-table th {
+  text-align: left;
+  color: var(--color-muted, #7a7a85);
+  padding: 6px 8px;
+  font-weight: 500;
+  border-bottom: 1px dashed rgba(220, 20, 60, 0.1);
+}
+
+.cabala-telemetry-table td {
+  padding: 8px;
+  color: rgba(230, 230, 235, 0.8);
+  border-bottom: 1px dashed rgba(122, 122, 133, 0.05);
+}
+
+.cabala-telemetry-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Painel de Fluxo Direito (Stream) */
+.cabala-stream-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cabala-stream-header {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+  border-left: 2px solid var(--color-crimson, #dc143c);
+  padding-left: 10px;
+}
+
+/* Sobrescritas utilitárias locais para o ecossistema da Árvore da Morte */
+.text-crimson {
+  color: var(--color-crimson, #dc143c) !important;
+}
+
+.text-gold {
+  color: var(--color-gold, #b08d57) !important;
+}
+
+/* Responsividade de Alinhamento */
+@media (max-width: 1024px) {
+  .cabala-page-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .cabala-telemetry-panel {
+    border-right: none;
+    border-bottom: 1px solid rgba(220, 20, 60, 0.15);
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+  
+  .sticky-cabala-content {
+    position: relative;
+    top: 0;
+  }
+}

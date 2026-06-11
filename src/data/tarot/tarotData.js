@@ -1,6 +1,6 @@
 import tarotMajorImage from "../../assets/tarot/majorArcana/tarotMajorArcana.jpeg";
 import tarotMinorImage from "../../assets/tarot/minorArcana/tarotMinorArcana.jpeg";
-
+import tarotHomeImage from "../../assets/tarot/tarotHome.jpeg";
 
 
 
@@ -31,6 +31,15 @@ export const tarotSubSectors = [
     image: tarotMinorImage,
     metadata: "56_CHAVES // MICROCOSMO",
     path: "/tarot/minor-arcana"
+  },
+  {
+    id: "TAR-SPREADS",
+    title: "Ritual Synthesis Lab",
+    subTitle: "Oracular Protocols",
+    description: "A sandbox for combinatorial experimentation across all Grimório sectors. Synthesize custom rituals by selecting and merging data points from the other five domains.",
+    image: tarotHomeImage,
+    metadata: "SYNTHESIS // PROTOCOLS",
+    path: "/readings"
   }
 ];
 
