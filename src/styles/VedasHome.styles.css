@@ -1,0 +1,173 @@
+/* src/styles/VedasHome.styles.css */
+/* ==========================================================================
+   SYS_VEDA_CORE // VEDIC MATRIX STYLES (GOETIA STRUCTURAL OVERRIDE)
+   Aesthetic: Cyber-Vedic, Solar Saffron Amber, Wave-Form Telemetry
+   ========================================================================== */
+
+.vedas-page-container {
+  display: grid;
+  grid-template-columns: 5fr 4fr; /* Ajustado para a proporção exata de Goetia */
+  gap: 60px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Painel de Telemetria / Manifesto Esquerdo */
+.vedas-manifesto-panel {
+  position: relative;
+  border-right: var(--border-sharp); /* Utiliza a borda padronizada do grimório */
+  padding-right: 40px;
+}
+
+.sticky-vedas-content {
+  position: sticky;
+  top: 140px;
+  left: 0;
+}
+
+.vedas-archive-tag {
+  font-size: 0.8rem;
+  color: #ff7700; /* Saffron Assinatura */
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.vedas-main-title {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--color-ghost);
+}
+
+.vedas-architectural-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #ff7700 0%, transparent 100%); /* Linha sutil degradê em Saffron */
+  margin: 24px 0;
+}
+
+.vedas-description-text {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+/* Painel da Direita (Stream de Cards) */
+.vedas-stream-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.vedas-stream-tag {
+  font-size: 0.8rem;
+  color: #ff7700;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.vedas-grid-gap {
+  gap: 32px !important; /* Espaçamento de alta performance idêntico ao goetia-grid-gap */
+}
+
+/* Monitor de Telemetria (Live Feed Box) */
+.live-vedas-box {
+  background: rgba(15, 12, 10, 0.4);
+  border: 1px solid rgba(255, 119, 0, 0.2);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: inset 0 0 20px rgba(255, 119, 0, 0.02);
+}
+
+.vedas-telemetry-header {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 119, 0, 0.15);
+  padding-bottom: 12px;
+}
+
+/* Indicador Pulsante Primordial (Agni Flame Effect) */
+.vedas-pulse-indicator {
+  width: 6px;
+  height: 6px;
+  background-color: #ff7700;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 10px #ff7700;
+  animation: solarMantricPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes solarMantricPulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.5;
+    box-shadow: 0 0 4px rgba(255, 119, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+    box-shadow: 0 0 14px rgba(255, 119, 0, 0.9);
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0.5;
+    box-shadow: 0 0 4px rgba(255, 119, 0, 0.4);
+  }
+}
+
+/* Tabela de Telemetria Interna */
+.vedas-telemetry-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+}
+
+.vedas-telemetry-table th {
+  text-align: left;
+  color: var(--color-muted);
+  padding: 6px 8px;
+  font-weight: 500;
+  border-bottom: 1px dashed rgba(255, 119, 0, 0.1);
+}
+
+.vedas-telemetry-table td {
+  padding: 8px;
+  color: rgba(230, 230, 235, 0.8);
+  border-bottom: 1px dashed rgba(122, 122, 133, 0.05);
+}
+
+.vedas-telemetry-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Utilitários Cromáticos Locais */
+.text-saffron {
+  color: #ff7700 !important;
+}
+
+/* Responsividade de Alta Performance (Alinhada ao Breakpoint de 1100px do Goetia) */
+@media (max-width: 1100px) {
+  .vedas-page-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .vedas-manifesto-panel {
+    border-right: none;
+    border-bottom: var(--border-sharp);
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+  
+  .sticky-vedas-content {
+    position: relative;
+    top: 0;
+  }
+}

@@ -3,7 +3,7 @@ import tarotHomeImage from "../../assets/tarot/tarotHome.jpeg";
 import goetiaHomeImage from "../../assets/goetia/goetiaHome.jpeg";
 import cabalaHomeImage from "../../assets/goetia/goetiaHome.jpeg";
 import anjosHomeImage from "../../assets/goetia/goetiaHome.jpeg";
-
+import vedasHomeImage from "../../assets/goetia/goetiaHome.jpeg";
 
 export const homeManifesto = {
   sigil: "M_01",
@@ -67,6 +67,15 @@ export const grimoireSectors = [
     image: tarotHomeImage,
     metadata: "SYNTHESIS // PROTOCOLS",
     path: "/readings"
+  },
+  {
+    id: "SEC-007",
+    title: "Sacred Texts Repository",
+    subTitle: "Vedic Corpus",
+    description: "A comprehensive collection of ancient Vedic texts and their interpretations. Explore the foundational scriptures of Hindu philosophy and spirituality.",
+    image: vedasHomeImage,
+    metadata: "108_VEDAS // INTERPRETATIONS",
+    path: "/vedas"
   }
    
 ];

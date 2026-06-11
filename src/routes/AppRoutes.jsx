@@ -36,6 +36,11 @@ import QliphothDetail from "../pages/cabala/qliphoth/QliphothDetail";
 import AnjosHome from "../pages/cabala/anjos/AnjosHome";
 import AnjoDetail from "../pages/cabala/anjos/AnjoDetail";
 
+//importações do Módulo Vedas
+import VedasHome from "../pages/vedas/VedasHome";
+import JyotishHome from '../pages/vedas/JyotishHome';
+import AyurvedaHome from '../pages/vedas/AyurvedaHome';
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -80,6 +85,10 @@ const AppRoutes = () => {
           {/* Módulo Anjos (Rotas Simplificadas) */}
           <Route path="/anjos" element={<AnjosHome />} />
           <Route path="/anjos/:number" element={<AnjoDetail />} />
+          {/* Módulo Vedas */}
+          <Route path="/vedas" element={<VedasHome />} />
+          <Route path="/vedas/jyotish" element={<JyotishHome />} />
+          <Route path="/vedas/ayurveda" element={<AyurvedaHome />} />
         </Routes>
       </Layout>
     </BrowserRouter>

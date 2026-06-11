@@ -35,7 +35,13 @@ const mainNavigation = [
       { path: '/cabala/anjos', label: 'ANJOS' }
     ]
   },
-  { path: '/goetia', label: 'GOETIA' }
+  { path: '/goetia', label: 'GOETIA' },
+  { path: '/vedas', label: 'VEDAS',
+    subcategories: [
+      { path: '/vedas/jyotish', label: 'JYOTISH' },
+      { path: '/vedas/ayurveda', label: 'AYURVEDA' }
+    ]
+   }
 ];
 
 export default function Navbar() {
