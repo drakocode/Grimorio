@@ -1,0 +1,103 @@
+.planets-page-container {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  gap: 60px;
+  width: 100%;
+  min-height: 100vh;
+}
+.planets-filter-panel {
+  position: relative;
+  border-right: var(--border-sharp);
+  padding-right: 40px;
+}
+.sticky-planets-content {
+  position: sticky;
+  top: 140px;
+  left: 0;
+}
+.planets-archive-tag {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+.planets-main-title {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--color-ghost);
+}
+.planets-architectural-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-crimson) 0%, transparent 100%);
+  margin: 24px 0;
+}
+.planets-description-text {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.filter-system-box {
+  margin-bottom: 32px;
+}
+.filter-header {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+}
+.filter-buttons-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.filter-ritual-btn {
+  background: transparent;
+  border: 1px solid rgba(176, 141, 87, 0.15);
+  color: var(--color-muted);
+  padding: 14px 20px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+.filter-ritual-btn:hover, .filter-ritual-btn.active {
+  border-color: var(--color-gold);
+  color: var(--color-ghost);
+  background: rgba(176, 141, 87, 0.03);
+}
+.btn-indicator {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.filter-ritual-btn.active .btn-indicator {
+  background: var(--color-gold);
+  box-shadow: 0 0 8px var(--color-gold);
+}
+.planets-status-box {
+  border-top: 1px dashed rgba(176, 141, 87, 0.15);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.8rem;
+}
+.tel-row {
+  display: flex;
+  justify-content: space-between;
+}
+.tel-label { color: var(--color-muted); }
+.planets-stream-tag {
+  font-size: 0.8rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+.planets-grid-override {
+  gap: 16px !important;
+}

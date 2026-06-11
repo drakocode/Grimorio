@@ -7,6 +7,8 @@ import '../../styles/Navbar.styles.css';
 const mainNavigation = [
   { path: '/astrology', label: 'ASTROLOGIA' },
   { path: '/tarot', label: 'TAROT' },
+  { path: '/cabala', label: 'CABALA' },
+  { path: '/anjos', label: 'ANJOS' },
   { path: '/goetia', label: 'GOETIA' }
 ];
 

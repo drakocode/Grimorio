@@ -109,3 +109,45 @@
     top: 0;
   }
 }
+
+/* Matriz de Filtros de Hierarquia - Adaptada */
+.goetia-filter-matrix {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+  margin-top: 24px;
+}
+
+.goetia-filter-title {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-bottom: 14px;
+}
+
+.goetia-rank-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.goetia-rank-btn {
+  background: rgba(20, 20, 25, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--color-muted);
+  padding: 10px;
+  font-size: 0.7rem;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition-ceremonial);
+}
+
+.goetia-rank-btn:hover {
+  border-color: var(--color-crimson);
+  color: var(--color-ghost);
+}
+
+.goetia-rank-btn.is-active {
+  border-color: var(--color-crimson);
+  color: var(--color-ghost);
+  background: rgba(139, 0, 0, 0.06);
+  box-shadow: 0 0 10px rgba(139, 0, 0, 0.15);
+}

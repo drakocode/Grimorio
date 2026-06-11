@@ -1,16 +1,25 @@
+import astrologyHomeImage from "../../assets/astrology/astrologyHome.jpeg";
+import tarotHomeImage from "../../assets/tarot/tarotHome.jpeg";
+import goetiaHomeImage from "../../assets/goetia/goetiaHome.jpeg";
+import cabalaHomeImage from "../../assets/goetia/goetiaHome.jpeg";
+import anjosHomeImage from "../../assets/goetia/goetiaHome.jpeg";
+
+
 export const homeManifesto = {
   sigil: "M_01",
   title: "The Living Ritual Archive",
   declaration: "Grimório bridges ancient ritual mechanics and contemporary digital execution frameworks. Access the structured paths below to reveal architectural arrays of cosmic and infernal domains."
 };
 
+// Não se esqueça de importar a imagem correspondente no topo do arquivo:
+// import cabalaHomeImage from "../../assets/cabala/cabalaHome.jpeg";
 export const grimoireSectors = [
   {
     id: "SEC-001",
     title: "Celestial Archive",
     subTitle: "Astrology Engine",
     description: "Architectural alignment matrices tracking planar transits, planetary positions, houses, and geometric aspects.",
-    image: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=600&auto=format&fit=crop",
+    image: astrologyHomeImage,
     metadata: "ORBITS // NODES",
     path: "/astrology"
   },
@@ -19,17 +28,36 @@ export const grimoireSectors = [
     title: "Symbolic Manuscript",
     subTitle: "Tarot Matrix",
     description: "Decoupled array mapping the Major and Minor Arcana pipelines. Cryptographic archetypes optimized for spatial reading.",
-    image: "https://images.unsplash.com/photo-1601024445121-e5b8227eb531?q=80&w=600&auto=format&fit=crop",
+    image: tarotHomeImage,
     metadata: "78_KEYS // PROTOCOLS",
     path: "/tarot"
   },
   {
     id: "SEC-003",
+    title: "Qabalah Archive",
+    subTitle: "Emanation Tree Matrix",
+    description: "Mathematical mapping of the ten primordial Sephirot and serpentine channels. Synthesized data structures routing the four macrocosmic worlds from pure light to material crystallization.",
+    image: cabalaHomeImage,
+    metadata: "10_SPHERES // 22_PATHS",
+    path: "/cabala"
+  },
+  {
+    id: "SEC-004",
+    title: "Angelic Vector Registry",
+    subTitle: "Shem HaMephorash Engine",
+    description: "Cryptographic division of the divine name into 72 high-frequency operational nodes. Allocates harmonic streams across specialized angelic choirs and zodiacal degrees.",
+    image: anjosHomeImage,
+    metadata: "72_VECTORS // CHOIRS",
+    path: "/anjos"
+  },
+  {
+    id: "SEC-005",
     title: "Infernal Ritual Index",
     subTitle: "Goetia Engine",
     description: "The complete directory tracking the 72 dynamic spirits. Complete categorical parsing of offices, seals, and requirements.",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=600&auto=format&fit=crop",
+    image: goetiaHomeImage,
     metadata: "CHTHONIC // DEV_ENV",
     path: "/goetia"
-  }
+  },
+  
 ];

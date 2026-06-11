@@ -1,3 +1,12 @@
+import tarotMajorImage from "../../assets/tarot/majorArcana/tarotMajorArcana.jpeg";
+import tarotMinorImage from "../../assets/tarot/minorArcana/tarotMinorArcana.jpeg";
+
+
+
+
+
+
+
 export const tarotManifesto = {
   sectionId: "MS_TAROT_78",
   title: "Tarot Matrix",
@@ -10,7 +19,7 @@ export const tarotSubSectors = [
     title: "Major Arcana",
     subTitle: "Os Arcanos Maiores",
     description: "As 22 chaves macrocósmicas. Vetores fundamentais do desenvolvimento da consciência, mapeando a jornada arquetípica do Louco ao Universo.",
-    image: "https://images.unsplash.com/photo-1601024445121-e5b8227eb531?q=80&w=600&auto=format&fit=crop",
+    image: tarotMajorImage,
     metadata: "22_CHAVES // MACROCOSMO",
     path: "/tarot/major-arcana"
   },
@@ -19,7 +28,7 @@ export const tarotSubSectors = [
     title: "Minor Arcana",
     subTitle: "Os Arcanos Menores",
     description: "As 56 chaves microcósmicas. A ramificação dos quatro elementos (Bastões, Taças, Espadas e Pentáculos) operando nos campos densos da manifestação.",
-    image: "https://images.unsplash.com/photo-1572945281861-68b122e3e84e?q=80&w=600&auto=format&fit=crop",
+    image: tarotMinorImage,
     metadata: "56_CHAVES // MICROCOSMO",
     path: "/tarot/minor-arcana"
   }

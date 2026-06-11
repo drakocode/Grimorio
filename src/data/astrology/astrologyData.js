@@ -1,3 +1,26 @@
+import astrologyHousesImage from "../../assets/astrology/astrologyHouses.jpeg";
+import astrologyPlanetsImage from "../../assets/astrology/astrologyPlanets.jpeg";
+import astrologyAspectsImage from "../../assets/astrology/astrologyAspects.jpeg";
+import astrologyZodiacImage from "../../assets/astrology/astrologyZodiac.jpeg";
+
+import ariesImage from "../../assets/astrology/zodiac/1.jpeg";
+import taurusImage from "../../assets/astrology/zodiac/2.jpeg";
+import geminiImage from "../../assets/astrology/zodiac/3.jpeg";
+import cancerImage from "../../assets/astrology/zodiac/4.jpeg";
+import leoImage from "../../assets/astrology/zodiac/5.jpeg";
+import virgoImage from "../../assets/astrology/zodiac/6.jpeg";
+import libraImage from "../../assets/astrology/zodiac/7.jpeg";
+import scorpioImage from "../../assets/astrology/zodiac/8.jpeg";
+import sagittariusImage from "../../assets/astrology/zodiac/9.jpeg";
+import capricornImage from "../../assets/astrology/zodiac/10.jpeg";
+import aquariusImage from "../../assets/astrology/zodiac/11.jpeg";
+import piscesImage from "../../assets/astrology/zodiac/12.jpeg";
+
+
+
+
+
+
 export const astrologyManifesto = {
   sectionId: "ARC_CELESTIAL_01",
   title: "Celestial Archive",
@@ -10,7 +33,7 @@ export const astrologySubSectors = [
     title: "Zodiacal Archetypes",
     subTitle: "Os Signos do Zodíaco",
     description: "Doze partições geométricas da eclíptica. Cada quadrante atua como um filtro de frequência elemental para a consciência planetária.",
-    image: "https://images.unsplash.com/photo-1532960401447-7dd05bef20b0?q=80&w=600&auto=format&fit=crop",
+    image: astrologyZodiacImage,
     metadata: "12_MATRIZES // ELEMENTOS",
     path: "/astrology/signs"
   },
@@ -19,16 +42,25 @@ export const astrologySubSectors = [
     title: "Mundane Sectors",
     subTitle: "As Casas Astrológicas",
     description: "A divisão do espaço local baseada na rotação da Terra. Doze campos estruturais onde os arquétipos celestes encontram ancoragem física.",
-    image: "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&w=600&auto=format&fit=crop",
+    image: astrologyHousesImage,
     metadata: "12_CAMPOS // DOMÍNIOS",
     path: "/astrology/houses"
+  },
+  {
+    id: "AST-PLANETS",
+    title: "Planetary Dynamics",
+    subTitle: "Os Planetas Astrológicos",
+    description: "Os corpos celestes que influenciam os arquétipos zodíacos. Cada planeta representa uma força simbólica única que molda a experiência humana.",
+    image: astrologyPlanetsImage,
+    metadata: "07_PLANETAS // FORÇAS",
+    path: "/astrology/planets"
   },
   {
     id: "AST-ASPECTS",
     title: "Angular Mechanics",
     subTitle: "Aspectos e Geometria Sacrada",
     description: "Relações matemáticas exatas entre corpos celestes. Dinâmicas de tensão e síntese baseadas em divisões harmônicas do círculo.",
-    image: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?q=80&w=600&auto=format&fit=crop",
+    image: astrologyAspectsImage,
     metadata: "CONJUNÇÃO // OPOSIÇÃO",
     path: "/astrology/aspects"
   }
@@ -99,7 +131,7 @@ export const zodiacSigns = [
     modality: "Cardinal",
     ruler: "Marte",
     dateRange: "21 Março - 19 Abril",
-    image: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=600&auto=format&fit=crop",
+    image: ariesImage,
     lore: "Áries é o ponto inicial do ciclo zodiacal, o equinócio de primavera no hemisfério norte. Representa a explosão de força vital que rompe a inércia do inverno. Sob a regência de Marte, este arquétipo corporifica o pioneirismo absoluto, a coragem cega, o instinto combativo e a busca incessante por diferenciação individual. É a faísca que inicia o incêndio da criação cósmica.",
     keywords: ["Iniciação", "Ação", "Coragem", "Impulso"]
   },
@@ -112,7 +144,7 @@ export const zodiacSigns = [
     modality: "Fixo",
     ruler: "Vênus",
     dateRange: "20 Abril - 20 Maio",
-    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=600&auto=format&fit=crop",
+    image: taurusImage,
     lore: "Touro consolida a energia liberada em Áries, dando-lhe forma física e estabilidade estrutural. Representa a fecundação da terra e o desfrute sensorial da matéria. Sob o domínio de Vênus, este signo governa a conservação de recursos, a paciência construtiva, o apego à segurança biológica e a manifestação da beleza através dos cinco sentidos fundamentais.",
     keywords: ["Estabilidade", "Fecundidade", "Sensorial", "Resistência"]
   },
@@ -125,7 +157,7 @@ export const zodiacSigns = [
     modality: "Mutável",
     ruler: "Mercúrio",
     dateRange: "21 Maio - 20 Junho",
-    image: "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?q=80&w=600&auto=format&fit=crop",
+    image: geminiImage,
     lore: "Gêmeos introduz o princípio da dualidade, da divisão e da comunicação. Representa a mente racional que conecta dois pontos distintos por meio da palavra e do símbolo. Governado por Mercúrio, é o fluxo contínuo de curiosidade, adaptabilidade intelectual, redes de troca e o aprendizado empírico através da linguagem conceitual.",
     keywords: ["Dualidade", "Intelecto", "Navegação", "Conexão"]
   },
@@ -138,7 +170,7 @@ export const zodiacSigns = [
     modality: "Cardinal",
     ruler: "Lua",
     dateRange: "21 Junho - 22 Julho",
-    image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=600&auto=format&fit=crop",
+    image: cancerImage,
     lore: "Câncer marca a interiorização da consciência nos oceanos da alma e da memória subconsciente. Sob a luz mutável da Lua, rege o útero protetor da família, as fundações psicológicas, a intuição emocional e a necessidade arquetípica de pertencer. É a âncora emocional que sustenta o ego na correnteza do tempo.",
     keywords: ["Matriz", "Intuição", "Memória", "Proteção"]
   },
@@ -151,7 +183,7 @@ export const zodiacSigns = [
     modality: "Fixo",
     ruler: "Sol",
     dateRange: "23 Julho - 22 Agosto",
-    image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=600&auto=format&fit=crop",
+    image: leoImage,
     lore: "Leão irradia a consciência centralizada e individualizada. Sob a regência do Sol, é o princípio do brilho próprio, do orgulho criativo, do calor vital e da autorrealização dramática. Representa o rei no trono interior, buscando a expressão soberana de si e a imortalização da própria essência através da criação.",
     keywords: ["Soberania", "Vitalidade", "Criação", "Centro"]
   },
@@ -164,7 +196,7 @@ export const zodiacSigns = [
     modality: "Mutável",
     ruler: "Mercúrio",
     dateRange: "23 Agosto - 22 Setembro",
-    image: "https://images.unsplash.com/photo-1471086569966-db3eebc25a59?q=80&w=600&auto=format&fit=crop",
+    image: virgoImage,
     lore: "Virgem opera a triagem, o refino e a depuração da consciência material. Sob o comando de Mercúrio, este signo de terra analisa cada componente da realidade, eliminando o supérfluo para otimizar os sistemas. Rege a saúde biológica, o serviço técnico, o trabalho de artesão e a busca incessante pela pureza mecânica e funcional.",
     keywords: ["Análise", "Purificação", "Trabalho", "Detalhe"]
   },
@@ -177,7 +209,7 @@ export const zodiacSigns = [
     modality: "Cardinal",
     ruler: "Vênus",
     dateRange: "23 Setembro - 22 Outubro",
-    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=600&auto=format&fit=crop",
+    image: libraImage,
     lore: "Libra introduz o espelho do outro, a busca geométrica por equilíbrio, simetria e justiça nas relações interpessoais. Governado por Vênus, este arquétipo de ar rege as pontes diplomáticas, a estética refinada, os acordos jurídicos e sociais e a sintonização harmônica entre pólos opostos da realidade.",
     keywords: ["Equilíbrio", "Harmonia", "Diplomacia", "Espelho"]
   },
@@ -190,7 +222,7 @@ export const zodiacSigns = [
     modality: "Fixo",
     ruler: "Plutão / Marte",
     dateRange: "23 Outubro - 21 Novembro",
-    image: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=600&auto=format&fit=crop",
+    image: scorpioImage,
     lore: "Escorpião desce aos abismos da psique, onde ocorrem os processos de fusão, morte e transmutação alquímica. Rege os recursos compartilhados, a sexualidade tântrica, os segredos ocultos do poder e a regeneração psicológica através do despojamento absoluto do ego. Sob Plutão, é o limiar de purificação pelo fogo emocional.",
     keywords: ["Transmutação", "Profundidade", "Poder", "Morte"]
   },
@@ -203,7 +235,7 @@ export const zodiacSigns = [
     modality: "Mutável",
     ruler: "Júpiter",
     dateRange: "22 Novembro - 21 Dezembro",
-    image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=600&auto=format&fit=crop",
+    image: sagittariusImage,
     lore: "Sagitário lança sua flecha em direção ao horizonte da verdade última, da filosofia e dos grandes sistemas metafísicos. Governado pelo expansivo Júpiter, este signo busca integrar a moralidade, a aventura transfronteiriça, a sabedoria superior e a fé arquetípica em um sistema de sentido holístico e teleológico.",
     keywords: ["Expansão", "Verdade", "Filosofia", "Busca"]
   },
@@ -216,7 +248,7 @@ export const zodiacSigns = [
     modality: "Cardinal",
     ruler: "Saturno",
     dateRange: "22 Dezembro - 19 Janeiro",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop",
+    image: capricornImage,
     lore: "Capricórnio escala a montanha do tempo e da responsabilidade institucional. Sob o olhar severo de Saturno, este arquétipo corporifica o domínio sobre a matéria, o dever estrutural, o respeito à hierarquia e a consolidação do poder social através do trabalho rigoroso, da disciplina autoimposta e do pragmatismo geométrico.",
     keywords: ["Estrutura", "Disciplina", "Ascensão", "Tempo"]
   },
@@ -229,7 +261,7 @@ export const zodiacSigns = [
     modality: "Fixo",
     ruler: "Urano / Saturno",
     dateRange: "20 Janeiro - 18 Fevereiro",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop",
+    image: aquariusImage,
     lore: "Aquário rompe as barreiras capricornianas por meio da revolução científica, da inovação coletiva e da busca por utopias horizontais. Sob o raio urânico, rege a rede social de mentes livres, a tecnologia desvinculada do dogma e a percepção intuitiva do futuro através da cooperação humanitária e intelectual.",
     keywords: ["Revolução", "Coletivo", "Futuro", "Rede"]
   },
@@ -242,7 +274,7 @@ export const zodiacSigns = [
     modality: "Mutável",
     ruler: "Netuno / Júpiter",
     dateRange: "19 Fevereiro - 20 Março",
-    image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=600&auto=format&fit=crop",
+    image: piscesImage,
     lore: "Peixes dissolve as fronteiras do ego individual no oceano infinito da consciência universal e do amor místico. Governado por Netuno, rege os sonhos, a compaixão sem limites, as ilusões psicológicas e o retorno cíclico da alma ao vácuo primordial, preparando o terreno para o recomeço em Áries.",
     keywords: ["Dissolução", "Compaixão", "Misticismo", "Absoluto"]
   }
@@ -476,5 +508,111 @@ export const astrologicalAspects = [
     nature: "Dinâmico / Polaridade e Balanço",
     description: "Um alinhamento de 180 graus que divide o zodíaco em dois eixos polares complementares. Provoca oscilações dramáticas, projeções de sombra psicológica no outro e a necessidade crucial de reconciliar pólos opostos através da integração harmônica.",
     tension: 90
+  }
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Adicionar ao final do seu src/data/astrology/astrologyData.js
+
+export const planetsTelemetry = {
+  sectionId: "ARC_PLANETS_07",
+  title: "Planetary Dynamics",
+  description: "Os operadores móveis da matriz celeste. Enquanto as constelações formam o hardware arquetípico do firmamento, os corpos celestes atuam como fluxos dinâmicos de dados e energia sutil, injetando impulsos de modificação, restrição e expansão na psique do operador."
+};
+
+export const planetsCatalog = [
+  {
+    id: "sun",
+    name: "Sol",
+    symbol: "☉",
+    classification: "luminar",
+    rulerOf: "Leão",
+    keywords: ["Essência", "Vontade", "Identidade", "Consciência Núcleo"],
+    lore: "O Sol representa o núcleo central do ser, a força vital primária e o propósito de individuação da alma incarnada. É o operador master do algoritmo da consciência, emitindo a frequência de luz central que estabiliza e alimenta toda a rede microcósmica.",
+    image: "/assets/astrology/planets/sun.jpeg"
+  },
+  {
+    id: "moon",
+    name: "Lua",
+    symbol: "☽",
+    classification: "luminar",
+    rulerOf: "Câncer",
+    keywords: ["Inconsciente", "Memória", "Nutrição Emocional", "Ritmo"],
+    lore: "A Lua governa as marés internas, a mente subconsciente e os padrões automáticos de resposta. Atua como o banco de memória e armazenamento de dados de vidas passadas, refletindo e modulando as correntes de luz solar na psique recôndita.",
+    image: "/assets/astrology/planets/moon.jpeg"
+  },
+  {
+    id: "mercury",
+    name: "Mercúrio",
+    symbol: "☿",
+    classification: "pessoal",
+    rulerOf: "Gêmeos / Virgem",
+    keywords: ["Intelecto", "Logística", "Processamento", "Transmissão"],
+    lore: "O mensageiro trans-dimensional gerencia os canais de processamento de informação e transmissão de dados sinápticos. Mercúrio é a ponte analítica que traduz frequências abstratas em linguagem inteligível e conexões lógicas.",
+    image: "/assets/astrology/planets/mercury.jpeg"
+  },
+  {
+    id: "venus",
+    name: "Vênus",
+    symbol: "♀",
+    classification: "pessoal",
+    rulerOf: "Touro / Libra",
+    keywords: ["Atração", "Harmonia", "Equilíbrio Coesivo", "Valor"],
+    lore: "Vênus dita os códigos de atração magnética, os valores estéticos e a ressonância de afinidade. É o princípio de coesão harmónica que unifica sistemas distantes através do alinhamento geométrico de beleza e desejo.",
+    image: "/assets/astrology/planets/venus.jpeg"
+  },
+  {
+    id: "mars",
+    name: "Marte",
+    symbol: "♂",
+    classification: "pessoal",
+    rulerOf: "Áries",
+    keywords: ["Impulso", "Ruptura", "Conquista", "Corte Cirúrgico"],
+    lore: "O dínamo de fogo que impulsiona a força de vontade externa e a autoafirmação. Marte executa as diretrizes de ação da consciência, quebrando loops de estagnação e protegendo os limites da integridade sistémica com precisão militar.",
+    image: "/assets/astrology/planets/mars.jpeg"
+  },
+  {
+    id: "jupiter",
+    name: "Júpiter",
+    symbol: "♃",
+    classification: "social",
+    rulerOf: "Sagitário",
+    keywords: ["Expansão", "Evolução", "Síntese", "Sabedoria Alta"],
+    lore: "O grande otimizador abre canais de abundância e evolução espiritual. Júpiter gerencia as grandes sínteses filosóficas de conhecimento, permitindo que a consciência rompa limites tridimensionais e aceda a visões macrocósmicas.",
+    image: "/assets/astrology/planets/jupiter.jpeg"
+  },
+  {
+    id: "saturn",
+    name: "Saturno",
+    symbol: "♄",
+    classification: "social",
+    rulerOf: "Capricórnio",
+    keywords: ["Cristalização", "Karma", "Estrutura Tempo", "Limite"],
+    lore: "O Senhor do Tempo e da Restrição impõe as barreiras estruturais necessárias para a manifestação estável da matéria. Saturno audita rigorosamente cada processo evolutivo, exigindo disciplina absoluta e consolidação de fundações.",
+    image: "/assets/astrology/planets/saturn.jpeg"
   }
 ];

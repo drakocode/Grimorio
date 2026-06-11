@@ -1,3 +1,9 @@
+
+
+
+
+
+
 export const goetiaManifesto = {
   sectionId: "REG_CHTHONIC_72",
   title: "Infernal Index",

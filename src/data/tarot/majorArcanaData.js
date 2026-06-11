@@ -1,3 +1,27 @@
+import foolImage from "../../assets/tarot/majorArcana/0.jpeg";
+import magicianImage from "../../assets/tarot/majorArcana/1.jpeg";
+import priestessImage from "../../assets/tarot/majorArcana/2.jpeg";
+import empressImage from "../../assets/tarot/majorArcana/3.jpeg";
+import emperorImage from "../../assets/tarot/majorArcana/4.jpeg";
+import hierophantImage from "../../assets/tarot/majorArcana/5.jpeg";
+import loversImage from "../../assets/tarot/majorArcana/6.jpeg";
+import chariotImage from "../../assets/tarot/majorArcana/7.jpeg";
+import justiceImage from "../../assets/tarot/majorArcana/8.jpeg";
+import hermitImage from "../../assets/tarot/majorArcana/9.jpeg";
+import wheelImage from "../../assets/tarot/majorArcana/10.jpeg";
+import strengthImage from "../../assets/tarot/majorArcana/11.jpeg";
+import hangedManImage from "../../assets/tarot/majorArcana/12.jpeg";
+import deathImage from "../../assets/tarot/majorArcana/13.jpeg";
+import temperanceImage from "../../assets/tarot/majorArcana/14.jpeg";
+import devilImage from "../../assets/tarot/majorArcana/15.jpeg";
+import towerImage from "../../assets/tarot/majorArcana/16.jpeg";
+import starImage from "../../assets/tarot/majorArcana/17.jpeg";
+import moonImage from "../../assets/tarot/majorArcana/18.jpeg";
+import sunImage from "../../assets/tarot/majorArcana/19.jpeg";
+import judgementImage from "../../assets/tarot/majorArcana/20.jpeg";
+import worldImage from "../../assets/tarot/majorArcana/21.jpeg";
+
+
 export const majorArcanaManifesto = {
   sectionId: "MS_TAR_MAJOR_22",
   title: "Major Arcana",
@@ -28,7 +52,7 @@ export const majorArcanaKeys = [
     title: "The Fool",
     subTitle: "O Louco // Chave 0",
     description: "O vetor do potencial absoluto, caos primordial e liberdade irrestrita. Representa o estado latente antes da manifestação da primeira palavra geométrica.",
-    image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=600&auto=format&fit=crop",
+    image: foolImage,
     metadata: "ALPHA // URANO",
     path: "/tarot/major-arcana/the-fool",
     element: "Ar",
@@ -49,7 +73,7 @@ export const majorArcanaKeys = [
     title: "The Magician",
     subTitle: "O Mago // Chave I",
     description: "O princípio da vontade consciente e da canalização de vetores elementais. O eixo que conecta o plano denso ao sutil através da tecnologia ritualística.",
-    image: "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?q=80&w=600&auto=format&fit=crop",
+    image: magicianImage,
     metadata: "CONDUÇÃO // MERCÚRIO",
     path: "/tarot/major-arcana/the-magician",
     element: "Fogo / Luz",
@@ -69,7 +93,7 @@ export const majorArcanaKeys = [
     title: "The High Priestess",
     subTitle: "A Sacerdotisa // Chave II",
     description: "A guardiã do arquivo velado e da intuição subaquática. Rege a dualidade estática, os mistérios não manifestos e a memória oculta do tecido universal.",
-    image: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=600&auto=format&fit=crop",
+    image: priestessImage,
     metadata: "ORÁCULO // LUA",
     path: "/tarot/major-arcana/the-high-priestess",
     element: "Água",
@@ -89,7 +113,7 @@ export const majorArcanaKeys = [
     title: "The Empress",
     subTitle: "A Imperatriz // Chave III",
     description: "A força geratriz da matéria e da abundância orgânica. Matriz da criatividade contínua, da inteligência natural e do florescimento dos reinos densos.",
-    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=600&auto=format&fit=crop",
+    image: empressImage,
     metadata: "GÊNESE // VÊNUS",
     path: "/tarot/major-arcana/the-empress",
     element: "Terra / Natureza",
@@ -109,7 +133,7 @@ export const majorArcanaKeys = [
     title: "The Emperor",
     subTitle: "O Imperador // Chave IV",
     description: "A estrutura do poder secular, estabilidade geopolítica e a imposição da ordem matemática sobre o caos indomado.",
-    image: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=600&auto=format&fit=crop",
+    image: emperorImage,
     metadata: "ARQUITETO // ÁRIES",
     path: "/tarot/major-arcana/the-em emperor",
     element: "Fogo",
@@ -129,7 +153,7 @@ export const majorArcanaKeys = [
     title: "The Hierophant",
     subTitle: "O Hierofante // Chave V",
     description: "A codificação das doutrinas espirituais, tradições teológicas e o portal institucional para os mistérios sagrados.",
-    image: "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    image: hierophantImage,
     metadata: "TRADIÇÃO // TOURO",
     path: "/tarot/major-arcana/the-hierophant",
     element: "Terra",
@@ -149,7 +173,7 @@ export const majorArcanaKeys = [
     title: "The Lovers",
     subTitle: "Os Amantes // Chave VI",
     description: "O vetor de bifurcação, alinhamento de polaridades e a tensão eletromagnética das escolhas conscientes e inconscientes.",
-    image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=600&auto=format&fit=crop",
+    image: loversImage,
     metadata: "POLARIDADE // GÊMEOS",
     path: "/tarot/major-arcana/the-lovers",
     element: "Ar",
@@ -169,7 +193,7 @@ export const majorArcanaKeys = [
     title: "The Chariot",
     subTitle: "O Carro // Chave VII",
     description: "A canalização direcionada do ego, triunfo focado e a maestria técnica sobre correntes opostas de força em movimento.",
-    image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=600&auto=format&fit=crop",
+    image: chariotImage,
     metadata: "TRIUNFO // CÂNCONER",
     path: "/tarot/major-arcana/the-chariot",
     element: "Água",
@@ -184,23 +208,23 @@ export const majorArcanaKeys = [
     ]
   },
   {
-    id: "strength",
+    id: "justice",
     numericId: "VIII",
-    title: "Strength",
-    subTitle: "A Força // Chave VIII",
-    description: "O domínio sutil sobre os impulsos animalescos através da alquimia interna, coragem silenciosa e compaixão inflexível.",
-    image: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=600&auto=format&fit=crop",
-    metadata: "ALQUIMIA // LEÃO",
-    path: "/tarot/major-arcana/strength",
-    element: "Fogo",
-    astrology: "Leão",
-    hebrewLetter: "Teth (ט)",
-    treeOfLife: "Chesed para Geburah",
-    lore: "A Força inverte o conceito de dominação violenta. Aqui, uma figura feminina fecha suavemente as mandíbulas de um leão enfurecido. O arquétipo ensina que os demônios e instintos ctônicos do microcosmo não devem ser destruídos, mas transmutados e integrados através do autocontrole e da doçura cirúrgica.",
+    title: "Justice",
+    subTitle: "A Justiça // Chave VIII",
+    description: "O equilíbrio cirúrgico da balança cármica, retidão legal e o julgamento lógico que elimina todas as ilusões emocionais.",
+    image: justiceImage,
+    metadata: "EQUILÍBRIO // LIBRA",
+    path: "/tarot/major-arcana/justice",
+    element: "Ar",
+    astrology: "Libra",
+    hebrewLetter: "Lamed (ל)",
+    treeOfLife: "Tiphereth para Geburah",
+    lore: "A Justiça senta-se no centro geométrico da árvore arquetípica. Munida de uma espada de dois gumes e uma balança de precisão, ela pesa os atos da consciência humana com imparcialidade matemática. Ela nos lembra que toda ação gera uma reação equivalente e oposta no tecido da realidade.",
     symbology: [
-      "A Lemnisca: A energia infinita que flui quando a força bruta é convertida em poder sutil.",
-      "O Leão de Ouro: O aspecto apaixonado, o ego selvagem e a energia libidinal inferior.",
-      "As Correntes de Flores: O laço estético e ético que subjuga as forças da natureza primordial."
+      "A Balança: A mensuração exata das forças polares e ações individuais.",
+      "A Espada Ereta: A execução imediata da lei cósmica e o corte das ilusões subjetivas.",
+      "O Quadrado na Coroa: A estabilização do ordenamento social por leis justas."
     ]
   },
   {
@@ -209,7 +233,7 @@ export const majorArcanaKeys = [
     title: "The Hermit",
     subTitle: "O Eremita // Chave IX",
     description: "A retirada estratégica para o isolamento analítico, busca pela lanterna interior e o amadurecimento silencioso da sabedoria oculta.",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop",
+    image: hermitImage,
     metadata: "ISOLAMENTO // VIRGEM",
     path: "/tarot/major-arcana/the-hermit",
     element: "Terra",
@@ -229,7 +253,7 @@ export const majorArcanaKeys = [
     title: "Wheel of Fortune",
     subTitle: "A Roda da Fortuna // Chave X",
     description: "A oscilação contínua dos ciclos macrocósmicos, as engrenagens do karma e as mutações constantes do tecido probabilístico.",
-    image: "https://images.unsplash.com/photo-1533928298208-27ff66555d8d?q=80&w=600&auto=format&fit=crop",
+    image: wheelImage,
     metadata: "CICLOS // JÚPITER",
     path: "/tarot/major-arcana/wheel-of-fortune",
     element: "Fogo / Expansão",
@@ -244,23 +268,23 @@ export const majorArcanaKeys = [
     ]
   },
   {
-    id: "justice",
+    id: "strength",
     numericId: "XI",
-    title: "Justice",
-    subTitle: "A Justiça // Chave XI",
-    description: "O equilíbrio cirúrgico da balança cármica, retidão legal e o julgamento lógico que elimina todas as ilusões emocionais.",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=600&auto=format&fit=crop",
-    metadata: "EQUILÍBRIO // LIBRA",
-    path: "/tarot/major-arcana/justice",
-    element: "Ar",
-    astrology: "Libra",
-    hebrewLetter: "Lamed (ל)",
-    treeOfLife: "Tiphereth para Geburah",
-    lore: "A Justiça senta-se no centro geométrico da árvore arquetípica. Munida de uma espada de dois gumes e uma balança de precisão, ela pesa os atos da consciência humana com imparcialidade matemática. Ela nos lembra que toda ação gera uma reação equivalente e oposta no tecido da realidade.",
+    title: "Strength",
+    subTitle: "A Força // Chave XI",
+    description: "O domínio sutil sobre os impulsos animalescos através da alquimia interna, coragem silenciosa e compaixão inflexível.",
+    image: strengthImage,
+    metadata: "ALQUIMIA // LEÃO",
+    path: "/tarot/major-arcana/strength",
+    element: "Fogo",
+    astrology: "Leão",
+    hebrewLetter: "Teth (ט)",
+    treeOfLife: "Chesed para Geburah",
+    lore: "A Força inverte o conceito de dominação violenta. Aqui, uma figura feminina fecha suavemente as mandíbulas de um leão enfurecido. O arquétipo ensina que os demônios e instintos ctônicos do microcosmo não devem ser destruídos, mas transmutados e integrados através do autocontrole e da doçura cirúrgica.",
     symbology: [
-      "A Balança: A mensuração exata das forças polares e ações individuais.",
-      "A Espada Ereta: A execução imediata da lei cósmica e o corte das ilusões subjetivas.",
-      "O Quadrado na Coroa: A estabilização do ordenamento social por leis justas."
+      "A Lemnisca: A energia infinita que flui quando a força bruta é convertida em poder sutil.",
+      "O Leão de Ouro: O aspecto apaixonado, o ego selvagem e a energia libidinal inferior.",
+      "As Correntes de Flores: O laço estético e ético que subjuga as forças da natureza primordial."
     ]
   },
   {
@@ -269,7 +293,7 @@ export const majorArcanaKeys = [
     title: "The Hanged Man",
     subTitle: "O Enforcado // Chave XII",
     description: "A suspensão voluntária da ação, inversão da perspectiva mundana e o sacrifício estratégico do ego em prol da iluminação espiritual.",
-    image: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=600&auto=format&fit=crop",
+    image: hangedManImage,
     metadata: "REVERSÃO // NETUNO",
     path: "/tarot/major-arcana/the-hanged-man",
     element: "Água",
@@ -289,7 +313,7 @@ export const majorArcanaKeys = [
     title: "Death",
     subTitle: "A Morte // Chave XIII",
     description: "A foice da dissolução necessária, encerramento de ciclos obsoletos e a radical transmutação molecular da forma pura.",
-    image: "https://images.unsplash.com/photo-1502481851512-e91251c21d66?q=80&w=600&auto=format&fit=crop",
+    image: deathImage,
     metadata: "DISSOLUÇÃO // ESCORPIÃO",
     path: "/tarot/major-arcana/death",
     element: "Água",
@@ -309,7 +333,7 @@ export const majorArcanaKeys = [
     title: "Temperance",
     subTitle: "A Temperança // Chave XIV",
     description: "A alquimia dos fluidos psíquicos, calibração constante de opostos e a harmonia dinâmica da cura espiritual.",
-    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=600&auto=format&fit=crop",
+    image: temperanceImage,
     metadata: "ALQUIMIA // SARGITÁRIO",
     path: "/tarot/major-arcana/temperance",
     element: "Fogo",
@@ -329,7 +353,7 @@ export const majorArcanaKeys = [
     title: "The Devil",
     subTitle: "O Diabo // Chave XV",
     description: "O aprisionamento na ilusão puramente material, as correntes do desejo inconsciente e o confronto com a própria sombra psicológica.",
-    image: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=600&auto=format&fit=crop",
+    image: devilImage,
     metadata: "SOMBRA // CAPRICÓRNIO",
     path: "/tarot/major-arcana/the-devil",
     element: "Terra",
@@ -349,7 +373,7 @@ export const majorArcanaKeys = [
     title: "The Tower",
     subTitle: "A Torre // Chave XVI",
     description: "A ruptura sísmica de falsas estruturas, colapso de dogmas erguidos pelo orgulho egoico e a catarse libertadora do raio divino.",
-    image: "https://images.unsplash.com/photo-1536566482680-fca31930a0bd?q=80&w=600&auto=format&fit=crop",
+    image: towerImage,
     metadata: "CATARSE // MARTE",
     path: "/tarot/major-arcana/the-tower",
     element: "Fogo",
@@ -369,7 +393,7 @@ export const majorArcanaKeys = [
     title: "The Star",
     subTitle: "A Estrela // Chave XVII",
     description: "O influxo da esperança serena, inspiração cósmica pura e a purificação dos mananciais psíquicos por canais celestes.",
-    image: "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&w=600&auto=format&fit=crop",
+    image: starImage,
     metadata: "INFLUXO // AQUÁRIO",
     path: "/tarot/major-arcana/the-star",
     element: "Ar",
@@ -389,7 +413,7 @@ export const majorArcanaKeys = [
     title: "The Moon",
     subTitle: "A Lua // Chave XVIII",
     description: "A travessia do labirinto subconsciente, ilusões astrais densas, pesadelos atávicos e o limiar da evolução oculta.",
-    image: "https://images.unsplash.com/photo-1532960401447-7dd05bef20b0?q=80&w=600&auto=format&fit=crop",
+    image: moonImage,
     metadata: "LABIRINTO // PEIXES",
     path: "/tarot/major-arcana/the-moon",
     element: "Água",
@@ -409,7 +433,7 @@ export const majorArcanaKeys = [
     title: "The Sun",
     subTitle: "O Sol // Chave XIX",
     description: "A radiação máxima da verdade analítica, vitalidade celular plena, lucidez indomável e o sucesso nos campos da matéria.",
-    image: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?q=80&w=600&auto=format&fit=crop",
+    image: sunImage,
     metadata: "LUCIDEZ // SOL",
     path: "/tarot/major-arcana/the-sun",
     element: "Fogo",
@@ -429,7 +453,7 @@ export const majorArcanaKeys = [
     title: "Judgement",
     subTitle: "O Julgamento // Chave XX",
     description: "O chamado do despertar arquetípico, ressurreição da consciência sepultada e a integração final do ciclo histórico pessoal.",
-    image: "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&w=600&auto=format&fit=crop",
+    image: judgementImage,
     metadata: "DESPERTAR // PLUTÃO",
     path: "/tarot/major-arcana/judgement",
     element: "Fogo",
@@ -449,7 +473,7 @@ export const majorArcanaKeys = [
     title: "The World",
     subTitle: "O Mundo // Chave XXI",
     description: "A totalização da sínclise arquetípica, maestria absoluta sobre os quatro elementos e a consumação do ciclo evolutivo cósmico.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop",
+    image: worldImage,
     metadata: "TOTALIDADE // SATURNO",
     path: "/tarot/major-arcana/the-world",
     element: "Terra",

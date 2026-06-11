@@ -1,0 +1,187 @@
+/* src/styles/SephirotHome.styles.css */
+
+.sephirot-page-container {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  gap: 60px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sephirot-telemetry-panel {
+  position: relative;
+  border-right: var(--border-sharp);
+  padding-right: 40px;
+}
+
+.sticky-sephirot-content {
+  position: sticky;
+  top: 140px;
+  left: 0;
+}
+
+.sephirot-archive-tag {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.sephirot-main-title {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--color-ghost);
+}
+
+.sephirot-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-gold) 0%, transparent 100%);
+  margin: 24px 0;
+}
+
+.sephirot-manifesto-text {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* Painel de Métricas */
+.tree-metrics-box {
+  background: rgba(26, 26, 34, 0.25);
+  border: var(--border-sharp);
+  padding: 20px;
+  font-size: 0.8rem;
+}
+
+.metrics-header {
+  color: var(--color-gold);
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(176, 141, 87, 0.1);
+  padding-bottom: 8px;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  color: var(--color-ghost);
+}
+
+.status-stable {
+  color: #5af78e;
+  text-shadow: 0 0 8px rgba(90, 247, 142, 0.3);
+}
+
+/* Stream de Cards à Direita */
+.sephirot-stream-panel {
+  padding-bottom: 100px;
+}
+
+.sephirot-stream-header {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.sephirot-list {
+  display: flex;
+  flex-col: column;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Card Ritualístico */
+.sephirah-ritual-card {
+  background: rgba(15, 15, 22, 0.4);
+  border: var(--border-sharp);
+  padding: 24px;
+  transition: var(--transition-ceremonial);
+}
+
+.sephirah-ritual-card:hover {
+  border-color: rgba(176, 141, 87, 0.4);
+  background: rgba(176, 141, 87, 0.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.sephirah-card-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  margin-bottom: 12px;
+}
+
+.sephirah-class {
+  color: var(--color-muted);
+}
+
+.sephirah-card-title-block {
+  margin-bottom: 20px;
+}
+
+.sephirah-name {
+  font-size: 1.8rem;
+  color: var(--color-ghost);
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.sephirah-translation {
+  font-size: 0.95rem;
+  color: var(--color-gold);
+  opacity: 0.8;
+}
+
+/* Grid Técnico do Card */
+.sephirah-data-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  border-left: 2px solid var(--color-gold);
+  margin-bottom: 16px;
+  font-size: 0.8rem;
+}
+
+.data-item {
+  display: flex;
+  gap: 8px;
+}
+
+.data-item .label {
+  color: var(--color-muted);
+  min-width: 110px;
+}
+
+.data-item .value {
+  color: var(--color-ghost);
+}
+
+.sephirah-description {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 1100px) {
+  .sephirot-page-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .sephirot-telemetry-panel {
+    border-right: none;
+    border-bottom: var(--border-sharp);
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+  .sticky-sephirot-content {
+    position: relative;
+    top: 0;
+  }
+}
