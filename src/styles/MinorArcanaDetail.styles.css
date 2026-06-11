@@ -1,0 +1,76 @@
+.minor-detail-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+.minor-back-link {
+  display: inline-block;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  margin-bottom: 40px;
+  transition: color 0.3s ease;
+}
+.minor-back-link:hover { color: var(--color-gold); }
+.minor-layout-container {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  gap: 80px;
+  align-items: start;
+}
+.minor-monolith {
+  border: 1px solid rgba(176, 141, 87, 0.2);
+  background: #0d0d11;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.minor-hero-img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(1) contrast(1.1);
+  mix-blend-mode: luminosity;
+  opacity: 0.7;
+}
+.minor-monolith-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--color-muted);
+}
+.minor-meta { color: var(--color-gold); font-size: 0.8rem; letter-spacing: 0.1em; }
+.minor-title-main { font-size: 3.5rem; color: var(--color-ghost); margin: 8px 0; }
+.minor-subtitle-sub { color: var(--color-muted); font-size: 1rem; }
+.minor-separator {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-gold) 0%, transparent 100%);
+  margin: 32px 0;
+}
+.minor-section { margin-bottom: 40px; }
+.minor-section-tag { color: var(--color-muted); font-size: 0.8rem; margin-bottom: 16px; }
+.minor-lore-text { font-size: 1.15rem; line-height: 1.8; color: rgba(230, 230, 235, 0.85); text-align: justify; }
+.minor-keywords-flex { display: flex; flex-wrap: wrap; gap: 12px; }
+.minor-kw-badge {
+  background: var(--color-charcoal);
+  border: var(--border-sharp);
+  padding: 10px 16px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-ghost);
+}
+.crimson-bullet { color: var(--color-crimson); }
+.minor-symbology-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.minor-symbology-item {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+  padding-left: 16px;
+  border-left: 2px solid var(--color-crimson);
+}
+.minor-symbology-item strong { display: block; font-size: 0.85rem; margin-bottom: 4px; }
+.minor-integrity-footer { border-top: 1px dashed rgba(176, 141, 87, 0.2); padding-top: 20px; color: var(--color-muted); font-size: 0.75rem; }

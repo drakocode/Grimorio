@@ -6,6 +6,8 @@ import Home from "../pages/home/Home";
 import TarotHome from "../pages/tarot/TarotHome";
 import MajorArcanaHome from "../pages/tarot/majorArcana/MajorArcanaHome";
 import ArcanaDetail from "../pages/tarot/majorArcana/ArcanaDetail";
+import MinorArcanaHome from "../pages/tarot/minorArcana/MinorArcanaHome";
+import MinorArcanaDetail from "../pages/tarot/minorArcana/MinorArcanaDetail";
 
 // Importações do Módulo Goetia
 import GoetiaHome from "../pages/goetia/GoetiaHome";
@@ -37,13 +39,13 @@ const AppRoutes = () => {
           <Route path="/tarot" element={<TarotHome />} />
           <Route path="/tarot/major-arcana" element={<MajorArcanaHome />} />
           <Route path="/tarot/major-arcana/:id" element={<ArcanaDetail />} />
+          <Route path="/tarot/minor-arcana" element={<MinorArcanaHome />} />
+          <Route path="/tarot/minor-arcana/:id" element={<MinorArcanaDetail />} />
+          
 
           {/* Módulo Goetia */}
           <Route path="/goetia" element={<GoetiaHome />} />
-          <Route
-            path="/goetia/daemons"
-            element={<Navigate to="/goetia" replace />}
-          />
+          <Route path="/goetia/daemons" element={<Navigate to="/goetia" replace />} />
           <Route path="/goetia/daemons/:id" element={<DaemonDetail />} />
 
           {/* Módulo Astrologia */}

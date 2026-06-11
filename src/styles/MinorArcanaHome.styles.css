@@ -1,0 +1,101 @@
+.minor-arcana-page-container {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  gap: 60px;
+  width: 100%;
+  min-height: 100vh;
+}
+.minor-arcana-manifesto-panel {
+  position: relative;
+  border-right: var(--border-sharp);
+  padding-right: 40px;
+}
+.sticky-minor-content {
+  position: sticky;
+  top: 140px;
+  left: 0;
+}
+.minor-archive-tag {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+.minor-main-title {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--color-ghost);
+}
+.minor-architectural-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-crimson) 0%, transparent 100%);
+  margin: 24px 0;
+}
+.minor-description-text {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.suit-filter-wrapper {
+  margin-bottom: 32px;
+}
+.filter-system-header {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-bottom: 14px;
+}
+.suit-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.suit-ritual-btn {
+  background: transparent;
+  border: var(--border-sharp);
+  border-color: rgba(176, 141, 87, 0.15);
+  color: var(--color-muted);
+  padding: 12px 16px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+.suit-ritual-btn:hover, .suit-ritual-btn.selected {
+  border-color: var(--color-gold);
+  color: var(--color-ghost);
+  background: rgba(176, 141, 87, 0.02);
+}
+.suit-dot {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+}
+.suit-ritual-btn.selected .suit-dot {
+  background: var(--color-gold);
+  box-shadow: 0 0 6px var(--color-gold);
+}
+.minor-telemetry-box {
+  border-top: 1px dashed rgba(176, 141, 87, 0.15);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.75rem;
+}
+.minor-tel-row {
+  display: flex;
+  justify-content: space-between;
+}
+.minor-stream-tag {
+  font-size: 0.8rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+.minor-grid-override {
+  gap: 20px !important;
+}
