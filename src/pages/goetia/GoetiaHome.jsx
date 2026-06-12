@@ -4,12 +4,14 @@ import {
   goetiaDaemons,
   goetiaSystemMetrics,
 } from "../../data/goetia/goetiaData";
+import BirthdateSearch from "../../components/search/BirthdateSearch";
 import RitualGrid from "../../components/grid/Grid";
 import OccultCard from "../../components/cards/Card";
 import "../../styles/GoetiaHome.styles.css";
 
 const GoetiaHome = () => {
   const [selectedRank, setSelectedRank] = useState("ALL");
+  const [birthdateSearch, setBirthdateSearch] = useState("");
 
   // As 7 hierarquias tradicionais da Goetia indexadas ao sistema de barreira
   const ranks = [
@@ -23,16 +25,33 @@ const GoetiaHome = () => {
     "PRELADO",
   ];
 
-  // Filtro adaptativo varrendo propriedades prováveis do seu modelo de dados (.rank ou .hierarchy)
-  const filteredDaemons =
-    selectedRank === "ALL"
-      ? goetiaDaemons
-      : goetiaDaemons.filter(
+  // Filtro por data de nascimento (planet/zodíaco)
+  const filterByBirthdate = (daemons) => {
+    if (!birthdateSearch.trim()) return daemons;
+
+    const searchLower = birthdateSearch.toLowerCase();
+    return daemons.filter(
+      (daemon) =>
+        daemon.planet?.toLowerCase().includes(searchLower) ||
+        daemon.zodiacRange?.toLowerCase().includes(searchLower) ||
+        daemon.title.toLowerCase().includes(searchLower)
+    );
+  };
+
+  // Filtro por hierarquia
+  const filterByRank = (daemons) => {
+    return selectedRank === "ALL"
+      ? daemons
+      : daemons.filter(
           (daemon) =>
             daemon.rank === selectedRank ||
             daemon.hierarchy === selectedRank ||
-            daemon.metadata?.includes(selectedRank),
+            daemon.metadata?.includes(selectedRank)
         );
+  };
+
+  // Aplicar filtros em sequência
+  const filteredDaemons = filterByRank(filterByBirthdate(goetiaDaemons));
 
   return (
     <div className="goetia-page-container">
@@ -47,6 +66,12 @@ const GoetiaHome = () => {
           <p className="goetia-description-text">
             {goetiaManifesto.description}
           </p>
+
+          {/* Pesquisa por Data de Nascimento */}
+          <BirthdateSearch
+            onSearch={setBirthdateSearch}
+            placeholder="Pesquisar por planeta/data..."
+          />
 
           {/* ADAPTADO DE ANJOSHOME: Filtro por Hierarquias Ctônicas */}
           <div className="goetia-filter-matrix">

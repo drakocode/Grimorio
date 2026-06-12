@@ -2,6 +2,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { sephirotTreeData } from '../../../data/cabala/sephirot/sephirotData';
+import DetailNavigation from '../../../components/navigation/DetailNavigation';
 import '../../../styles/SephirahDetail.styles.css';
 
 const SephirahDetail = () => {
@@ -26,6 +27,14 @@ const SephirahDetail = () => {
       <Link to="/cabala/sephirot" className="sephirah-back-link font-mono">
         ← RETORNAR AO GRAFO SEPHIRÓTICO
       </Link>
+
+      {/* Navegação Topo */}
+      <DetailNavigation
+        items={sephirotTreeData}
+        currentId={number}
+        basePath="/cabala/sephirot"
+        paramName="number"
+      />
 
       <div className="sephirah-layout-container">
         
@@ -96,6 +105,14 @@ const SephirahDetail = () => {
         </div>
 
       </div>
+
+      {/* Navegação Base */}
+      <DetailNavigation
+        items={sephirotTreeData}
+        currentId={number}
+        basePath="/cabala/sephirot"
+        paramName="number"
+      />
     </div>
   );
 };

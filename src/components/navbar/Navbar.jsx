@@ -32,7 +32,7 @@ const mainNavigation = [
       { path: '/cabala/sephirot', label: 'SEPHIROT' },
       { path: '/cabala/tree-of-death', label: 'ÁRVORE DA MORTE' },
       { path: '/cabala/qliphoth', label: 'QLIPHOTH' },
-      { path: '/cabala/anjos', label: 'ANJOS' }
+      { path: '/anjos', label: 'ANJOS' }
     ]
   },
   { path: '/goetia', label: 'GOETIA' },

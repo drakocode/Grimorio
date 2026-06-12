@@ -1,6 +1,7 @@
 // src/pages/cabala/qliphoth/QliphothDetail.jsx
 import { useParams, Link } from 'react-router-dom';
 import { qliphotCatalog } from '../../../data/cabala/qliphoth/qliphothData';
+import DetailNavigation from '../../../components/navigation/DetailNavigation';
 import '../../../styles/QliphothDetail.styles.css';
 
 const QliphothDetail = () => {
@@ -21,11 +22,19 @@ const QliphothDetail = () => {
 
   return (
     <div className="qliphot-detail-wrapper">
-      
+
       {/* Navegação de Retorno */}
       <Link to="/cabala" className="qliphot-back-link font-mono">
         ← RETORNAR AO FLUXO DA ÁRVORE DA VIDA
       </Link>
+
+      {/* Navegação Topo */}
+      <DetailNavigation
+        items={qliphotCatalog}
+        currentId={number}
+        basePath="/cabala/qliphoth"
+        paramName="number"
+      />
 
       <div className="qliphot-layout-container">
         
@@ -106,6 +115,14 @@ const QliphothDetail = () => {
         </div>
 
       </div>
+
+      {/* Navegação Base */}
+      <DetailNavigation
+        items={qliphotCatalog}
+        currentId={number}
+        basePath="/cabala/qliphoth"
+        paramName="number"
+      />
     </div>
   );
 };

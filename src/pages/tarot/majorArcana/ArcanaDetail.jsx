@@ -1,6 +1,9 @@
 import { useParams, Link } from 'react-router-dom';
 import { majorArcanaKeys } from '../../../data/tarot/majorArcanaData';
+import DeckImageCard from '../../../components/decks/DeckImageCard';
+import DetailNavigation from '../../../components/navigation/DetailNavigation';
 import '../../../styles/ArcanaDetail.styles.css';
+import '../../../styles/DeckImageCard.styles.css';
 
 const ArcanaDetail = () => {
   const { id } = useParams();
@@ -21,11 +24,18 @@ const ArcanaDetail = () => {
 
   return (
     <div className="arcana-detail-wrapper">
-      
+
       {/* Botão de Retorno Técnico */}
       <Link to="/tarot/major-arcana" className="arcana-back-link font-mono">
         ← RETORNAR_À_MATRIZ_MÃE
       </Link>
+
+      {/* Navegação Topo */}
+      <DetailNavigation
+        items={majorArcanaKeys}
+        currentId={id}
+        basePath="/tarot/major-arcana"
+      />
 
       <div className="arcana-layout-container">
         
@@ -54,6 +64,25 @@ const ArcanaDetail = () => {
             <div className="corr-row">
               <span className="corr-label">EIXO_DA_ÁRBORE:</span>
               <span className="corr-value text-crimson">{arcana.treeOfLife}</span>
+            </div>
+          </div>
+
+          {/* Galeria de Decks */}
+          <div className="arcana-decks-section">
+            <h4 className="decks-section-tag font-mono">[VARIAÇÕES DE DECKS]</h4>
+            <div className="decks-gallery">
+              {arcana.decks && arcana.decks.length > 0 ? (
+                arcana.decks.map((deck, index) => (
+                  <DeckImageCard key={index} deck={deck} />
+                ))
+              ) : (
+                <div className="deck-card">
+                  <div className="deck-card-placeholder">
+                    <span className="placeholder-text font-mono">// SEM_DECKS_MAPEADOS</span>
+                    <span className="placeholder-desc font-mono">Adicionar variações futuras</span>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -98,6 +127,13 @@ const ArcanaDetail = () => {
         </div>
 
       </div>
+
+      {/* Navegação Base */}
+      <DetailNavigation
+        items={majorArcanaKeys}
+        currentId={id}
+        basePath="/tarot/major-arcana"
+      />
     </div>
   );
 };

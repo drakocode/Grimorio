@@ -173,6 +173,21 @@
   letter-spacing: 0.2em;
 }
 
+/* Seção de Decks */
+.arcana-decks-section {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.decks-section-tag {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
 /* Fallback Chave Não Encontrada */
 .arcana-not-found {
   text-align: center;

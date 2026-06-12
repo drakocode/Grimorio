@@ -1,0 +1,89 @@
+.birthdate-search-container {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: rgba(11, 11, 15, 0.5);
+  border: 1px solid rgba(176, 141, 87, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.search-title {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.birthdate-search-input {
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(11, 11, 15, 0.8);
+  border: 1px solid rgba(176, 141, 87, 0.3);
+  color: var(--color-ghost);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  font-family: monospace;
+  transition: all 0.3s ease;
+}
+
+.birthdate-search-input:focus {
+  outline: none;
+  background: rgba(11, 11, 15, 0.95);
+  border-color: var(--color-gold);
+  box-shadow: 0 0 12px rgba(176, 141, 87, 0.2);
+}
+
+.birthdate-search-input::placeholder {
+  color: rgba(122, 122, 133, 0.5);
+}
+
+.search-clear-btn {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  color: var(--color-crimson);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-clear-btn:hover {
+  color: var(--color-gold);
+}
+
+.search-help-text {
+  font-size: 0.65rem;
+  color: var(--color-muted);
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  line-height: 1.4;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .birthdate-search-container {
+    margin-bottom: 16px;
+    padding: 12px;
+  }
+
+  .birthdate-search-input {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  .search-help-text {
+    font-size: 0.6rem;
+  }
+}

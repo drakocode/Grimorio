@@ -1,6 +1,9 @@
 import { useParams, Link } from 'react-router-dom';
 import { goetiaDaemons } from '../../../data/goetia/goetiaData';
+import DetailNavigation from '../../../components/navigation/DetailNavigation';
+import DaemonSealCard from '../../../components/goetia/DaemonSealCard';
 import '../../../styles/DaemonDetail.styles.css';
+import '../../../styles/DaemonSealCard.styles.css';
 
 const DaemonDetail = () => {
   const { id } = useParams();
@@ -20,11 +23,18 @@ const DaemonDetail = () => {
 
   return (
     <div className="daemon-detail-wrapper">
-      
+
       {/* Botão de Retorno Técnico ao Módulo Central */}
       <Link to="/goetia" className="daemon-back-link font-mono">
         ← RETORNAR_A_SÍNCLISE_CTÔNICA
       </Link>
+
+      {/* Navegação Topo */}
+      <DetailNavigation
+        items={goetiaDaemons}
+        currentId={id}
+        basePath="/goetia/daemons"
+      />
 
       <div className="daemon-layout-container">
         
@@ -35,7 +45,9 @@ const DaemonDetail = () => {
             <img src={daemon.image} alt={daemon.title} className="daemon-chamber-img" />
             <div className="daemon-containment-glow"></div>
           </div>
-          
+
+          {/* Card do Sigilo */}
+          <DaemonSealCard daemon={daemon} />
           {/* Tabela de Telemetria Analítica */}
           <div className="daemon-parameters font-mono">
             <div className="param-row">
@@ -98,6 +110,13 @@ const DaemonDetail = () => {
         </div>
 
       </div>
+
+      {/* Navegação Base */}
+      <DetailNavigation
+        items={goetiaDaemons}
+        currentId={id}
+        basePath="/goetia/daemons"
+      />
     </div>
   );
 };

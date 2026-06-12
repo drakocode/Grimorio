@@ -1,7 +1,10 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { minorArcanaCatalog } from '../../../data/tarot/minorArcanaData';
+import DeckImageCard from '../../../components/decks/DeckImageCard';
+import DetailNavigation from '../../../components/navigation/DetailNavigation';
 import '../../../styles/MinorArcanaDetail.styles.css';
+import '../../../styles/DeckImageCard.styles.css';
 
 const MinorArcanaDetail = () => {
   const { id } = useParams();
@@ -20,10 +23,17 @@ const MinorArcanaDetail = () => {
 
   return (
     <div className="minor-detail-wrapper">
-      
+
       <Link to="/tarot/minor-arcana" className="minor-back-link font-mono">
         ← RETORNAR À DISTRIBUIÇÃO ELEMENTAL
       </Link>
+
+      {/* Navegação Topo */}
+      <DetailNavigation
+        items={minorArcanaCatalog}
+        currentId={id}
+        basePath="/tarot/minor-arcana"
+      />
 
       <div className="minor-layout-container">
         
@@ -34,6 +44,25 @@ const MinorArcanaDetail = () => {
             <div className="minor-monolith-header font-mono">
               <span>EL_ENG: {card.element.toUpperCase()}</span>
               <span>RANK // {card.rank.toUpperCase()}</span>
+            </div>
+          </div>
+
+          {/* Galeria de Decks */}
+          <div className="minor-decks-section">
+            <h4 className="decks-section-tag font-mono">[VARIAÇÕES DE DECKS]</h4>
+            <div className="decks-gallery">
+              {card.decks && card.decks.length > 0 ? (
+                card.decks.map((deck, index) => (
+                  <DeckImageCard key={index} deck={deck} />
+                ))
+              ) : (
+                <div className="deck-card">
+                  <div className="deck-card-placeholder">
+                    <span className="placeholder-text font-mono">// SEM_DECKS_MAPEADOS</span>
+                    <span className="placeholder-desc font-mono">Adicionar variações futuras</span>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -88,6 +117,13 @@ const MinorArcanaDetail = () => {
         </div>
 
       </div>
+
+      {/* Navegação Base */}
+      <DetailNavigation
+        items={minorArcanaCatalog}
+        currentId={id}
+        basePath="/tarot/minor-arcana"
+      />
     </div>
   );
 };

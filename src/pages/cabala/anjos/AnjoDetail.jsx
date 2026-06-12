@@ -1,6 +1,7 @@
 // src/pages/cabala/anjos/AnjoDetail.jsx
 import { useParams, Link } from 'react-router-dom';
 import { angelsCatalog } from '../../../data/cabala/anjos/anjosData'; // Ajuste o nível de pastas se necessário
+import DetailNavigation from '../../../components/navigation/DetailNavigation';
 import '../../../styles/AnjoDetail.styles.css';
 
 const AnjoDetail = () => {
@@ -22,11 +23,19 @@ const AnjoDetail = () => {
 
   return (
     <div className="angel-detail-wrapper">
-      
+
       {/* CORRIGIDO: path alterado para /cabala/anjos */}
       <Link to="/anjos" className="angel-back-link font-mono">
         ← RETORNAR_AO_FLUXO_ANGÉLICO
       </Link>
+
+      {/* Navegação Topo */}
+      <DetailNavigation
+        items={angelsCatalog}
+        currentId={number}
+        basePath="/anjos"
+        paramName="number"
+      />
 
       <div className="angel-layout-container">
         
@@ -106,6 +115,14 @@ const AnjoDetail = () => {
         </div>
 
       </div>
+
+      {/* Navegação Base */}
+      <DetailNavigation
+        items={angelsCatalog}
+        currentId={number}
+        basePath="/anjos"
+        paramName="number"
+      />
     </div>
   );
 };

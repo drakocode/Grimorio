@@ -22,6 +22,33 @@ import judgementImage from "../../assets/tarot/majorArcana/20.jpeg";
 import worldImage from "../../assets/tarot/majorArcana/21.jpeg";
 
 
+// DARK ARCHETYPES TAROT
+import foolDarkImage from "../../assets/tarot/majorArcana/dark/0.jpg";
+import magicianDarkImage from "../../assets/tarot/majorArcana/dark/1.jpg";
+import priestessDarkImage from "../../assets/tarot/majorArcana/dark/2.jpg";
+import empressDarkImage from "../../assets/tarot/majorArcana/dark/3.jpg";
+import emperorDarkImage from "../../assets/tarot/majorArcana/dark/4.jpg";
+import hierophantDarkImage from "../../assets/tarot/majorArcana/dark/5.jpg";
+import loversDarkImage from "../../assets/tarot/majorArcana/dark/6.jpg";
+import chariotDarkImage from "../../assets/tarot/majorArcana/dark/7.jpg";
+import justiceDarkImage from "../../assets/tarot/majorArcana/dark/8.jpg";
+import hermitDarkImage from "../../assets/tarot/majorArcana/dark/9.jpg";
+import wheelDarkImage from "../../assets/tarot/majorArcana/dark/10.jpg";
+import strengthDarkImage from "../../assets/tarot/majorArcana/dark/11.jpg";
+import hangedManDarkImage from "../../assets/tarot/majorArcana/dark/12.jpg";
+import deathDarkImage from "../../assets/tarot/majorArcana/dark/13.jpg";
+import temperanceDarkImage from "../../assets/tarot/majorArcana/dark/14.jpg";
+import devilDarkImage from "../../assets/tarot/majorArcana/dark/15.jpg";
+import towerDarkImage from "../../assets/tarot/majorArcana/dark/16.jpg";
+import starDarkImage from "../../assets/tarot/majorArcana/dark/17.jpg";
+import moonDarkImage from "../../assets/tarot/majorArcana/dark/18.jpg";
+import sunDarkImage from "../../assets/tarot/majorArcana/dark/19.jpg";
+import judgementDarkImage from "../../assets/tarot/majorArcana/dark/20.jpg";
+import worldDarkImage from "../../assets/tarot/majorArcana/dark/21.jpg";
+
+
+
+
 export const majorArcanaManifesto = {
   sectionId: "MS_TAR_MAJOR_22",
   title: "Major Arcana",
@@ -53,6 +80,9 @@ export const majorArcanaKeys = [
     subTitle: "O Louco // Chave 0",
     description: "O vetor do potencial absoluto, caos primordial e liberdade irrestrita. Representa o estado latente antes da manifestação da primeira palavra geométrica.",
     image: foolImage,
+    decks: [
+    { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: foolDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "ALPHA // URANO",
     path: "/tarot/major-arcana/the-fool",
     element: "Ar",
@@ -74,6 +104,9 @@ export const majorArcanaKeys = [
     subTitle: "O Mago // Chave I",
     description: "O princípio da vontade consciente e da canalização de vetores elementais. O eixo que conecta o plano denso ao sutil através da tecnologia ritualística.",
     image: magicianImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: magicianDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "CONDUÇÃO // MERCÚRIO",
     path: "/tarot/major-arcana/the-magician",
     element: "Fogo / Luz",
@@ -94,6 +127,9 @@ export const majorArcanaKeys = [
     subTitle: "A Sacerdotisa // Chave II",
     description: "A guardiã do arquivo velado e da intuição subaquática. Rege a dualidade estática, os mistérios não manifestos e a memória oculta do tecido universal.",
     image: priestessImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: priestessDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "ORÁCULO // LUA",
     path: "/tarot/major-arcana/the-high-priestess",
     element: "Água",
@@ -114,6 +150,9 @@ export const majorArcanaKeys = [
     subTitle: "A Imperatriz // Chave III",
     description: "A força geratriz da matéria e da abundância orgânica. Matriz da criatividade contínua, da inteligência natural e do florescimento dos reinos densos.",
     image: empressImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: empressDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "GÊNESE // VÊNUS",
     path: "/tarot/major-arcana/the-empress",
     element: "Terra / Natureza",
@@ -134,8 +173,11 @@ export const majorArcanaKeys = [
     subTitle: "O Imperador // Chave IV",
     description: "A estrutura do poder secular, estabilidade geopolítica e a imposição da ordem matemática sobre o caos indomado.",
     image: emperorImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: emperorDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "ARQUITETO // ÁRIES",
-    path: "/tarot/major-arcana/the-em emperor",
+    path: "/tarot/major-arcana/the-emperor",
     element: "Fogo",
     astrology: "Áries",
     hebrewLetter: "Heh (ה)",
@@ -154,6 +196,9 @@ export const majorArcanaKeys = [
     subTitle: "O Hierofante // Chave V",
     description: "A codificação das doutrinas espirituais, tradições teológicas e o portal institucional para os mistérios sagrados.",
     image: hierophantImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: hierophantDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "TRADIÇÃO // TOURO",
     path: "/tarot/major-arcana/the-hierophant",
     element: "Terra",
@@ -174,6 +219,9 @@ export const majorArcanaKeys = [
     subTitle: "Os Amantes // Chave VI",
     description: "O vetor de bifurcação, alinhamento de polaridades e a tensão eletromagnética das escolhas conscientes e inconscientes.",
     image: loversImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: loversDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "POLARIDADE // GÊMEOS",
     path: "/tarot/major-arcana/the-lovers",
     element: "Ar",
@@ -194,6 +242,9 @@ export const majorArcanaKeys = [
     subTitle: "O Carro // Chave VII",
     description: "A canalização direcionada do ego, triunfo focado e a maestria técnica sobre correntes opostas de força em movimento.",
     image: chariotImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: chariotDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "TRIUNFO // CÂNCONER",
     path: "/tarot/major-arcana/the-chariot",
     element: "Água",
@@ -214,6 +265,9 @@ export const majorArcanaKeys = [
     subTitle: "A Justiça // Chave VIII",
     description: "O equilíbrio cirúrgico da balança cármica, retidão legal e o julgamento lógico que elimina todas as ilusões emocionais.",
     image: justiceImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: justiceDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "EQUILÍBRIO // LIBRA",
     path: "/tarot/major-arcana/justice",
     element: "Ar",
@@ -234,6 +288,9 @@ export const majorArcanaKeys = [
     subTitle: "O Eremita // Chave IX",
     description: "A retirada estratégica para o isolamento analítico, busca pela lanterna interior e o amadurecimento silencioso da sabedoria oculta.",
     image: hermitImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: hermitDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "ISOLAMENTO // VIRGEM",
     path: "/tarot/major-arcana/the-hermit",
     element: "Terra",
@@ -254,6 +311,9 @@ export const majorArcanaKeys = [
     subTitle: "A Roda da Fortuna // Chave X",
     description: "A oscilação contínua dos ciclos macrocósmicos, as engrenagens do karma e as mutações constantes do tecido probabilístico.",
     image: wheelImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: wheelDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "CICLOS // JÚPITER",
     path: "/tarot/major-arcana/wheel-of-fortune",
     element: "Fogo / Expansão",
@@ -274,6 +334,9 @@ export const majorArcanaKeys = [
     subTitle: "A Força // Chave XI",
     description: "O domínio sutil sobre os impulsos animalescos através da alquimia interna, coragem silenciosa e compaixão inflexível.",
     image: strengthImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: strengthDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "ALQUIMIA // LEÃO",
     path: "/tarot/major-arcana/strength",
     element: "Fogo",
@@ -294,6 +357,9 @@ export const majorArcanaKeys = [
     subTitle: "O Enforcado // Chave XII",
     description: "A suspensão voluntária da ação, inversão da perspectiva mundana e o sacrifício estratégico do ego em prol da iluminação espiritual.",
     image: hangedManImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: hangedManDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "REVERSÃO // NETUNO",
     path: "/tarot/major-arcana/the-hanged-man",
     element: "Água",
@@ -314,6 +380,9 @@ export const majorArcanaKeys = [
     subTitle: "A Morte // Chave XIII",
     description: "A foice da dissolução necessária, encerramento de ciclos obsoletos e a radical transmutação molecular da forma pura.",
     image: deathImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: deathDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "DISSOLUÇÃO // ESCORPIÃO",
     path: "/tarot/major-arcana/death",
     element: "Água",
@@ -334,6 +403,9 @@ export const majorArcanaKeys = [
     subTitle: "A Temperança // Chave XIV",
     description: "A alquimia dos fluidos psíquicos, calibração constante de opostos e a harmonia dinâmica da cura espiritual.",
     image: temperanceImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: temperanceDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "ALQUIMIA // SARGITÁRIO",
     path: "/tarot/major-arcana/temperance",
     element: "Fogo",
@@ -354,6 +426,9 @@ export const majorArcanaKeys = [
     subTitle: "O Diabo // Chave XV",
     description: "O aprisionamento na ilusão puramente material, as correntes do desejo inconsciente e o confronto com a própria sombra psicológica.",
     image: devilImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: devilDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "SOMBRA // CAPRICÓRNIO",
     path: "/tarot/major-arcana/the-devil",
     element: "Terra",
@@ -374,6 +449,9 @@ export const majorArcanaKeys = [
     subTitle: "A Torre // Chave XVI",
     description: "A ruptura sísmica de falsas estruturas, colapso de dogmas erguidos pelo orgulho egoico e a catarse libertadora do raio divino.",
     image: towerImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: towerDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "CATARSE // MARTE",
     path: "/tarot/major-arcana/the-tower",
     element: "Fogo",
@@ -394,6 +472,9 @@ export const majorArcanaKeys = [
     subTitle: "A Estrela // Chave XVII",
     description: "O influxo da esperança serena, inspiração cósmica pura e a purificação dos mananciais psíquicos por canais celestes.",
     image: starImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: starDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "INFLUXO // AQUÁRIO",
     path: "/tarot/major-arcana/the-star",
     element: "Ar",
@@ -414,6 +495,9 @@ export const majorArcanaKeys = [
     subTitle: "A Lua // Chave XVIII",
     description: "A travessia do labirinto subconsciente, ilusões astrais densas, pesadelos atávicos e o limiar da evolução oculta.",
     image: moonImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: moonDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "LABIRINTO // PEIXES",
     path: "/tarot/major-arcana/the-moon",
     element: "Água",
@@ -434,6 +518,9 @@ export const majorArcanaKeys = [
     subTitle: "O Sol // Chave XIX",
     description: "A radiação máxima da verdade analítica, vitalidade celular plena, lucidez indomável e o sucesso nos campos da matéria.",
     image: sunImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: sunDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "LUCIDEZ // SOL",
     path: "/tarot/major-arcana/the-sun",
     element: "Fogo",
@@ -454,6 +541,9 @@ export const majorArcanaKeys = [
     subTitle: "O Julgamento // Chave XX",
     description: "O chamado do despertar arquetípico, ressurreição da consciência sepultada e a integração final do ciclo histórico pessoal.",
     image: judgementImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: judgementDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "DESPERTAR // PLUTÃO",
     path: "/tarot/major-arcana/judgement",
     element: "Fogo",
@@ -474,6 +564,9 @@ export const majorArcanaKeys = [
     subTitle: "O Mundo // Chave XXI",
     description: "A totalização da sínclise arquetípica, maestria absoluta sobre os quatro elementos e a consumação do ciclo evolutivo cósmico.",
     image: worldImage,
+    decks: [
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: worldDarkImage, artist: 'Amy Moreno' }
+    ],
     metadata: "TOTALIDADE // SATURNO",
     path: "/tarot/major-arcana/the-world",
     element: "Terra",

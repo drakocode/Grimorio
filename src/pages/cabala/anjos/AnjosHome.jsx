@@ -5,12 +5,14 @@ import {
   angelsCatalog,
   anjosTelemetry,
 } from "../../../data/cabala/anjos/anjosData";
+import BirthdateSearch from "../../../components/search/BirthdateSearch";
 import RitualGrid from "../../../components/grid/Grid";
 import OccultCard from "../../../components/cards/Card";
 import "../../../styles/AnjosHome.styles.css";
 
 const AnjosHome = () => {
   const [selectedChoir, setSelectedChoir] = useState("ALL");
+  const [birthdateSearch, setBirthdateSearch] = useState("");
 
   const choirs = [
     "ALL",
@@ -25,10 +27,27 @@ const AnjosHome = () => {
     "ANJOS",
   ];
 
-  const filteredAngels =
-    selectedChoir === "ALL"
-      ? angelsCatalog
-      : angelsCatalog.filter((angel) => angel.choir === selectedChoir);
+  // Filtro por data de nascimento (degrees/zodíaco)
+  const filterByBirthdate = (angels) => {
+    if (!birthdateSearch.trim()) return angels;
+
+    const searchLower = birthdateSearch.toLowerCase();
+    return angels.filter(
+      (angel) =>
+        angel.degrees.toLowerCase().includes(searchLower) ||
+        angel.name.toLowerCase().includes(searchLower)
+    );
+  };
+
+  // Filtro por coro
+  const filterByChoir = (angels) => {
+    return selectedChoir === "ALL"
+      ? angels
+      : angels.filter((angel) => angel.choir === selectedChoir);
+  };
+
+  // Aplicar filtros em sequência
+  const filteredAngels = filterByChoir(filterByBirthdate(angelsCatalog));
 
   return (
     <div className="anjos-page-container">
@@ -41,6 +60,12 @@ const AnjosHome = () => {
           <h1 className="anjos-main-title">{anjosManifesto.title}</h1>
           <div className="anjos-divider"></div>
           <p className="anjos-manifesto-text">{anjosManifesto.description}</p>
+
+          {/* Pesquisa por Data de Nascimento */}
+          <BirthdateSearch
+            onSearch={setBirthdateSearch}
+            placeholder="Pesquisar por mês/graus zodiacais..."
+          />
 
           {/* Filtro por Coros (Interface de Matriz) */}
           <div className="choir-filter-matrix">

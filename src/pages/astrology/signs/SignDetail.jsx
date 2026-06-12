@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { zodiacSigns } from '../../../data/astrology/astrologyData';
+import DetailNavigation from '../../../components/navigation/DetailNavigation';
 import '../../../styles/SignDetail.styles.css';
 
 const SignDetail = () => {
@@ -21,11 +22,18 @@ const SignDetail = () => {
 
   return (
     <div className="sign-detail-wrapper">
-      
+
       {/* Botão de Retorno */}
       <Link to="/astrology/signs" className="sign-back-link font-mono">
         ← RETORNAR À SÍNCLISE CELESTIAL
       </Link>
+
+      {/* Navegação Topo */}
+      <DetailNavigation
+        items={zodiacSigns}
+        currentId={id}
+        basePath="/astrology/signs"
+      />
 
       <div className="sign-layout-container">
         
@@ -94,6 +102,13 @@ const SignDetail = () => {
         </div>
 
       </div>
+
+      {/* Navegação Base */}
+      <DetailNavigation
+        items={zodiacSigns}
+        currentId={id}
+        basePath="/astrology/signs"
+      />
     </div>
   );
 };

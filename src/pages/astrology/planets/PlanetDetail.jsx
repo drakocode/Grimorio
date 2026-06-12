@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { planetsCatalog } from '../../../data/astrology/astrologyData';
+import DetailNavigation from '../../../components/navigation/DetailNavigation';
 import '../../../styles/PlanetDetail.styles.css';
 
 const PlanetDetail = () => {
@@ -21,10 +22,17 @@ const PlanetDetail = () => {
 
   return (
     <div className="planet-detail-wrapper">
-      
+
       <Link to="/astrology/planets" className="planet-back-link font-mono">
         ← RETORNAR AO FLUXO PLANETÁRIO
       </Link>
+
+      {/* Navegação Topo */}
+      <DetailNavigation
+        items={planetsCatalog}
+        currentId={id}
+        basePath="/astrology/planets"
+      />
 
       <div className="planet-layout-container">
         
@@ -74,6 +82,13 @@ const PlanetDetail = () => {
         </div>
 
       </div>
+
+      {/* Navegação Base */}
+      <DetailNavigation
+        items={planetsCatalog}
+        currentId={id}
+        basePath="/astrology/planets"
+      />
     </div>
   );
 };
