@@ -581,3 +581,56 @@ export const majorArcanaKeys = [
     ]
   }
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DetailSection data para ArcanaDetail
+export const arcanaDetailSections = {
+  interpretation: {
+    tag: "[I. INTERPRETAÇÃO_E_SIGNIFICADO]",
+    title: "Leitura e Interpretação",
+    type: "text",
+    content: "Adicione aqui a interpretação expandida do arcano maior em contextos de leitura tarótica..."
+  },
+  reversed: {
+    tag: "[II. SIGNIFICADO_REVERSO]",
+    title: "Quando Invertido",
+    type: "text",
+    content: "O significado quando o arcano aparece de cabeça para baixo em uma leitura..."
+  },
+  positions: {
+    tag: "[III. INTERPRETAÇÃO_POR_POSIÇÃO]",
+    title: "Significado nas Diferentes Posições",
+    type: "list",
+    items: [
+      "Posição de Passado: Influências que levaram à situação atual",
+      "Posição de Presente: A dinâmica e energia do momento",
+      "Posição de Futuro: Possíveis desenvolvimentos e resultados"
+    ]
+  },
+  contexts: {
+    tag: "[IV. CONTEXTOS_DE_APLICAÇÃO]",
+    title: "Aplicação em Diferentes Contextos",
+    type: "list",
+    items: [
+      { title: "Amor e Relacionamentos", text: "Significado específico em leituras de romance e vínculos" },
+      { title: "Finanças e Carreira", text: "Interpretação para questões materiais e profissionais" },
+      { title: "Desenvolvimento Espiritual", text: "Lições e caminhos de evolução indicados pelo arcano" }
+    ]
+  }
+}; 

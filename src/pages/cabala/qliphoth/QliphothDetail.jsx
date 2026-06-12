@@ -1,6 +1,6 @@
-// src/pages/cabala/qliphoth/QliphothDetail.jsx
 import { useParams, Link } from 'react-router-dom';
-import { qliphotCatalog } from '../../../data/cabala/qliphoth/qliphothData';
+import { qliphothTreeData } from '../../../data/cabala/qliphoth/qliphothData';
+import DetailSection from '../../../components/detail/DetailSection';
 import DetailNavigation from '../../../components/navigation/DetailNavigation';
 import '../../../styles/QliphothDetail.styles.css';
 
@@ -8,8 +8,10 @@ const QliphothDetail = () => {
   const { number } = useParams();
   
   // Localiza a Qlipha específica pelo número do vetor abissal
-  const qlipha = qliphotCatalog.find(item => item.number === number);
+  const qlipha = qliphothTreeData.find(item => item.number === number);
 
+
+  // Fallback caso o nó não seja encontrado
   if (!qlipha) {
     return (
       <div className="qliphot-not-found font-mono">
@@ -30,7 +32,7 @@ const QliphothDetail = () => {
 
       {/* Navegação Topo */}
       <DetailNavigation
-        items={qliphotCatalog}
+        items={qliphothTreeData}
         currentId={number}
         basePath="/cabala/qliphoth"
         paramName="number"
@@ -112,13 +114,24 @@ const QliphothDetail = () => {
           <footer className="qliphot-system-footer font-mono">
             <div className="q-security-tag">ESTAÇÃO // FILTRO_ABISSAL_MONITORIZADO_ALERTA_DE_NÍVEL_03</div>
           </footer>
+
+
+
+          {/* DETAIL SECTION */}
+          {qlipha.detailSections && Object.entries(qlipha.detailSections).map(([key, sectionData]) => (
+            <DetailSection key={key} {...sectionData} />
+          ))} 
+
+
+
+
         </div>
 
       </div>
 
       {/* Navegação Base */}
       <DetailNavigation
-        items={qliphotCatalog}
+        items={qliphothTreeData}
         currentId={number}
         basePath="/cabala/qliphoth"
         paramName="number"

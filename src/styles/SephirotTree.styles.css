@@ -1,0 +1,107 @@
+.sephirot-tree-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px;
+  background: rgba(11, 11, 15, 0.6);
+  border: 1px solid rgba(176, 141, 87, 0.2);
+}
+
+.sephirot-tree-svg {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 1/1.2;
+  margin: 0 auto;
+  background: radial-gradient(
+    circle at center,
+    rgba(176, 141, 87, 0.05) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  border: 1px solid rgba(176, 141, 87, 0.15);
+}
+
+/* Linhas de conexão */
+.sephirot-connection-line {
+  stroke: rgba(176, 141, 87, 0.4);
+  stroke-width: 0.3;
+  fill: none;
+  transition: stroke 0.3s ease;
+}
+
+.sephirot-tree-svg:hover .sephirot-connection-line {
+  stroke: rgba(176, 141, 87, 0.6);
+}
+
+/* Nós */
+.sephirot-node-bg {
+  fill: rgba(11, 11, 15, 0.9);
+  stroke: rgba(176, 141, 87, 0.3);
+  stroke-width: 0.2;
+}
+
+.sephirot-node-link {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+.sephirot-node-circle {
+  fill: rgba(11, 11, 15, 0.8);
+  stroke: var(--color-gold);
+  stroke-width: 0.25;
+  transition: all 0.3s ease;
+}
+
+.sephirot-node-link:hover .sephirot-node-circle {
+  fill: rgba(176, 141, 87, 0.3);
+  stroke: var(--color-gold);
+  stroke-width: 0.4;
+  filter: drop-shadow(0 0 1.5 rgba(176, 141, 87, 0.4));
+}
+
+.sephirot-node-number {
+  font-size: 1;
+  fill: var(--color-gold);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  pointer-events: none;
+}
+
+.sephirot-node-link:hover .sephirot-node-number {
+  fill: var(--color-ghost);
+}
+
+.sephirot-node-name {
+  font-size: 0.7;
+  fill: var(--color-muted);
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+.sephirot-node-link:hover .sephirot-node-name {
+  fill: var(--color-gold);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .sephirot-tree-container {
+    padding: 16px;
+    gap: 24px;
+  }
+
+  .sephirot-tree-svg {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sephirot-tree-container {
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .sephirot-tree-svg {
+    max-width: 100%;
+  }
+}

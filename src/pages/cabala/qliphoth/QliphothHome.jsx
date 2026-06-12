@@ -6,6 +6,7 @@ import {
   qliphothTreeData,
   coreTreeMetrics,
 } from "../../../data/cabala/qliphoth/qliphothData";
+import QliphothTree from "../../../components/cabala/QliphothTree";
 import "../../../styles/SephirotHome.styles.css";
 
 const QliphothHome = () => {
@@ -44,7 +45,13 @@ const QliphothHome = () => {
       {/* PAINEL DIREITO: Nós de Emanação Reversa (Shells) */}
       <section className="sephirot-stream-panel">
         <div className="sephirot-stream-header font-mono">// QLIPHOTIC_SHELLS_STREAM</div>
-        
+
+        {/* Visualização da Árvore da Morte */}
+        <div className="qliphoth-tree-section">
+          <div className="tree-section-header font-mono">// ÁRVORE_DA_MORTE_INTERATIVA</div>
+          <QliphothTree />
+        </div>
+
         <div className="sephirot-grid">
           {qliphothTreeData.map((shell) => (
             <motion.div

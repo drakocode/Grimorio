@@ -23,7 +23,30 @@ export const treeOfDeathManifesto = {
   sectionId: "QAB_MORS_10",
   title: "Tree of Death",
   subTitle: "Matriz Qliphotica // Abismo Adverso",
-  description: "A anti-estrutura cósmica e o reflexo corrompido da emanação. Mapeamento das cascas vazias (Qliphoth) geradas pelo excesso de rigor e desequilíbrio estrutural."
+  description: "A anti-estrutura cósmica e o reflexo corrompido da emanação. Mapeamento das cascas vazias (Qliphoth) geradas pelo excesso de rigor e desequilíbrio estrutural.",
+  detailSections: {
+    textoMorteSubita1: {
+    type: "text",
+    content: "Este material é um acompanhamento do curso de Qlipoth: A Árvore da Morte, oferecido por Marcelo del Debbio adicionado de alguns insights pessoais do autor e apresenta uma introdução ao estudo da árvore da morte da cabala qliphótica. Esse estudo pode trazer medo quem só está acostumado com o lado luminoso da cabala e ilusões quem não está acostumado com cabala nenhuma. Ele fornece entretanto conceitos importantes tanto para quem quer evitar os erros do caminho com para quem quer se proteger da malícia dos demais."
+  },
+  textoMorteSubita2: {
+    type: "text",
+    content: "Lida de cima para baixo a árvore da morte é um manual de como a opressão é criada e mantida,  Lido de baixo para cima entretanto pode ser vista como uma rota de fuga. Um mapa capaz de denunciar os mecanismos usados para nos escravizar. Este resumo trará a segunda opção com os nomes e características de cada Qlipha, bem como dos túneis que as ligam. Também foi incluído um pequeno questionamento meditativo em cada qlipha sobre os obstáculos que a árvore da morte impõe.Também será fornecida uma referência de ficção da literatura ou do cinema de uma distopia ."
+  },
+  textoMorteSubita3: {
+    type: "text",
+    content: "Entretanto a forma mais de compreender a árvore da morte é comparar cada um de seus elementos com seu correspondente na árvore da vida. Trata-se sempre de uma versão corrompida, prostituída e degenerada de sua contraparte. Por essa razão a cada elemento estudado será sempre mencionada a sephira ou caminho da qual é a sombra. Se estes nomes forem novidades para você, interrompa a leitura e faça um estudo da cabala pela via luminosa antes de continuar."
+  },
+  textoMorteSubita4: {
+    title: "Aplicação em Diferentes Contextos",
+    type: "list",
+    items: [
+      { title: "Árvore da morte:", text: "É o oposto da árvore da vida. Composta por qliphoth e túneis.Algumas pessoas tratam a árvore da morte como como as raízes subterrâneas, a sombra ou ainda o reflexo invertido da árvore da vida." },
+      { title: "Qlipha:", text: "Qlipha (plural Qliphoth) é para a árvore da morte o que uma sephiras é para a árvore da vida. Cada uma possui sua correspondente em uma das duas árvores. Qlipha significa literalmente casca no mesmo sentido da casca de uma fruta, que depois de separada de sua polpa doce e nutritiva e só que só serve para ser jogada fora para servir de adubo." },
+      { title: "Túneis", text: "Os túneis ligam duas qliphoth na árvore da morte da mesma maneira que os caminhos ligam duas sephiroth na árvore da vida. São pontos em que duas forças se influenciam mutuamente gerando um resultado específico e que engana e prende a luz como uma teia." }
+    ]
+  }
+  }
 };
 
 export const cabalaSubSectors = [

@@ -1,0 +1,198 @@
+.qliphoth-tree-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px;
+  background: rgba(11, 11, 15, 0.6);
+  border: 1px solid rgba(176, 141, 87, 0.2);
+}
+
+.qliphoth-tree-svg {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 1/1.2;
+  margin: 0 auto;
+  background: radial-gradient(
+    circle at center,
+    rgba(176, 141, 87, 0.05) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  border: 1px solid rgba(176, 141, 87, 0.15);
+}
+
+/* Linhas de conexão */
+.qliphoth-connection-line {
+  stroke: rgba(176, 141, 87, 0.4);
+  stroke-width: 0.3;
+  fill: none;
+  transition: stroke 0.3s ease;
+}
+
+.qliphoth-tree-svg:hover .qliphoth-connection-line {
+  stroke: rgba(176, 141, 87, 0.6);
+}
+
+/* Nós */
+.qliphoth-node-bg {
+  fill: rgba(11, 11, 15, 0.9);
+  stroke: rgba(176, 141, 87, 0.3);
+  stroke-width: 0.2;
+}
+
+.qliphoth-node-link {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+.qliphoth-node-circle {
+  fill: rgba(11, 11, 15, 0.8);
+  stroke: var(--color-crimson);
+  stroke-width: 0.25;
+  transition: all 0.3s ease;
+}
+
+.qliphoth-node-link:hover .qliphoth-node-circle {
+  fill: rgba(176, 141, 87, 0.3);
+  stroke: var(--color-gold);
+  stroke-width: 0.4;
+  filter: drop-shadow(0 0 1.5 rgba(176, 141, 87, 0.4));
+}
+
+.qliphoth-node-number {
+  font-size: 1;
+  fill: var(--color-crimson);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  pointer-events: none;
+}
+
+.qliphoth-node-link:hover .qliphoth-node-number {
+  fill: var(--color-gold);
+}
+
+.qliphoth-node-name {
+  font-size: 0.7;
+  fill: var(--color-muted);
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+.qliphoth-node-link:hover .qliphoth-node-name {
+  fill: var(--color-gold);
+}
+
+/* Legenda */
+.qliphoth-tree-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.legend-title {
+  font-size: 0.4rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.1em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(176, 141, 87, 0.2);
+}
+
+.legend-nodes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.legend-node-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  background: rgba(11, 11, 15, 0.5);
+  border: 1px solid rgba(176, 141, 87, 0.25);
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.legend-node-item:hover {
+  background: rgba(11, 11, 15, 0.8);
+  border-color: var(--color-gold);
+  box-shadow: 0 0 12px rgba(176, 141, 87, 0.2);
+}
+
+.legend-number {
+  font-size: 0.7rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.legend-name {
+  font-size: 0.85rem;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.legend-translation {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .qliphoth-tree-container {
+    padding: 16px;
+    gap: 24px;
+  }
+
+  .qliphoth-tree-svg {
+    max-width: 500px;
+  }
+
+  .legend-nodes {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .qliphoth-tree-container {
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .qliphoth-tree-svg {
+    max-width: 100%;
+  }
+
+  .legend-nodes {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+  }
+
+  .legend-node-item {
+    padding: 8px 10px;
+    gap: 2px;
+  }
+
+  .legend-name {
+    font-size: 0.75rem;
+  }
+
+  .legend-number {
+    font-size: 0.65rem;
+  }
+
+  .legend-translation {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .legend-nodes {
+    grid-template-columns: 1fr;
+  }
+}

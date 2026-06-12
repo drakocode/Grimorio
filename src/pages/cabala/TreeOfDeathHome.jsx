@@ -1,7 +1,9 @@
 import { treeOfDeathManifesto, qliphoticEmanations, treeOfDeathSubSectors } from '../../data/cabala/cabalaData';
 import RitualGrid from '../../components/grid/Grid';
 import OccultCard from '../../components/cards/Card';
+import DetailSection from '../../components/detail/DetailSection';
 import '../../styles/CabalaHome.styles.css';
+import '../../styles/QliphothDetail.styles.css';
 
 const TreeOfDeathHome = () => {
   return (
@@ -14,6 +16,19 @@ const TreeOfDeathHome = () => {
           <h1 className="cabala-main-title text-crimson">{treeOfDeathManifesto.title}</h1>
           <div className="cabala-divider"></div>
           <p className="cabala-manifesto-text">{treeOfDeathManifesto.description}</p>
+
+          {/* DETAIL SECTION */}
+          {treeOfDeathManifesto.detailSections && Object.entries(treeOfDeathManifesto.detailSections).map(([key, sectionData]) => (
+            <DetailSection key={key} {...sectionData} />
+          ))} 
+
+
+
+
+
+
+
+
           
           {/* Monitor de Emanações Invertidas (Live Box Atômica) */}
           <div className="live-cabala-box">

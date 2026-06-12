@@ -1,0 +1,153 @@
+/* DetailSection Component Styles */
+
+.detail-section {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-section-tag {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.detail-section-title {
+  font-size: 1.5rem;
+  color: var(--color-gold);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.detail-section-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-gold);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.detail-section-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(230, 230, 235, 0.85);
+  text-align: justify;
+}
+
+/* List Type */
+.detail-section-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-list-item {
+  display: flex;
+  gap: 12px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+.list-bullet {
+  color: var(--color-crimson);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.list-text {
+  margin: 0;
+}
+
+.list-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-title {
+  font-size: 0.85rem;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Grid Type */
+.detail-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.grid-item {
+  padding: 12px;
+  background: rgba(11, 11, 15, 0.5);
+  border: 1px dashed rgba(176, 141, 87, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.grid-label {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  letter-spacing: 0.1em;
+}
+
+.grid-value {
+  font-size: 0.95rem;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .detail-section {
+    margin-bottom: 32px;
+    gap: 10px;
+  }
+
+  .detail-section-tag {
+    font-size: 0.75rem;
+  }
+
+  .detail-section-title {
+    font-size: 1.3rem;
+  }
+
+  .detail-section-text {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .detail-list-item {
+    font-size: 0.95rem;
+  }
+
+  .detail-section-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-section {
+    margin-bottom: 24px;
+  }
+
+  .detail-section-title {
+    font-size: 1.1rem;
+  }
+
+  .detail-section-text {
+    font-size: 0.95rem;
+  }
+
+  .detail-list-item {
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+}

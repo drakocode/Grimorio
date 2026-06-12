@@ -204,3 +204,19 @@
 /* Utilitários de Cor Globais da Aplicação */
 .text-gold { color: var(--color-gold); }
 .text-crimson { color: var(--color-crimson); }
+
+/* Seção da Árvore da Morte */
+.qliphoth-tree-section {
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tree-section-header {
+  font-size: 0.8rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.1em;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed rgba(176, 141, 87, 0.2);
+}

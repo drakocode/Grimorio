@@ -1,9 +1,11 @@
 import { useParams, Link } from 'react-router-dom';
-import { majorArcanaKeys } from '../../../data/tarot/majorArcanaData';
+import { majorArcanaKeys, arcanaDetailSections } from '../../../data/tarot/majorArcanaData';
+import DetailSection from '../../../components/detail/DetailSection';
 import DeckImageCard from '../../../components/decks/DeckImageCard';
 import DetailNavigation from '../../../components/navigation/DetailNavigation';
 import '../../../styles/ArcanaDetail.styles.css';
 import '../../../styles/DeckImageCard.styles.css';
+import '../../../styles/DetailSection.styles.css';
 
 const ArcanaDetail = () => {
   const { id } = useParams();
@@ -124,8 +126,15 @@ const ArcanaDetail = () => {
             <div className="integrity-tag">COMPILADO // INTEGRALIDADE_GARANTIDA</div>
           </footer>
 
+          {/* Seções de Detalhe Expandidas */}
+          <div className="arcana-detail-sections">
+            <DetailSection {...arcanaDetailSections.interpretation} />
+            <DetailSection {...arcanaDetailSections.reversed} />
+            <DetailSection {...arcanaDetailSections.positions} />
+            <DetailSection {...arcanaDetailSections.contexts} />
+          </div>
         </div>
-
+ 
       </div>
 
       {/* Navegação Base */}

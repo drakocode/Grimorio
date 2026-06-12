@@ -6,6 +6,7 @@ import {
   sephirotTreeData,
   coreTreeMetrics,
 } from "../../../data/cabala/sephirot/sephirotData";
+import SephirotTree from "../../../components/cabala/SephirotTree";
 import "../../../styles/SephirotHome.styles.css";
 
 const SephirotHome = () => {
@@ -41,7 +42,13 @@ const SephirotHome = () => {
       {/* PAINEL DIREITO: Nós de Emanação */}
       <section className="sephirot-stream-panel">
         <div className="sephirot-stream-header font-mono">// ARCANUM_NODES_STREAM</div>
-        
+
+        {/* Visualização da Árvore da Vida */}
+        <div className="sephirot-tree-section">
+          <div className="tree-section-header font-mono">// ÁRVORE_DA_VIDA_INTERATIVA</div>
+          <SephirotTree />
+        </div>
+
         <div className="sephirot-grid">
           {sephirotTreeData.map((sephirah) => (
             <motion.div
