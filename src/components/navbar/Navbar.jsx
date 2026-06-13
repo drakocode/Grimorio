@@ -41,6 +41,9 @@ const mainNavigation = [
       { path: '/vedas/jyotish', label: 'JYOTISH' },
       { path: '/vedas/ayurveda', label: 'AYURVEDA' }
     ]
+   },
+   {
+    path: '/archive', label: 'ARQUIVO',
    }
 ];
 

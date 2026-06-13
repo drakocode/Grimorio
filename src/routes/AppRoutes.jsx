@@ -41,6 +41,9 @@ import VedasHome from "../pages/vedas/VedasHome";
 import JyotishHome from '../pages/vedas/JyotishHome';
 import AyurvedaHome from '../pages/vedas/AyurvedaHome';
 
+//importações do arquivo
+import LibraryArchive from "../pages/archive/LibraryArchive";
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -89,6 +92,8 @@ const AppRoutes = () => {
           <Route path="/vedas" element={<VedasHome />} />
           <Route path="/vedas/jyotish" element={<JyotishHome />} />
           <Route path="/vedas/ayurveda" element={<AyurvedaHome />} />
+          {/*  ARQUIVO  */}
+          <Route path="/archive" element={<LibraryArchive />} />
         </Routes>
       </Layout>
     </BrowserRouter>
