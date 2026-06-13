@@ -38,7 +38,7 @@ const SephirotHome = () => {
           </div>
         </div>
       </aside>
-
+ 
       {/* PAINEL DIREITO: Nós de Emanação */}
       <section className="sephirot-stream-panel">
         <div className="sephirot-stream-header font-mono">// ARCANUM_NODES_STREAM</div>

@@ -3,7 +3,7 @@ import { vedasManifesto, vedicSubSectors, activeMantraStreams } from '../../data
 import RitualGrid from '../../components/grid/Grid';
 import OccultCard from '../../components/cards/Card';
 import '../../styles/VedasHome.styles.css';
-
+ 
 const VedasHome = () => {
   return (
     <div className="vedas-page-container">

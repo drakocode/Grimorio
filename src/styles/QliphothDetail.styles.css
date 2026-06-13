@@ -27,6 +27,11 @@
   align-items: start;
 }
 
+.qliphot-content-column {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Monólito Abissal */
 .qliphot-media-column {
   display: flex;

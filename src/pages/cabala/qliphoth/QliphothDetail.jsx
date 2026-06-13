@@ -115,7 +115,7 @@ const QliphothDetail = () => {
             <DetailSection key={key} {...sectionData} />
           ))} 
 
-          
+           
           {/* Rodapé de Registro de Segurança */}
           <footer className="qliphot-system-footer font-mono">
             <div className="q-security-tag">ESTAÇÃO // FILTRO_ABISSAL_MONITORIZADO_ALERTA_DE_NÍVEL_03</div>

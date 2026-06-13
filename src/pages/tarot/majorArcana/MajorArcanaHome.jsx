@@ -32,7 +32,7 @@ const MajorArcanaHome = () => {
           </div>
         </div>
       </aside>
-
+ 
       {/* PAINEL DIREITO: Catálogo de Chaves Coletadas */}
       <section className="major-arcana-stream-panel">
         <div className="major-arcana-stream-tag font-mono">// ARCANUM_INDEX_FEED</div>

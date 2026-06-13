@@ -171,3 +171,37 @@
     top: 0;
   }
 }
+
+/* Breakpoint Mobile: Ajuste Fino de Cards, Tabelas e Tipografia */
+@media (max-width: 600px) {
+  .vedas-main-title {
+    font-size: 2rem !important; /* Reduz o tamanho para não quebrar a grelha visual em ecrãs pequenos */
+  }
+
+  .vedas-description-text {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Proteção de Overflow para a Tabela de Telemetria */
+  .live-vedas-box {
+    padding: 16px !important;
+    overflow-x: auto; /* Permite scroll horizontal suave se as colunas ficarem muito espremidas */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .vedas-telemetry-table {
+    min-width: 420px; /* Força um limite mínimo de leitura para os dados dos Rishis */
+  }
+
+  /* Ajuste no espaçamento do fluxo de Cards */
+  .vedas-stream-panel {
+    gap: 16px !important;
+  }
+
+  .vedas-stream-tag {
+    margin-bottom: 12px !important;
+  }
+}

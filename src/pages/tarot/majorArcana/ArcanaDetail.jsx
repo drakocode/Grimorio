@@ -8,7 +8,7 @@ import DetailNavigation from "../../../components/navigation/DetailNavigation";
 import "../../../styles/ArcanaDetail.styles.css";
 import "../../../styles/DeckImageCard.styles.css";
 import "../../../styles/DetailSection.styles.css";
-
+ 
 const ArcanaDetail = () => {
   const { id } = useParams();
 
