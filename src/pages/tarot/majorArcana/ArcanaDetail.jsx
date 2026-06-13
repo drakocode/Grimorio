@@ -1,17 +1,19 @@
-import { useParams, Link } from 'react-router-dom';
-import { majorArcanaKeys, arcanaDetailSections } from '../../../data/tarot/majorArcanaData';
-import DetailSection from '../../../components/detail/DetailSection';
-import DeckImageCard from '../../../components/decks/DeckImageCard';
-import DetailNavigation from '../../../components/navigation/DetailNavigation';
-import '../../../styles/ArcanaDetail.styles.css';
-import '../../../styles/DeckImageCard.styles.css';
-import '../../../styles/DetailSection.styles.css';
+import { useParams, Link } from "react-router-dom";
+import {
+  majorArcanaKeys
+} from "../../../data/tarot/majorArcanaData";
+import DetailSection from "../../../components/detail/DetailSection";
+import DeckImageCard from "../../../components/decks/DeckImageCard";
+import DetailNavigation from "../../../components/navigation/DetailNavigation";
+import "../../../styles/ArcanaDetail.styles.css";
+import "../../../styles/DeckImageCard.styles.css";
+import "../../../styles/DetailSection.styles.css";
 
 const ArcanaDetail = () => {
   const { id } = useParams();
-  
-  // Localiza o Arcano pelo ID dinâmico da URL
-  const arcana = majorArcanaKeys.find(item => item.id === id);
+
+  // Localiza o Arcano pelo ID numérico da URL
+  const arcana = majorArcanaKeys.find((item) => item.id === id);
 
   // Fallback caso a chave solicitada não seja encontrada ou mapeada
   if (!arcana) {
@@ -19,14 +21,15 @@ const ArcanaDetail = () => {
       <div className="arcana-not-found font-mono">
         <h2>[ERR_CHAVE_NÃO_LOCALIZADA]</h2>
         <p>O vetor solicitado não consta na matriz corrente do Grimório.</p>
-        <Link to="/tarot/major-arcana" className="btn-back">// RETORNAR_AO_INDEX</Link>
+        <Link to="/tarot/major-arcana" className="btn-back">
+          // RETORNAR_AO_INDEX
+        </Link>
       </div>
     );
   }
 
   return (
     <div className="arcana-detail-wrapper">
-
       {/* Botão de Retorno Técnico */}
       <Link to="/tarot/major-arcana" className="arcana-back-link font-mono">
         ← RETORNAR_À_MATRIZ_MÃE
@@ -40,15 +43,18 @@ const ArcanaDetail = () => {
       />
 
       <div className="arcana-layout-container">
-        
         {/* COLUNA ESQUERDA: Monólito de Imagem e Assinaturas */}
         <div className="arcana-media-column">
           <div className="arcana-monolith">
             <div className="arcana-badge font-mono">KEY_{arcana.numericId}</div>
-            <img src={arcana.image} alt={arcana.title} className="arcana-hero-img" />
+            <img
+              src={arcana.image}
+              alt={arcana.title}
+              className="arcana-hero-img"
+            />
             <div className="arcana-scanner-line"></div>
           </div>
-          
+
           {/* Tabela de Relações Analógicas */}
           <div className="arcana-correspondences font-mono">
             <div className="corr-row">
@@ -65,13 +71,17 @@ const ArcanaDetail = () => {
             </div>
             <div className="corr-row">
               <span className="corr-label">EIXO_DA_ÁRBORE:</span>
-              <span className="corr-value text-crimson">{arcana.treeOfLife}</span>
+              <span className="corr-value text-crimson">
+                {arcana.treeOfLife}
+              </span>
             </div>
           </div>
 
           {/* Galeria de Decks */}
           <div className="arcana-decks-section">
-            <h4 className="decks-section-tag font-mono">[VARIAÇÕES DE DECKS]</h4>
+            <h4 className="decks-section-tag font-mono">
+              [VARIAÇÕES DE DECKS]
+            </h4>
             <div className="decks-gallery">
               {arcana.decks && arcana.decks.length > 0 ? (
                 arcana.decks.map((deck, index) => (
@@ -80,8 +90,12 @@ const ArcanaDetail = () => {
               ) : (
                 <div className="deck-card">
                   <div className="deck-card-placeholder">
-                    <span className="placeholder-text font-mono">// SEM_DECKS_MAPEADOS</span>
-                    <span className="placeholder-desc font-mono">Adicionar variações futuras</span>
+                    <span className="placeholder-text font-mono">
+                      // SEM_DECKS_MAPEADOS
+                    </span>
+                    <span className="placeholder-desc font-mono">
+                      Adicionar variações futuras
+                    </span>
                   </div>
                 </div>
               )}
@@ -107,10 +121,12 @@ const ArcanaDetail = () => {
 
           {/* Seção 02: Decomposição Simbólica */}
           <section className="arcana-section">
-            <h3 className="section-tag font-mono">[II. DECOMPOSIÇÃO_GEOMÉTRICA]</h3>
+            <h3 className="section-tag font-mono">
+              [II. DECOMPOSIÇÃO_GEOMÉTRICA]
+            </h3>
             <ul className="symbology-list">
               {arcana.symbology.map((symbol, index) => {
-                const [title, text] = symbol.split(':');
+                const [title, text] = symbol.split(":");
                 return (
                   <li key={index} className="symbology-item">
                     <strong className="text-gold font-mono">{title}:</strong>
@@ -121,20 +137,21 @@ const ArcanaDetail = () => {
             </ul>
           </section>
 
-          {/* Rodapé Interno de Autenticação */}
-          <footer className="arcana-integrity-footer font-mono">
-            <div className="integrity-tag">COMPILADO // INTEGRALIDADE_GARANTIDA</div>
-          </footer>
-
-          {/* Seções de Detalhe Expandidas */}
-          <div className="arcana-detail-sections">
-            <DetailSection {...arcanaDetailSections.interpretation} />
-            <DetailSection {...arcanaDetailSections.reversed} />
-            <DetailSection {...arcanaDetailSections.positions} />
-            <DetailSection {...arcanaDetailSections.contexts} />
-          </div>
+          {/* DETAIL SECTIONS — textoPaulMarteauMarselha e outros */}
+          {arcana.detailSections &&
+            Object.entries(arcana.detailSections).map(([groupKey, groupData]) =>
+              Object.entries(groupData).map(([sectionKey, sectionData]) => (
+                <DetailSection key={`${groupKey}-${sectionKey}`} {...sectionData} />
+              ))
+            )}
         </div>
- 
+
+        {/* Rodapé Interno de Autenticação */}
+        <footer className="arcana-integrity-footer font-mono">
+          <div className="integrity-tag">
+            COMPILADO // INTEGRALIDADE_GARANTIDA
+          </div>
+        </footer>
       </div>
 
       {/* Navegação Base */}

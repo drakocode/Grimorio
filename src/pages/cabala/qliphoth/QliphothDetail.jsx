@@ -110,6 +110,12 @@ const QliphothDetail = () => {
             </ul>
           </section>
 
+          {/* DETAIL SECTION */}
+          {qlipha.detailSections && Object.entries(qlipha.detailSections).map(([key, sectionData]) => (
+            <DetailSection key={key} {...sectionData} />
+          ))} 
+
+          
           {/* Rodapé de Registro de Segurança */}
           <footer className="qliphot-system-footer font-mono">
             <div className="q-security-tag">ESTAÇÃO // FILTRO_ABISSAL_MONITORIZADO_ALERTA_DE_NÍVEL_03</div>
@@ -117,10 +123,6 @@ const QliphothDetail = () => {
 
 
 
-          {/* DETAIL SECTION */}
-          {qlipha.detailSections && Object.entries(qlipha.detailSections).map(([key, sectionData]) => (
-            <DetailSection key={key} {...sectionData} />
-          ))} 
 
 
 
