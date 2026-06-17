@@ -46,6 +46,30 @@ import sunDarkImage from "../../assets/tarot/majorArcana/dark/19.jpg";
 import judgementDarkImage from "../../assets/tarot/majorArcana/dark/20.jpg";
 import worldDarkImage from "../../assets/tarot/majorArcana/dark/21.jpg";
 
+// TAROT MARSELHA
+import foolMarselhaImage from "../../assets/tarot/majorArcana/marselha/0.png";
+import magicianMarselhaImage from "../../assets/tarot/majorArcana/marselha/1.png";
+import priestessMarselhaImage from "../../assets/tarot/majorArcana/marselha/2.png";
+import empressMarselhaImage from "../../assets/tarot/majorArcana/marselha/3.png";
+import emperorMarselhaImage from "../../assets/tarot/majorArcana/marselha/4.png";
+import hierophantMarselhaImage from "../../assets/tarot/majorArcana/marselha/5.png";
+import loversMarselhaImage from "../../assets/tarot/majorArcana/marselha/6.png";
+import chariotMarselhaImage from "../../assets/tarot/majorArcana/marselha/7.png";
+import justiceMarselhaImage from "../../assets/tarot/majorArcana/marselha/8.png";
+import hermitMarselhaImage from "../../assets/tarot/majorArcana/marselha/9.png";
+import wheelMarselhaImage from "../../assets/tarot/majorArcana/marselha/10.png";
+import strengthMarselhaImage from "../../assets/tarot/majorArcana/marselha/11.png";
+import hangedManMarselhaImage from "../../assets/tarot/majorArcana/marselha/12.png";
+import deathMarselhaImage from "../../assets/tarot/majorArcana/marselha/13.png";
+import temperanceMarselhaImage from "../../assets/tarot/majorArcana/marselha/14.png";
+import devilMarselhaImage from "../../assets/tarot/majorArcana/marselha/15.png";
+import towerMarselhaImage from "../../assets/tarot/majorArcana/marselha/16.png";
+import starMarselhaImage from "../../assets/tarot/majorArcana/marselha/17.png";
+import moonMarselhaImage from "../../assets/tarot/majorArcana/marselha/18.png";
+import sunMarselhaImage from "../../assets/tarot/majorArcana/marselha/19.png";
+import judgementMarselhaImage from "../../assets/tarot/majorArcana/marselha/20.png";
+import worldMarselhaImage from "../../assets/tarot/majorArcana/marselha/21.png";
+
 
 
 
@@ -81,7 +105,8 @@ export const majorArcanaKeys = [
     description: "O princípio da vontade consciente e da canalização de vetores elementais. O eixo que conecta o plano denso ao sutil através da tecnologia ritualística.",
     image: magicianImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: magicianDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: magicianDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: magicianMarselhaImage, artist: 'unknown' }
     ],
     metadata: "CONDUÇÃO // MERCÚRIO",
     path: "/tarot/major-arcana/1",
@@ -251,7 +276,8 @@ export const majorArcanaKeys = [
     description: "A guardiã do arquivo velado e da intuição subaquática. Rege a dualidade estática, os mistérios não manifestos e a memória oculta do tecido universal.",
     image: priestessImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: priestessDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: priestessDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: priestessMarselhaImage, artist: 'unknown' }
     ],
     metadata: "ORÁCULO // LUA",
     path: "/tarot/major-arcana/2",
@@ -363,7 +389,8 @@ export const majorArcanaKeys = [
     description: "A força geratriz da matéria e da abundância orgânica. Matriz da criatividade contínua, da inteligência natural e do florescimento dos reinos densos.",
     image: empressImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: empressDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: empressDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: empressMarselhaImage, artist: 'unknown' }
     ],
     metadata: "GÊNESE // VÊNUS",
     path: "/tarot/major-arcana/3",
@@ -455,7 +482,8 @@ export const majorArcanaKeys = [
     description: "A estrutura do poder secular, estabilidade geopolítica e a imposição da ordem matemática sobre o caos indomado.",
     image: emperorImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: emperorDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: emperorDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: emperorMarselhaImage, artist: 'unknown' }
     ],
     metadata: "ARQUITETO // ÁRIES",
     path: "/tarot/major-arcana/4",
@@ -547,7 +575,8 @@ export const majorArcanaKeys = [
     description: "A codificação das doutrinas espirituais, tradições teológicas e o portal institucional para os mistérios sagrados.",
     image: hierophantImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: hierophantDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: hierophantDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: hierophantMarselhaImage, artist: 'unknown' }
     ],
     metadata: "TRADIÇÃO // TOURO",
     path: "/tarot/major-arcana/5",
@@ -639,7 +668,8 @@ export const majorArcanaKeys = [
     description: "O vetor de bifurcação, alinhamento de polaridades e a tensão eletromagnética das escolhas conscientes e inconscientes.",
     image: loversImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: loversDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: loversDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: loversMarselhaImage, artist: 'unknown' }
     ],
     metadata: "POLARIDADE // GÊMEOS",
     path: "/tarot/major-arcana/6",
@@ -727,7 +757,8 @@ export const majorArcanaKeys = [
     description: "A canalização direcionada do ego, triunfo focado e a maestria técnica sobre correntes opostas de força em movimento.",
     image: chariotImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: chariotDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: chariotDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: chariotMarselhaImage, artist: 'unknown' }
     ],
     metadata: "TRIUNFO // CÂNCONER",
     path: "/tarot/major-arcana/7",
@@ -819,7 +850,8 @@ export const majorArcanaKeys = [
     description: "O equilíbrio cirúrgico da balança cármica, retidão legal e o julgamento lógico que elimina todas as ilusões emocionais.",
     image: justiceImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: justiceDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: justiceDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: justiceMarselhaImage, artist: 'unknown' }
     ],
     metadata: "EQUILÍBRIO // LIBRA",
     path: "/tarot/major-arcana/8",
@@ -903,7 +935,8 @@ export const majorArcanaKeys = [
     description: "A retirada estratégica para o isolamento analítico, busca pela lanterna interior e o amadurecimento silencioso da sabedoria oculta.",
     image: hermitImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: hermitDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: hermitDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: hermitMarselhaImage, artist: 'unknown' }
     ],
     metadata: "ISOLAMENTO // VIRGEM",
     path: "/tarot/major-arcana/9",
@@ -987,7 +1020,8 @@ export const majorArcanaKeys = [
     description: "A oscilação contínua dos ciclos macrocósmicos, as engrenagens do karma e as mutações constantes do tecido probabilístico.",
     image: wheelImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: wheelDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: wheelDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: wheelMarselhaImage, artist: 'unknown' }
     ],
     metadata: "CICLOS // JÚPITER",
     path: "/tarot/major-arcana/10",
@@ -1071,7 +1105,8 @@ export const majorArcanaKeys = [
     description: "O domínio sutil sobre os impulsos animalescos através da alquimia interna, coragem silenciosa e compaixão inflexível.",
     image: strengthImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: strengthDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: strengthDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: strengthMarselhaImage, artist: 'unknown' }
     ],
     metadata: "ALQUIMIA // LEÃO",
     path: "/tarot/major-arcana/11",
@@ -1155,7 +1190,8 @@ export const majorArcanaKeys = [
     description: "A suspensão voluntária da ação, inversão da perspectiva mundana e o sacrifício estratégico do ego em prol da iluminação espiritual.",
     image: hangedManImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: hangedManDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: hangedManDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: hangedManMarselhaImage, artist: 'unknown' }
     ],
     metadata: "REVERSÃO // NETUNO",
     path: "/tarot/major-arcana/12",
@@ -1239,7 +1275,8 @@ export const majorArcanaKeys = [
     description: "A foice da dissolução necessária, encerramento de ciclos obsoletos e a radical transmutação molecular da forma pura.",
     image: deathImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: deathDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: deathDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: deathMarselhaImage, artist: 'unknown' }
     ],
     metadata: "DISSOLUÇÃO // ESCORPIÃO",
     path: "/tarot/major-arcana/13",
@@ -1323,7 +1360,8 @@ export const majorArcanaKeys = [
     description: "A alquimia dos fluidos psíquicos, calibração constante de opostos e a harmonia dinâmica da cura espiritual.",
     image: temperanceImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: temperanceDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: temperanceDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: temperanceMarselhaImage, artist: 'unknown' }
     ],
     metadata: "ALQUIMIA // SARGITÁRIO",
     path: "/tarot/major-arcana/14",
@@ -1407,7 +1445,8 @@ export const majorArcanaKeys = [
     description: "O aprisionamento na ilusão puramente material, as correntes do desejo inconsciente e o confronto com a própria sombra psicológica.",
     image: devilImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: devilDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: devilDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: devilMarselhaImage, artist: 'unknown' }
     ],
     metadata: "SOMBRA // CAPRICÓRNIO",
     path: "/tarot/major-arcana/15",
@@ -1495,7 +1534,8 @@ export const majorArcanaKeys = [
     description: "A ruptura sísmica de falsas estruturas, colapso de dogmas erguidos pelo orgulho egoico e a catarse libertadora do raio divino.",
     image: towerImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: towerDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: towerDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: towerMarselhaImage, artist: 'unknown' }
     ],
     metadata: "CATARSE // MARTE",
     path: "/tarot/major-arcana/16",
@@ -1579,7 +1619,8 @@ export const majorArcanaKeys = [
     description: "O influxo da esperança serena, inspiração cósmica pura e a purificação dos mananciais psíquicos por canais celestes.",
     image: starImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: starDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: starDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: starMarselhaImage, artist: 'unknown' }
     ],
     metadata: "INFLUXO // AQUÁRIO",
     path: "/tarot/major-arcana/17",
@@ -1663,7 +1704,8 @@ export const majorArcanaKeys = [
     description: "A travessia do labirinto subconsciente, ilusões astrais densas, pesadelos atávicos e o limiar da evolução oculta.",
     image: moonImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: moonDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: moonDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: moonMarselhaImage, artist: 'unknown' }
     ],
     metadata: "LABIRINTO // PEIXES",
     path: "/tarot/major-arcana/18",
@@ -1747,7 +1789,8 @@ export const majorArcanaKeys = [
     description: "A radiação máxima da verdade analítica, vitalidade celular plena, lucidez indomável e o sucesso nos campos da matéria.",
     image: sunImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: sunDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: sunDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: sunMarselhaImage, artist: 'unknown' }
     ],
     metadata: "LUCIDEZ // SOL",
     path: "/tarot/major-arcana/19",
@@ -1832,7 +1875,8 @@ export const majorArcanaKeys = [
     description: "O chamado do despertar arquetípico, ressurreição da consciência sepultada e a integração final do ciclo histórico pessoal.",
     image: judgementImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: judgementDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: judgementDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: judgementMarselhaImage, artist: 'unknown' }
     ],
     metadata: "DESPERTAR // PLUTÃO",
     path: "/tarot/major-arcana/20",
@@ -1916,7 +1960,8 @@ export const majorArcanaKeys = [
     description: "A totalização da sínclise arquetípica, maestria absoluta sobre os quatro elementos e a consumação do ciclo evolutivo cósmico.",
     image: worldImage,
     decks: [
-      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: worldDarkImage, artist: 'Amy Moreno' }
+      { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: worldDarkImage, artist: 'Amy Moreno' },
+      { name: 'TAROT DE MARSELHA', year: '1909', image: worldMarselhaImage, artist: 'unknown' }
     ],
     metadata: "TOTALIDADE // SATURNO",
     path: "/tarot/major-arcana/21",
@@ -2000,7 +2045,8 @@ export const majorArcanaKeys = [
     description: "O vetor do potencial absoluto, caos primordial e liberdade irrestrita. Representa o estado latente antes da manifestação da primeira palavra geométrica.",
     image: foolImage,
     decks: [
-    { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: foolDarkImage, artist: 'Amy Moreno' }
+    { name: 'DARK TAROT ARCHETYPES', year: 'unknown', image: foolDarkImage, artist: 'Amy Moreno' },
+    { name: 'TAROT DE MARSELHA', year: '1909', image: foolMarselhaImage, artist: 'unknown' }
     ],
     metadata: "ALPHA // URANO",
     path: "/tarot/major-arcana/0",
