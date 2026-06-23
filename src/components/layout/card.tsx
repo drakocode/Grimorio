@@ -1,6 +1,6 @@
 // src/components/card.tsx
 import React from 'react';
-import '../../styles/layout/Card.css';
+import '../../styles/layout/card.css';
 
 interface CardProps {
   id: string;
