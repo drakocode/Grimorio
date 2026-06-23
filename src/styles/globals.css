@@ -1,0 +1,65 @@
+:root {
+  /* Color Palette */
+  --color-abyss: #0B0B0F;
+  --color-charcoal: #1A1A22;
+  --color-crimson: #6A1E2A;
+  --color-gold: #B08D57;
+  --color-ghost: #F3F0F5;
+  --color-muted: #7A7A85;
+
+  /* Typography */
+  --font-display: 'Cinzel Decorative', 'Playfair Display', serif;
+  --font-body: 'Cormorant Garamond', serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Borders & Rules (Architectural, No Rounded Corners) */
+  --border-sharp: 1px solid rgba(176, 141, 87, 0.2);
+  --border-sharp-bright: 1px solid rgba(176, 141, 87, 0.5);
+  --border-crimson: 1px solid rgba(106, 30, 42, 0.4);
+  
+  /* Layout Spacing */
+  --grid-gap: 24px;
+  
+  /* Transitions */
+  --transition-ceremonial: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Global Foundations */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important; /* Enforced across entire platform */
+}
+
+body {
+  background-color: var(--color-abyss);
+  color: var(--color-ghost);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Custom Scrollbar for Manuscript Feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-abyss);
+  border-left: var(--border-sharp);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-crimson);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}

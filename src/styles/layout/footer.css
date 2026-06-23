@@ -1,0 +1,63 @@
+/* src/components/mainLayout/footer/Footer.styles.css */
+.ritual-footer {
+  width: 100%;
+  background: var(--color-abyss);
+  border-top: var(--border-sharp);
+  padding: 24px var(--grid-gap);
+  z-index: 10;
+}
+
+.footer-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.footer-label {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  letter-spacing: 0.15em;
+  font-family: var(--font-mono);
+  margin-bottom: 4px;
+}
+
+.footer-value {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  letter-spacing: 0.05em;
+}
+
+.center-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ritual-pulse {
+  width: 6px;
+  height: 6px;
+  background: var(--color-crimson);
+  box-shadow: 0 0 8px var(--color-crimson);
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.alignment-right {
+  text-align: right;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; filter: brightness(1.5); }
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+  .alignment-right { text-align: center; }
+  .center-block { justify-content: center; }
+}
